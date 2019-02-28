@@ -1,4 +1,4 @@
-import{ films } from './films.js'
+import{ films } from './Data/films.js/index.js'
 
 // const result = films.filter(film => film.episode_id)
 // console.log(result)
