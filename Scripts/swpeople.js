@@ -39,22 +39,15 @@ const allHomeWorlds = people.map(person => {
 //setting the variables of men women and other in order to later use them in functions
 //each variable is assigned a value by reaching into the imported "people" js
 
-// const men = people.filter(person => person.gender ==='male')
-// const women = people.filter(person => person.gender ==='female')
-// const other = people.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
-// console.log(men, women, other)
+const men = people.filter(person => person.gender ==='male')
+const women = people.filter(person => person.gender ==='female')
+const other = people.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
+console.log(men, other,women)
 
 
-//we are trying to resolve the url of the homeworld from Person to the actual planet name on the internets :)
 
-// const allHomeWorlds = people.map(person=> {
-//   let foundWorld = planets.find(element => {
-//    element.url === person.homeworld
-//   })
-//   return { name: person.name, home: foundWorld}
-// })
 
-// console.log(allHomeWorlds)
+
 
 //This is just creating a mainContainer element to hold all of the people information
 
@@ -62,10 +55,11 @@ const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
 
 allHomeWorlds.forEach((person) => {
-
+  
   let personElement = document.createElement('div')
   let planetElement = document.createElement ('p')
   let imageElement = document.createElement ('img')
+
 
   personElement.className = 'box'
   personElement.textContent = person.name
@@ -88,17 +82,11 @@ allHomeWorlds.forEach((person) => {
 // mainContainer.appendChild(womanElement)
 // })
 
+women.forEach((woman)=>{
+  let womanButton = document.createElement('button')
 
-// women.forEach((man) => {
+  mainContainer.appendChild(womanButton)
+})
 
-//   let manElement = document.createElement('div')
-//   manElement.className = 'box'
-//   manElement.textContent = man.name
-//   let eyeColor = document.createElement('p')
-//   eyeColor.textContent = man.eye_color
-//   manElement.appendChild(eyeColor)
-//   mainContainer.appendChild(manElement)
-  
-// })
 
 document.body.appendChild(mainContainer)
