@@ -9,12 +9,10 @@ body{
 }
 .container div{
   width: 200px;
-  
- 
-  
   margin: 10px;
   text-align: center;
 }
+
 h1 {
   text-transform: uppercase;
   font-weight: 700;

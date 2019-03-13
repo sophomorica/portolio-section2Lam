@@ -8,6 +8,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "19BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -95,6 +96,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "41.9BBY",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -122,6 +124,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "19BBY",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/2/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -244,6 +247,7 @@ export const people = [
         "eye_color": "blue-gray",
         "birth_year": "57BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/20/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -279,6 +283,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "41.9BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -310,6 +315,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "64BBY",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/21/",
         "films": [
             "https://swapi.co/api/films/6/",
@@ -333,6 +339,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "200BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/14/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -364,6 +371,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "29BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/22/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -490,6 +498,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "896BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -516,6 +525,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "82BBY",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -542,6 +552,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "31.5BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/10/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -568,6 +579,7 @@ export const people = [
         "eye_color": "red",
         "birth_year": "15BBY",
         "gender": "none",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/2/"
@@ -590,6 +602,7 @@ export const people = [
         "eye_color": "red",
         "birth_year": "53BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/29/",
         "films": [
             "https://swapi.co/api/films/2/"
@@ -612,6 +625,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "31BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/30/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -637,6 +651,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "37BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/6/",
         "films": [
             "https://swapi.co/api/films/2/"
@@ -659,6 +674,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "41BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/31/",
         "films": [
             "https://swapi.co/api/films/3/",
@@ -682,6 +698,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "48BBY",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/32/",
         "films": [
             "https://swapi.co/api/films/3/"
@@ -704,6 +721,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/3/"
@@ -728,6 +746,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "8BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/7/",
         "films": [
             "https://swapi.co/api/films/3/"
@@ -750,6 +769,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/33/",
         "films": [
             "https://swapi.co/api/films/3/"
@@ -774,6 +794,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "92BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -798,6 +819,7 @@ export const people = [
         "eye_color": "red",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/18/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -822,6 +844,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "91BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/9/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -844,6 +867,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "52BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -867,6 +891,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -889,6 +914,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -911,6 +937,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -933,6 +960,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/34/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -956,6 +984,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/35/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -978,6 +1007,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "62BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -998,6 +1028,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "72BBY",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1021,6 +1052,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "54BBY",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/36/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1047,6 +1079,7 @@ export const people = [
         "eye_color": "pink",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/37/",
         "films": [
             "https://swapi.co/api/films/3/"
@@ -1069,6 +1102,7 @@ export const people = [
         "eye_color": "hazel",
         "birth_year": "48BBY",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/37/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1093,6 +1127,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/39/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1115,6 +1150,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/40/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1137,6 +1173,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/41/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1159,6 +1196,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "72BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/42/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1183,6 +1221,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "92BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/43/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1207,6 +1246,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/44/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1231,6 +1271,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/45/",
         "films": [
             "https://swapi.co/api/films/4/",
@@ -1254,6 +1295,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/9/",
         "films": [
             "https://swapi.co/api/films/4/",
@@ -1277,6 +1319,7 @@ export const people = [
         "eye_color": "orange",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/47/",
         "films": [
             "https://swapi.co/api/films/4/",
@@ -1300,6 +1343,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/48/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1322,6 +1366,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "22BBY",
         "gender": "male",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/49/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1348,6 +1393,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/50/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1371,6 +1417,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1395,6 +1442,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1417,6 +1465,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "82BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1439,6 +1488,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/11/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1462,6 +1512,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "58BBY",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/51/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1485,6 +1536,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "40BBY",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/51/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1507,6 +1559,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1529,6 +1582,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "102BBY",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/52/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1554,6 +1608,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "67BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/2/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1577,6 +1632,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "66BBY",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/53/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1599,6 +1655,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/54/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1623,6 +1680,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/55/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1645,6 +1703,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/10/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1667,6 +1726,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/10/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1689,6 +1749,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/9/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1711,6 +1772,7 @@ export const people = [
         "eye_color": "unknown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/38/",
         "films": [
             "https://swapi.co/api/films/4/"
@@ -1733,6 +1795,7 @@ export const people = [
         "eye_color": "red, blue",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1754,6 +1817,7 @@ export const people = [
         "eye_color": "unknown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/56/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1776,6 +1840,7 @@ export const people = [
         "eye_color": "gold",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/57/",
         "films": [
             "https://swapi.co/api/films/5/"
@@ -1798,6 +1863,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/58/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1821,6 +1887,7 @@ export const people = [
         "eye_color": "green, yellow",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/59/",
         "films": [
             "https://swapi.co/api/films/6/"
@@ -1847,6 +1914,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/14/",
         "films": [
             "https://swapi.co/api/films/6/"
@@ -1869,6 +1937,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/2/",
         "films": [
             "https://swapi.co/api/films/6/",
@@ -1892,6 +1961,7 @@ export const people = [
         "eye_color": "white",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/60/",
         "films": [
             "https://swapi.co/api/films/5/",
@@ -1913,6 +1983,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/12/",
         "films": [
             "https://swapi.co/api/films/6/"
@@ -1935,6 +2006,7 @@ export const people = [
         "eye_color": "dark",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/7/"
@@ -1957,6 +2029,7 @@ export const people = [
         "eye_color": "hazel",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/7/"
@@ -1979,6 +2052,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "unknown",
         "gender": "male",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/7/"
@@ -2003,6 +2077,7 @@ export const people = [
         "eye_color": "black",
         "birth_year": "unknown",
         "gender": "none",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/7/"
@@ -2025,6 +2100,7 @@ export const people = [
         "eye_color": "unknown",
         "birth_year": "unknown",
         "gender": "female",
+        "force": "dark",
         "homeworld": "https://swapi.co/api/planets/28/",
         "films": [
             "https://swapi.co/api/films/7/"
@@ -2045,6 +2121,7 @@ export const people = [
         "eye_color": "brown",
         "birth_year": "46BBY",
         "gender": "female",
+        "force": "yellow",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/5/",

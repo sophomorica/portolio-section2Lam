@@ -19,9 +19,9 @@ films.forEach((film) => {
  titleElement.textContent = film.title
  crawlElement.textContent = film.opening_crawl
 
- tile.appendChild(titleElement)
- tile.appendChild(crawlElement)
- intro.appendChild(tile)
+//  tile.appendChild(titleElement)
+//  tile.appendChild(crawlElement)
+//  intro.appendChild(tile)
 })
 // let titleElement = document.querySelector(".title")
 // let crawlElement = document.querySelector(".crawl")

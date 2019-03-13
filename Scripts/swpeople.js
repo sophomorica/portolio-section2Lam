@@ -39,10 +39,15 @@ const allHomeWorlds = people.map(person => {
 //setting the variables of men women and other in order to later use them in functions
 //each variable is assigned a value by reaching into the imported "people" js
 
-const men = people.filter(person => person.gender ==='male')
+const men = people.filter(person=> person.gender ==='male')
 const women = people.filter(person => person.gender ==='female')
 const other = people.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
-console.log(men, other,women)
+// console.log(men, other,women)
+
+const lightSide = people.filter(person=> person.force ==='light')
+const darkSide = people.filter(person=> person.force === 'dark')
+
+
 
 
 
@@ -54,6 +59,28 @@ console.log(men, other,women)
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
 
+
+//trying to get a button to filter the genders
+var females = document.getElementById('females')
+var males = document.getElementById('males')
+
+females.onclick = function(){
+ let womanElement =  document.createElement('div')
+ let planetElement = document.createElement('p')
+ let imageElement = document.createElement('img')
+
+ womanElement.className = 'box'
+ womanElement.textContent = person.name
+ planetElement.textContent = person.home
+
+ imageElement.src = person.imagePath
+
+ womanElement.appendChild(imageElement)
+ womanElement.appendChild(planetElement)
+ mainContainer.appendChild(womanElement)
+
+}//end of my trials
+
 allHomeWorlds.forEach((person) => {
   
   let personElement = document.createElement('div')
@@ -64,6 +91,7 @@ allHomeWorlds.forEach((person) => {
   personElement.className = 'box'
   personElement.textContent = person.name
   planetElement.textContent = person.home
+ 
 
   imageElement.src = person.imagePath
 
@@ -72,7 +100,8 @@ allHomeWorlds.forEach((person) => {
   personElement.appendChild(planetElement)
   mainContainer.appendChild(personElement)
   
-})
+}) 
+
 
 // women.forEach((woman)=> {
 //   let womanElement = document.createElement('div')
@@ -82,11 +111,6 @@ allHomeWorlds.forEach((person) => {
 // mainContainer.appendChild(womanElement)
 // })
 
-women.forEach((woman)=>{
-  let womanButton = document.createElement('button')
-
-  mainContainer.appendChild(womanButton)
-})
 
 
 document.body.appendChild(mainContainer)

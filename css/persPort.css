@@ -42,10 +42,10 @@ h2 {
   text-shadow: 2px 2px 2px black;
 }
 .intro {
-  display:flex;
+  /* display:flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  top: 0px;
+  top: 0px; */
   min-height: 55vh;
   padding-top: 45vh;
   background: linear-gradient(
