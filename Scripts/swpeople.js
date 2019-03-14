@@ -33,13 +33,11 @@ const allHomeWorlds = people.map(person => {
 }
 })
 
-
-
+console.log(allHomeWorlds)
 
 
 //https://starwars-visualguide.com/assets/img/characters/1.jpg
 //----> now we insert into the DOM
-
 
 
 //setting the variables of men women and other in order to later use them in functions
@@ -48,9 +46,10 @@ const allHomeWorlds = people.map(person => {
 const men = allHomeWorlds.filter(person=> person.gender ==='male')
 const women = allHomeWorlds.filter(person => person.gender ==='female')
 const other = allHomeWorlds.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
+// console.log(men, other,women)
 
-const lightSide = people.filter(person=> person.force ==='light')
-const darkSide = people.filter(person=> person.force === 'dark')
+const lightSide = allHomeWorlds.filter(person=> person.force ==='light')
+const darkSide = allHomeWorlds.filter(person=> person.force === 'dark')
 
 
 console.log(darkSide)
@@ -63,17 +62,60 @@ console.log(darkSide)
 
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
+document.body.appendChild(mainContainer)
 
+const removeCards = () => {
+  let removeDiv = document.querySelector(".container");
+  while (removeDiv.firstChild) {
+      removeDiv.removeChild(removeDiv.firstChild);
+  }
+}
 
 //------pulling the HTML id to assign variables to use in the event listener------
 
 var females = document.getElementById('females')
 var males = document.getElementById('males')
 
+const createCards = ((personArray) => {
+  removeCards()
+  personArray.forEach((person) => {
+  
+  let personElement = document.createElement('div')
+  let planetElement = document.createElement ('p')
+  let imageElement = document.createElement ('img')
+  
 
-// --------mouse event for the button to filter out just the males--------------------
+  if (person.force ==='light'){
+    personElement.className = 'box lightSide personBox'
+  } 
+  if (person.force ==='dark'){
+    personElement.className = 'box darkSide personBox'
+  }
+  if (person.force ==='yellow'){
+    personElement.className = 'box yellow personBox'
+  }
+ 
 
-males.addEventListener('click', filterMales)
+  // personElement.className = 'personBox'
+  personElement.textContent = person.name
+  planetElement.textContent = person.home
+  
+ 
+
+  imageElement.src = person.imagePath
+
+  
+  personElement.appendChild(imageElement)
+  personElement.appendChild(planetElement)
+  mainContainer.appendChild(personElement)
+  
+})
+})
+
+// mouse event for the button to filter out just the males--------------------
+
+males.addEventListener('click', createCards.bind(this, men))
+females.addEventListener('click', createCards.bind(this, women))
 
 function filterMales(){
 
@@ -122,37 +164,20 @@ males.removeEventListener('click', filterMales)
 
 //end of my trials-----------------------------------------------------------------
 
-// allHomeWorlds.forEach((person) => {
-  
-//   let personElement = document.createElement('div')
-//   let planetElement = document.createElement ('p')
-//   let imageElement = document.createElement ('img')
-  
-// // assigning different classes to elements with certain element ID's
-//   if (person.force ==='light'){
-//     personElement.className = 'box lightSide personBox'
-//   } 
-//   if (person.force ==='dark'){
-//     personElement.className = 'box darkSide personBox'
-//   }
-//   if (person.force ==='yellow'){
-//     personElement.className = 'box yellow personBox'
-//   }
- 
 
- 
-//   personElement.textContent = person.name
-//   planetElement.textContent = person.home
-  
- 
 
-//   imageElement.src = person.imagePath
-
+// women.forEach((woman)=> {
+//   let womanElement = document.createElement('div')
   
-//   personElement.appendChild(imageElement)
-//   personElement.appendChild(planetElement)
-//   mainContainer.appendChild(personElement)
-  
-// }) 
+// womanElement.className = 'box'
+// womanElement.textContent = woman.name
+// mainContainer.appendChild(womanElement)
+// })
 
-document.body.appendChild(mainContainer)
+
+
+
+
+
+
+//removeCards()
