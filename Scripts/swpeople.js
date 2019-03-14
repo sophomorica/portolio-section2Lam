@@ -132,15 +132,15 @@ allHomeWorlds.forEach((person) => {
   
 
   if (person.force ==='light'){
-    personElement.className = 'lightSide'
+    personElement.className = 'box lightSide'
   } 
   if (person.force ==='dark'){
-    personElement.className = 'darkSide'
+    personElement.className = 'box darkSide box'
   }
   if (person.force ==='yellow'){
-    personElement.className = 'yellow'
+    personElement.className = 'box yellow'
   }
-  
+ 
 
   // personElement.className = 'personBox'
   personElement.textContent = person.name

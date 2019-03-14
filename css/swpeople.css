@@ -15,6 +15,9 @@ h1 a:hover{
   margin: 10px;
   text-align: center;
 }
+.personBox{
+  box-shadow: 5px 5px 15px 5px black
+}
 .lightSide:hover{
   
 box-shadow: 5px 5px 15px 5px rgb(1, 120, 255);
