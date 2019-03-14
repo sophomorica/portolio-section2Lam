@@ -27,7 +27,11 @@ const allHomeWorlds = people.map(person => {
   }
 })
 
-// console.log(allHomeWorlds)
+
+
+console.log(allHomeWorlds)
+
+
 
 
 
@@ -48,7 +52,7 @@ const lightSide = people.filter(person=> person.force ==='light')
 const darkSide = people.filter(person=> person.force === 'dark')
 
 
-
+console.log(women)
 
 
 
@@ -64,43 +68,82 @@ mainContainer.className = 'container'
 var females = document.getElementById('females')
 var males = document.getElementById('males')
 
-females.onclick = function(){
- let womanElement =  document.createElement('div')
- let planetElement = document.createElement('p')
- let imageElement = document.createElement('img')
 
- womanElement.className = 'box'
- womanElement.textContent = person.name
- planetElement.textContent = person.home
+// mouse event for the button to filter out just the males--------------------
 
- imageElement.src = person.imagePath
+males.addEventListener('click', filterMales)
 
- womanElement.appendChild(imageElement)
- womanElement.appendChild(planetElement)
- mainContainer.appendChild(womanElement)
+function filterMales(){
+  location.reload()
+  men.forEach((man) => {
+  let manElement = document.createElement('div')
+  let imageElement = document.createElement('img')
 
-}//end of my trials
+manElement.className = 'box'
+manElement.textContent = man.name
 
-allHomeWorlds.forEach((person) => {
+imageElement.src= man.imagePath
+
+manElement.appendChild(imageElement)
+mainContainer.appendChild(manElement)
+})
+
+
+
+males.removeEventListener('click', filterMales)
+
+
+}
+
+//event listener to filter out the females---------------------------------------
+females.addEventListener('click', filterFemales)
+
+function filterFemales(){ 
   
-  let personElement = document.createElement('div')
-  let planetElement = document.createElement ('p')
-  let imageElement = document.createElement ('img')
+women.forEach((woman) => { 
+  let womanElement = document.createElement('div')
+  let imageElement = document.createElement('img')
+  // let planetElement = document.createElement('p')
+
+  
+womanElement.className = 'box'
+womanElement.textContent = woman.name
 
 
-  personElement.className = 'box'
-  personElement.textContent = person.name
-  planetElement.textContent = person.home
+imageElement.src= woman.imagePath
+
+womanElement.appendChild(imageElement)
+
+mainContainer.appendChild(womanElement)
+}) 
+females.removeEventListener('click',filterFemales, false );
+if (false){
+  location.reload()
+}
+}
+
+//end of my trials-----------------------------------------------------------------
+
+// allHomeWorlds.forEach((person) => {
+  
+//   let personElement = document.createElement('div')
+//   let planetElement = document.createElement ('p')
+//   let imageElement = document.createElement ('img')
+
+
+//   personElement.className = 'box'
+//   personElement.textContent = person.name
+//   planetElement.textContent = person.home
  
 
-  imageElement.src = person.imagePath
+//   imageElement.src = person.imagePath
 
 
-  personElement.appendChild(imageElement)
-  personElement.appendChild(planetElement)
-  mainContainer.appendChild(personElement)
+//   personElement.appendChild(imageElement)
+//   personElement.appendChild(planetElement)
+//   mainContainer.appendChild(personElement)
   
-}) 
+// }) 
 
 
 // women.forEach((woman)=> {
