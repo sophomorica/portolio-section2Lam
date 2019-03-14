@@ -105,8 +105,8 @@ const createCards = ((personArray) => {
   imageElement.src = person.imagePath
 
   
-  personElement.appendChild(imageElement)
   personElement.appendChild(planetElement)
+  personElement.appendChild(imageElement)
   mainContainer.appendChild(personElement)
   
 })

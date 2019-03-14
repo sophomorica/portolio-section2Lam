@@ -6,14 +6,29 @@ body{
 h1{
   font-size: 30px;
 }
+.button{
+  width: 500px;
+  height: 750px;
+}
 .button-section{
   display:flex;
   justify-content: space-evenly;
+  margin: 15px;
 }
+.maleBG{
+  background-image: url("/maxresdefault\ \(1\).jpg");
+  background-size: 100% 100%;
+}
+.femaleBG{
+  background-image: url("/femaleBGedit.jpg");
+  background-size: 100% 100%;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background: grey;
 }
 .container div{
   width: 200px;

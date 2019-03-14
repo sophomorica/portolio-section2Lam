@@ -2101,6 +2101,7 @@ export const people = [
         "edited": "2015-04-17T06:57:38.061453Z",
         "url": "https://swapi.co/api/people/87/"
     },
+    
     {
         "name": "Captain Phasma",
         "height": "unknown",
@@ -2150,5 +2151,11 @@ export const people = [
         "created": "2014-12-19T17:28:26.926000Z",
         "edited": "2016-04-20T17:06:31.502555Z",
         "url": "https://swapi.co/api/people/35/"
-    }
+    },
+    // {
+    //     "name": "Kylo Ren",
+    //     "gender": "male",
+    //     "force": "dark",
+    //     "homeworld":"https://swapi.co/api/planets/32/",
+    // }
 ]
