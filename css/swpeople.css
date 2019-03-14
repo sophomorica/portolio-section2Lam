@@ -1,6 +1,9 @@
 body{
   text-align: center;
 }
+h1 a:hover{
+  text-shadow: 5px 5px 5px 5px green;
+}
 
 .container {
   display: flex;
@@ -12,7 +15,16 @@ body{
   margin: 10px;
   text-align: center;
 }
-
+.lightSide:hover{
+  
+box-shadow: 5px 5px 15px 5px rgb(1, 120, 255);
+}
+.darkSide:hover{
+  box-shadow: 5px 5px 15px 5px rgb(167, 0, 0);
+}
+.yellow:hover{
+  box-shadow: 5px 5px 15px 5px rgb(246, 255, 123) ;
+}
 h1 {
   text-transform: uppercase;
   font-weight: 700;

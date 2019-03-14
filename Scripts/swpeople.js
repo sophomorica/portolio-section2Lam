@@ -23,8 +23,10 @@ const allHomeWorlds = people.map(person => {
   return {
     name: person.name, 
     home: foundWorld.name,
+    
     imagePath: `https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
-  }
+  force: person.force,
+}
 })
 
 
@@ -52,7 +54,7 @@ const lightSide = people.filter(person=> person.force ==='light')
 const darkSide = people.filter(person=> person.force === 'dark')
 
 
-console.log(women)
+console.log(darkSide)
 
 
 
@@ -71,77 +73,89 @@ var males = document.getElementById('males')
 
 // mouse event for the button to filter out just the males--------------------
 
-males.addEventListener('click', filterMales)
+// males.addEventListener('click', filterMales)
 
-function filterMales(){
+// function filterMales(){
 
-  men.forEach((man) => {
-  let manElement = document.createElement('div')
-  let imageElement = document.createElement('img')
+//   men.forEach((man) => {
+//   let manElement = document.createElement('div')
+//   let imageElement = document.createElement('img')
 
-manElement.className = 'box'
-manElement.textContent = man.name
+// manElement.className = 'personBox'
+// manElement.textContent = man.name
 
-imageElement.src= man.imagePath
+// imageElement.src= man.imagePath
 
-manElement.appendChild(imageElement)
-mainContainer.appendChild(manElement)
-})
-males.removeEventListener('click', filterMales)
-males.addEventListener('click', function emptyPage(){
-  location.reload()
-}
-}
+// manElement.appendChild(imageElement)
+// mainContainer.appendChild(manElement)
+// })
+// males.removeEventListener('click', filterMales)
+
+// }
+//trying to add the darkside light side function--------------
+
 
 //event listener to filter out the females---------------------------------------
-females.addEventListener('click', filterFemales)
+// females.addEventListener('click', filterFemales)
 
-function filterFemales(){ 
+// function filterFemales(){ 
  
-women.forEach((woman) => { 
-  let womanElement = document.createElement('div')
-  let imageElement = document.createElement('img')
-  // let planetElement = document.createElement('p')
+// women.forEach((woman) => { 
+//   let womanElement = document.createElement('div')
+//   let imageElement = document.createElement('img')
+//   // let planetElement = document.createElement('p')
 
   
-womanElement.className = 'box'
-womanElement.textContent = woman.name
+// womanElement.className = 'box'
+// womanElement.textContent = woman.name
 
 
-imageElement.src= woman.imagePath
+// imageElement.src= woman.imagePath
 
-womanElement.appendChild(imageElement)
+// womanElement.appendChild(imageElement)
 
-mainContainer.appendChild(womanElement)
-}) 
-females.removeEventListener('click',filterFemales, false );
-if (false){
-  location.reload()
-}
-}
+// mainContainer.appendChild(womanElement)
+// }) 
+// females.removeEventListener('click',filterFemales, false );
+// if (false){
+//   location.reload()
+// }
+// }
 
 //end of my trials-----------------------------------------------------------------
 
-// allHomeWorlds.forEach((person) => {
+allHomeWorlds.forEach((person) => {
   
-//   let personElement = document.createElement('div')
-//   let planetElement = document.createElement ('p')
-//   let imageElement = document.createElement ('img')
+  let personElement = document.createElement('div')
+  let planetElement = document.createElement ('p')
+  let imageElement = document.createElement ('img')
+  
 
+  if (person.force ==='light'){
+    personElement.className = 'lightSide'
+  } 
+  if (person.force ==='dark'){
+    personElement.className = 'darkSide'
+  }
+  if (person.force ==='yellow'){
+    personElement.className = 'yellow'
+  }
+  
 
-//   personElement.className = 'box'
-//   personElement.textContent = person.name
-//   planetElement.textContent = person.home
+  // personElement.className = 'personBox'
+  personElement.textContent = person.name
+  planetElement.textContent = person.home
+  
  
 
-//   imageElement.src = person.imagePath
+  imageElement.src = person.imagePath
 
-
-//   personElement.appendChild(imageElement)
-//   personElement.appendChild(planetElement)
-//   mainContainer.appendChild(personElement)
   
-// }) 
+  personElement.appendChild(imageElement)
+  personElement.appendChild(planetElement)
+  mainContainer.appendChild(personElement)
+  
+}) 
 
 
 // women.forEach((woman)=> {
