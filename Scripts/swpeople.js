@@ -74,7 +74,7 @@ var males = document.getElementById('males')
 males.addEventListener('click', filterMales)
 
 function filterMales(){
-  location.reload()
+
   men.forEach((man) => {
   let manElement = document.createElement('div')
   let imageElement = document.createElement('img')
@@ -87,19 +87,17 @@ imageElement.src= man.imagePath
 manElement.appendChild(imageElement)
 mainContainer.appendChild(manElement)
 })
-
-
-
 males.removeEventListener('click', filterMales)
-
-
+males.addEventListener('click', function emptyPage(){
+  location.reload()
+}
 }
 
 //event listener to filter out the females---------------------------------------
 females.addEventListener('click', filterFemales)
 
 function filterFemales(){ 
-  
+ 
 women.forEach((woman) => { 
   let womanElement = document.createElement('div')
   let imageElement = document.createElement('img')
