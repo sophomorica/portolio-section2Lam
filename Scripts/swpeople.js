@@ -23,35 +23,29 @@ const allHomeWorlds = people.map(person => {
   return {
     name: person.name, 
     home: foundWorld.name,
-    
+    gender: person.gender,
     imagePath: `https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
   force: person.force,
 }
 })
 
-
-
 console.log(allHomeWorlds)
-
-
-
 
 
 //https://starwars-visualguide.com/assets/img/characters/1.jpg
 //----> now we insert into the DOM
 
 
-
 //setting the variables of men women and other in order to later use them in functions
 //each variable is assigned a value by reaching into the imported "people" js
 
-const men = people.filter(person=> person.gender ==='male')
-const women = people.filter(person => person.gender ==='female')
-const other = people.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
+const men = allHomeWorlds.filter(person=> person.gender ==='male')
+const women = allHomeWorlds.filter(person => person.gender ==='female')
+const other = allHomeWorlds.filter(person => (person.gender ==='n/a') || (person.gender ==='hermaphrodite') || (person.gender ==='other'))
 // console.log(men, other,women)
 
-const lightSide = people.filter(person=> person.force ==='light')
-const darkSide = people.filter(person=> person.force === 'dark')
+const lightSide = allHomeWorlds.filter(person=> person.force ==='light')
+const darkSide = allHomeWorlds.filter(person=> person.force === 'dark')
 
 
 console.log(darkSide)
@@ -64,16 +58,59 @@ console.log(darkSide)
 
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
+document.body.appendChild(mainContainer)
 
+const removeCards = () => {
+  let removeDiv = document.querySelector(".container");
+  while (removeDiv.firstChild) {
+      removeDiv.removeChild(removeDiv.firstChild);
+  }
+}
 
 //trying to get a button to filter the genders
 var females = document.getElementById('females')
 var males = document.getElementById('males')
 
+const createCards = ((personArray) => {
+  removeCards()
+  personArray.forEach((person) => {
+  
+  let personElement = document.createElement('div')
+  let planetElement = document.createElement ('p')
+  let imageElement = document.createElement ('img')
+  
+
+  if (person.force ==='light'){
+    personElement.className = 'box lightSide personBox'
+  } 
+  if (person.force ==='dark'){
+    personElement.className = 'box darkSide personBox'
+  }
+  if (person.force ==='yellow'){
+    personElement.className = 'box yellow personBox'
+  }
+ 
+
+  // personElement.className = 'personBox'
+  personElement.textContent = person.name
+  planetElement.textContent = person.home
+  
+ 
+
+  imageElement.src = person.imagePath
+
+  
+  personElement.appendChild(imageElement)
+  personElement.appendChild(planetElement)
+  mainContainer.appendChild(personElement)
+  
+})
+})
 
 // mouse event for the button to filter out just the males--------------------
 
-// males.addEventListener('click', filterMales)
+males.addEventListener('click', createCards.bind(this, men))
+females.addEventListener('click', createCards.bind(this, women))
 
 // function filterMales(){
 
@@ -124,38 +161,6 @@ var males = document.getElementById('males')
 
 //end of my trials-----------------------------------------------------------------
 
-allHomeWorlds.forEach((person) => {
-  
-  let personElement = document.createElement('div')
-  let planetElement = document.createElement ('p')
-  let imageElement = document.createElement ('img')
-  
-
-  if (person.force ==='light'){
-    personElement.className = 'box lightSide personBox'
-  } 
-  if (person.force ==='dark'){
-    personElement.className = 'box darkSide personBox'
-  }
-  if (person.force ==='yellow'){
-    personElement.className = 'box yellow personBox'
-  }
- 
-
-  // personElement.className = 'personBox'
-  personElement.textContent = person.name
-  planetElement.textContent = person.home
-  
- 
-
-  imageElement.src = person.imagePath
-
-  
-  personElement.appendChild(imageElement)
-  personElement.appendChild(planetElement)
-  mainContainer.appendChild(personElement)
-  
-}) 
 
 
 // women.forEach((woman)=> {
@@ -168,4 +173,8 @@ allHomeWorlds.forEach((person) => {
 
 
 
-document.body.appendChild(mainContainer)
+
+
+
+
+//removeCards()
