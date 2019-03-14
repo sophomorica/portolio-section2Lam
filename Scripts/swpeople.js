@@ -4,7 +4,8 @@ import { planets } from '../data/planets.js'
 
 
 //character act string funciton MDN
-//Slice string method MDN "how to get a section of a string from an index"
+//Slice string method MDN "how to get a section of a string from an index" . We did thus 
+
 const getLastNumber = (url) => {
   let end = url.lastIndexOf('/')
   console.log(end)
@@ -14,7 +15,10 @@ const getLastNumber = (url) => {
  }
 return (url.slice(start, end))
 }
-//we are going to import from one array then within that loop we will do search into another array
+
+//------------------------we are going to import from one array then within that loop we will do search into another array in order to find the homeworlds and then create a new array to be called on later ------------------------------
+
+
 const allHomeWorlds = people.map(person => {
   let foundWorld = planets.find(planet =>{
     return planet.url === person.homeworld
@@ -25,7 +29,7 @@ const allHomeWorlds = people.map(person => {
     home: foundWorld.name,
     gender: person.gender,
     imagePath: `https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
-  force: person.force,
+    force: person.force,
 }
 })
 
@@ -67,7 +71,8 @@ const removeCards = () => {
   }
 }
 
-//trying to get a button to filter the genders
+//------pulling the HTML id to assign variables to use in the event listener------
+
 var females = document.getElementById('females')
 var males = document.getElementById('males')
 
@@ -112,36 +117,34 @@ const createCards = ((personArray) => {
 males.addEventListener('click', createCards.bind(this, men))
 females.addEventListener('click', createCards.bind(this, women))
 
-// function filterMales(){
+function filterMales(){
 
-//   men.forEach((man) => {
-//   let manElement = document.createElement('div')
-//   let imageElement = document.createElement('img')
+  men.forEach((man) => {
+  let manElement = document.createElement('div')
+  let imageElement = document.createElement('img')
 
-// manElement.className = 'personBox'
-// manElement.textContent = man.name
+manElement.className = 'personBox'
+manElement.textContent = man.name
 
-// imageElement.src= man.imagePath
+imageElement.src= imagePath
 
-// manElement.appendChild(imageElement)
-// mainContainer.appendChild(manElement)
-// })
-// males.removeEventListener('click', filterMales)
+manElement.appendChild(imageElement)
+mainContainer.appendChild(manElement)
+})
+males.removeEventListener('click', filterMales)
 
-// }
-//trying to add the darkside light side function--------------
+}
 
 
-//event listener to filter out the females---------------------------------------
+
+//----------event listener to filter out the females----------------------------------
+
 // females.addEventListener('click', filterFemales)
-
 // function filterFemales(){ 
- 
 // women.forEach((woman) => { 
 //   let womanElement = document.createElement('div')
 //   let imageElement = document.createElement('img')
 //   // let planetElement = document.createElement('p')
-
   
 // womanElement.className = 'box'
 // womanElement.textContent = woman.name
