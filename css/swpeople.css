@@ -1,10 +1,15 @@
 body{
+  background: rgb(100, 100, 104);
   text-align: center;
+  color: #ffd000;
 }
-h1 a:hover{
-  text-shadow: 5px 5px 5px 5px green;
+h1{
+  font-size: 30px;
 }
-
+.button-section{
+  display:flex;
+  justify-content: space-evenly;
+}
 .container {
   display: flex;
   justify-content: space-around;
@@ -15,9 +20,12 @@ h1 a:hover{
   margin: 10px;
   text-align: center;
 }
+
+/* -------------look up how to override styles from CSS framework correctly----------- */
 .personBox{
   box-shadow: 5px 5px 7px 5px black
 }
+/*----------^^^^^^^^^^^ to make the box-shadow appear -------------*/
 .lightSide:hover{
   
 box-shadow: 5px 5px 7px 5px rgb(1, 120, 255);
