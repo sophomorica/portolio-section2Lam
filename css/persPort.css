@@ -64,6 +64,9 @@ h2 {
   text-align:center;
   margin-bottom: 40px;
 }
+.intro p{
+  text-transform: uppercase;
+}
 .work-main {
   min-height: 55vh;
   padding-top: 60px;
