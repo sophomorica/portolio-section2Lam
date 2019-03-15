@@ -75,7 +75,8 @@ const removeCards = () => {
 
 var females = document.getElementById('females')
 var males = document.getElementById('males')
-
+var light_side = document.getElementById('light-side')
+var dark_side = document.getElementById('dark-side')
 const createCards = ((personArray) => {
   removeCards()
   personArray.forEach((person) => {
@@ -116,7 +117,8 @@ const createCards = ((personArray) => {
 
 males.addEventListener('click', createCards.bind(this, men))
 females.addEventListener('click', createCards.bind(this, women))
-
+light_side.addEventListener('click', createCards.bind(this, lightSide))
+dark_side.addEventListener('click', createCards.bind(this, darkSide))
 function filterMales(){
 
   men.forEach((man) => {

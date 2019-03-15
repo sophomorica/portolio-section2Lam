@@ -7,24 +7,78 @@ body{
 }
 h1{
   font-size: 30px;
+}nav ul li {
+  display: inline-block;
+  margin: 55px;
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 .button{
   width: 500px;
   height: 750px;
+  color:rgb(253, 255, 254);
+  
 }
+/* -----------the CSS for the bottons-------------*/
+
 .button-section{
   display:flex;
   justify-content: space-evenly;
+  flex-wrap:wrap;
   margin: 15px;
+  color: #FFF;
+  text-shadow: 3px 3px 6px rgb(72, 157, 35)
 }
 .maleBG{
   background-image: url("/maxresdefault\ \(1\).jpg");
-  background-size: 100% 100%;
+  background-size:100% 100% ;
+  height: 600px;
+  width: 350px;
+  font-family: "Courier New", Courier, monospace;
+font-size: 60px;
+letter-spacing: 3px;
+text-transform: uppercase;
+font-weight: bolder;
+text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
 .femaleBG{
   background-image: url("/femaleBGedit.jpg");
   background-size: 100% 100%;
+  height: 600px;
+  width: 350px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
+.lightBG{
+  background-image: url("/yoda\ \(1\).jpg");
+  background-size: 100% 100%;
+  height: 600px;
+  width: 350px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 4px 3px 14px rgb(72, 157, 35)
+}
+.darkBG{
+  background-image: url("/DarthMaul\ \(1\).jpg");
+  background-size: 100% 100%;
+  height: 600px;
+  width: 350px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 4px 3px 14px rgb(72, 157, 35)
+}
+/* --------------end of Button CSS ------------- */
+
 
 .container {
   display: flex;
@@ -32,6 +86,7 @@ h1{
   flex-wrap: wrap;
   background-color: black;
  padding-bottom: 200px;
+ 
 
 }
 .container div{
