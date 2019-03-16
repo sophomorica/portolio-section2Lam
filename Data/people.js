@@ -41,7 +41,7 @@ export const people = [
         "eye_color": "yellow",
         "birth_year": "112BBY",
         "gender": "n/a",
-        "force": "yellow",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/1/",
         "films": [
             "https://swapi.co/api/films/2/",
@@ -69,7 +69,7 @@ export const people = [
         "eye_color": "red",
         "birth_year": "33BBY",
         "gender": "n/a",
-        "force": "yellow",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/8/",
         "films": [
             "https://swapi.co/api/films/2/",
