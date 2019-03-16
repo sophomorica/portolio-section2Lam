@@ -35,7 +35,13 @@ const allHomeWorlds = people.map(person => {
 
 console.log(allHomeWorlds)
 
-
+allHomeWorlds.push({ 
+  "name": "Kylo Ren",
+  "gender": "male",
+  "force": "dark",
+  "homeworld":"https://swapi.co/api/planets/32/",
+  "imagePath": "https://lumiere-a.akamaihd.net/v1/images/kylo-ren-db-main_e2e6f666.jpeg?region=0%2C0%2C1560%2C878&width=1536",
+})
 //https://starwars-visualguide.com/assets/img/characters/1.jpg
 //----> now we insert into the DOM
 

@@ -2152,10 +2152,5 @@ export const people = [
         "edited": "2016-04-20T17:06:31.502555Z",
         "url": "https://swapi.co/api/people/35/"
     },
-    // {
-    //     "name": "Kylo Ren",
-    //     "gender": "male",
-    //     "force": "dark",
-    //     "homeworld":"https://swapi.co/api/planets/32/",
-    // }
+   
 ]
