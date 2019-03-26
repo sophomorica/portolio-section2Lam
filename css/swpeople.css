@@ -30,7 +30,7 @@ h1{
   text-shadow: 3px 3px 6px rgb(72, 157, 35)
 }
 .maleBG{
-  background-image: url("/maxresdefault\ \(1\).jpg");
+  background-image: url("/downloaded-pics/maxresdefault\ \(1\).jpg");
   background-size:100% 100% ;
   height: 600px;
   width: 350px;
@@ -42,7 +42,7 @@ font-weight: bolder;
 text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
 .femaleBG{
-  background-image: url("/femaleBGedit.jpg");
+  background-image: url("/downloaded-pics/femaleBGedit.jpg");
   background-size: 100% 100%;
   height: 600px;
   width: 350px;
@@ -54,7 +54,7 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
 .lightBG{
-  background-image: url("/yoda\ \(1\).jpg");
+  background-image: url("/downloaded-pics/yoda\ \(1\).jpg");
   background-size: 100% 100%;
   height: 600px;
   width: 350px;
@@ -66,7 +66,7 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
 .darkBG{
-  background-image: url("/DarthMaul\ \(1\).jpg");
+  background-image: url("/downloaded-pics/DarthMaul\ \(1\).jpg");
   background-size: 100% 100%;
   height: 600px;
   width: 350px;
