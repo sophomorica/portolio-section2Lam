@@ -98,5 +98,5 @@ export const pokemon = [
   {
     "name": "igglybuff",
     "url": "https://pokeapi.co/api/v2/pokemon/174/"
-  }
+  },
 ]
