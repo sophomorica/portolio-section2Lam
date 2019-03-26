@@ -44,7 +44,8 @@ allHomeWorlds.push({
   "gender": "male",
   "force": "dark",
   "homeworld":"Chandrilla",
-  "imagePath": "https://lumiere-a.akamaihd.net/v1/images/kylo-ren-db-main_e2e6f666.jpeg?region=0%2C0%2C1560%2C878", 
+  // "imagePath": "https://lumiere-a.akamaihd.net/v1/images/kylo-ren-db-main_e2e6f666.jpeg?region=0%2C0%2C1560%2C878", 
+  "imagePath": "https://aa1a5178aef33568e9c4-a77ea51e8d8892c1eb8348eb6b3663f6.ssl.cf5.rackcdn.com/p/full/e76f93db-4c6b-4c70-b5a1-10c1bee4624d.jpg"
 })
 
 
