@@ -37,7 +37,7 @@ console.log(allHomeWorlds)
 
 
 //----------push the Kylo Ren Array to  allHomeWorlds in order to get him on the array//
-
+// command+D selects multiple of the same word. comnd + Opt + up or down makes more cursers 
 
 allHomeWorlds.push({ 
   "name": "Kylo Ren",
