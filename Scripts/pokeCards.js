@@ -31,9 +31,9 @@ function createPokeCard(pokeData) {
     image.src = `../PokeImages/images/pokeball.png`
   }
   figure.appendChild(image )
-
-  card.appendChild(title)
-  card.appendChild(image)
+  figure.appendChild(caption)
+  card.appendChild(figure)
+  
   mainContainer.appendChild(card)
 }
 
@@ -53,8 +53,13 @@ function fetchSinglePokemon(id){
   .then(response => response.json())
   .then(myJson => createPokeCard(myJson))
 }
- const newPOkemonButton = document.querySelector('button')
- newPOkemonButton.addEventListener('click', function(){
+ const newPokemonButton = document.querySelector('button')
+ newPokemonButton.addEventListener('click', function(){
    let pokemonID = prompt('Enter the ID of an existing Pokemon')
-   createPokeCard( new Pokemon(pokemonID))
+   fetchSinglePokemon(pokemonID)
+   if(pokemonID.length ===1){
+     pokemonID = "00" + pokemonID
+   }
+   
+  //  createPokeCard( new Pokemon(pokemonID))
  });
