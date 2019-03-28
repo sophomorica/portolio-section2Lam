@@ -2,7 +2,8 @@ import { pokemon } from "../data/pokemon.js"
 
 
 console.log(pokemon)
-
+//hello my name is patrick
+//coming to myself
 
 
 const mainContainer = document.querySelector('.container')
