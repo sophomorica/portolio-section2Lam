@@ -6,7 +6,7 @@ class Pokemon {
   }
 }
 
-const mainContainer = document.querySelector("container");
+const mainContainer = document.querySelector(".container");
 
 function createPokeCard(pokeData) {
   let card = document.createElement("div")
