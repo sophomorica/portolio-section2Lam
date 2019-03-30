@@ -2,7 +2,7 @@ import { pokemon } from "../data/pokemon.js"
 
 class Pokemon {
   constructor(id){
-      this.id= id
+      this.id = id
   }
 }
 
