@@ -20,9 +20,9 @@ function createPokeCard(pokeData) {
 caption.textContent = pokeData.name;
 
   if (pokeData.id !== 0) {
-    image.src = `../PokeImages/images/${pokeData.imageID}${pokeData.name}.png`;
+    image.src = `../images/${pokeData.imageID}${pokeData.name}.png`;
   } else {
-    image.src = `../PokeImages/images/pokeball.png`;
+    image.src = `../images/pokeball.png`;
   }
 
     figure.appendChild(image)
