@@ -21,13 +21,13 @@ function createPokeCard(pokeData) {
   let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
   caption.textContent = upperName
   if(pokeData.id !== 0  ){
-    image.src = `../PokeImages/images/${pokeData.id}${upperName}.png`
+    image.src = `../images/${pokeData.id}${upperName}.png`
   } else {
-    image.src = `../PokeImages/images/pokeball.png`
+    image.src = `../images/pokeball.png`
   }
   figure.appendChild(image)
   figure.appendChild(caption)
-card.appendChild(figure)
+  card.appendChild(figure)
   mainContainer.appendChild(card)
 }
 
