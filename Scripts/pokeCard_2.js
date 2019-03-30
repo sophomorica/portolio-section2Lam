@@ -1,5 +1,4 @@
 import { pokemon } from "../data/pokemon.js";
-console.log(pokemon);
 
 class Pokemon {
   constructor(id) {
@@ -10,16 +9,15 @@ class Pokemon {
 const mainContainer = document.querySelector("container");
 
 function createPokeCard(pokeData) {
-  console.log(pokeData.id);
-  let card = document.createElement("div");
-  card.className = "box";
-  let figure = document.createElement("figure");
-  let caption = document.createElement("figcaption");
-  let image = document.createElement("img");
+  let card = document.createElement("div")
+  card.className = "box"
+  let figure = document.createElement("figure")
+  let caption = document.createElement("figcaption")
+  let image = document.createElement("img")
 
   // let upperName = pokeData.name.charAt(0).toUppercase() + pokeData.name.slice(1)
 
-  caption.textContent = pokeData.name;
+caption.textContent = pokeData.name;
 
   if (pokeData.id !== 0) {
     image.src = `../PokeImages/images/${pokeData.imageID}${pokeData.name}.png`;
