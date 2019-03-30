@@ -6,11 +6,11 @@
 
 
 .box {
-  height: 150px;
-  margin: 0px;
+ 
+  margin: 8px;
   text-align: center;
   }
   .img {
-    height: 100px;
-    width: 100px;
+ 
+    width: 220px;
   }
