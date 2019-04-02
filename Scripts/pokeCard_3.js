@@ -95,4 +95,3 @@ newPokemonButton.addEventListener('click', function() {
     let pokemonID = prompt('Enter an ID of an existing pokemon:')
     fetchSinglePokemon(pokemonID)
   });
-

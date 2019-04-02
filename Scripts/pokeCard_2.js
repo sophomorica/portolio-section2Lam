@@ -84,9 +84,9 @@ function fetchSinglePokemon(id) {
     .then(function(response) {
       return response.json();
     })
-    .then(function(retrievedPokemon) {
+    .then(function(aPokemon) {
   
-      createPokeCard(matchIdToImage(retrievedPokemon));
+      createPokeCard(matchIdToImage(aPokemon));
     });
 }
 
