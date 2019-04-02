@@ -1546,7 +1546,7 @@ export const people = [
         "eye_color": "blue",
         "birth_year": "40BBY",
         "gender": "female",
-        "force": "yellow",
+        "force": "light",
         "homeworld": "https://swapi.co/api/planets/51/",
         "films": [
             "https://swapi.co/api/films/5/"
