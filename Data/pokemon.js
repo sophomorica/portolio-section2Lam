@@ -32,7 +32,7 @@ export const pokemon = [
     "url": "https://pokeapi.co/api/v2/pokemon/28/"
   },
   {
-    "name": "nidoran-f",
+    "name": "nidoran",
     "url": "https://pokeapi.co/api/v2/pokemon/29/"
   },
   {
@@ -44,7 +44,7 @@ export const pokemon = [
     "url": "https://pokeapi.co/api/v2/pokemon/31/"
   },
   {
-    "name": "nidoran-m",
+    "name": "nidoran",
     "url": "https://pokeapi.co/api/v2/pokemon/32/"
   },
   {
