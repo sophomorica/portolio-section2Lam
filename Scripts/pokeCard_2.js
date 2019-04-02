@@ -31,8 +31,13 @@ function cardFront(pokeData){
 function cardBack(pokeData){
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face--back card__face'
-  return cardBack
+ 
 
+  let backImage = document.createElement('img')
+  backImage.src = `../images/pokeball.png`
+  cardBack.appendChild(backImage)
+  
+  return cardBack
 }
 
 
