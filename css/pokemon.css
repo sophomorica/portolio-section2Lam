@@ -10,7 +10,7 @@ main {
   justify-content: space-around;
 }
 .scene {
-  width: 200px;
+  width: 260px;
   height: 260px;
   border: 1px solid #ccc;
   margin: 40px 0;
@@ -43,7 +43,11 @@ main {
 button {
   width: 300px;
 }
-
+figure{
+margin: 0px;
+  width: 220px;
+  height: 220px;
+}
 
   img {
     padding: 4px;
