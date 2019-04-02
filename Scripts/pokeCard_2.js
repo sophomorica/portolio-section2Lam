@@ -8,6 +8,10 @@ class Pokemon {
 
 const mainContainer = document.querySelector(".container");
 
+function cardFront(pokeData){
+
+}
+
 function createPokeCard(pokeData) {
   let card = document.createElement("div")
   card.className = "box"
@@ -32,25 +36,52 @@ caption.textContent = pokeData.name;
 
 }
 
+function matchIdToImage(aPokemon){
+  if (aPokemon.id < 10) {
+    aPokemon.imageID = "00" + aPokemon.id;
+  }
+
+  if (aPokemon.id > 9 && aPokemon.id < 100) {
+    aPokemon.imageID = "0" + aPokemon.id;
+  }
+  if (aPokemon.id > 99) {
+    aPokemon.imageID = aPokemon.id;
+  }
+  aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1);
+  return aPokemon
+}
+
+pokemon.forEach(singleMon => {
+  fetch(singleMon.url)
+  .then(function(response){
+    return response.json()
+  })
+  .then(function(myJson){
+    createPokeCard(matchIdToImage(myJson))
+  })
+})
+
+
+
 function fetchSinglePokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(function(response) {
       return response.json();
     })
-    .then(function(retrievePokemon) {
-      console.log(retrievePokemon.id);
-      if (retrievePokemon.id < 10) {
-        retrievePokemon.imageID = "00" + retrievePokemon.id;
+    .then(function(matchIdToImage) {
+      console.log(matchIdToImage.id);
+      if (matchIdToImage.id < 10) {
+        matchIdToImage.imageID = "00" + matchIdToImage.id;
       }
 
-      if (retrievePokemon.id > 9 && retrievePokemon.id < 100) {
-        retrievePokemon.imageID = "0" + retrievePokemon.id;
+      if (matchIdToImage.id > 9 && matchIdToImage.id < 100) {
+        matchIdToImage.imageID = "0" + matchIdToImage.id;
       }
-      if (retrievePokemon.id > 99) {
-        retrievePokemon.imageID = retrievePokemon.id;
+      if (matchIdToImage.id > 99) {
+        matchIdToImage.imageID = matchIdToImage.id;
       }
-      retrievePokemon.name = retrievePokemon.name.charAt(0).toUpperCase() + retrievePokemon.name.slice(1);
-      createPokeCard(retrievePokemon);
+      matchIdToImage.name = matchIdToImage.name.charAt(0).toUpperCase() + matchIdToImage.name.slice(1);
+      createPokeCard(matchIdToImage);
     });
 }
 

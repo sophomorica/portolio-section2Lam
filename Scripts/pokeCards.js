@@ -68,15 +68,24 @@ function createPokeCard(pokeData) {
 // })
 
 //this is the same as above but better
-pokemon.forEach(singleMon => {
-  fetch(singleMon.url)
-  .then(function(response){
-    return response.json()
-  })
-  .then(function(myJson){
-    createPokeCard(myJson)
-  })
-})
+// pokemon.forEach(singleMon => {
+//   fetch(singleMon.url)
+//   .then(function(response){
+//     return response.json()
+//   })
+//   .then(function(myJson){
+//     createPokeCard(myJson)
+//   })
+// })
+
+//----------------creating a new function-------
+
+function matchIdToImage(aPokemon){
+
+  return aPokemon
+}
+
+
 
 // function fetchSinglePokemon(id) {
 //   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
