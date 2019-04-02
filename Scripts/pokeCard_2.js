@@ -42,13 +42,17 @@ function createPokeCard(pokeData) {
   scene.className = 'scene'
   card.className = 'card'
 
+
+  card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
   card.appendChild(cardFront(pokeData))
   card.appendChild(cardBack(pokeData))
   scene.appendChild(card)
   mainContainer.appendChild(scene)
 }
 
-  // let upperName = pokeData.name.charAt(0).toUppercase() + pokeData.name.slice(1)
 
 
 
@@ -84,20 +88,9 @@ function fetchSinglePokemon(id) {
     .then(function(response) {
       return response.json();
     })
-    .then(function(matchIdToImage) {
-      console.log(matchIdToImage.id);
-      if (matchIdToImage.id < 10) {
-        matchIdToImage.imageID = "00" + matchIdToImage.id;
-      }
-
-      if (matchIdToImage.id > 9 && matchIdToImage.id < 100) {
-        matchIdToImage.imageID = "0" + matchIdToImage.id;
-      }
-      if (matchIdToImage.id > 99) {
-        matchIdToImage.imageID = matchIdToImage.id;
-      }
-      matchIdToImage.name = matchIdToImage.name.charAt(0).toUpperCase() + matchIdToImage.name.slice(1);
-      createPokeCard(matchIdToImage);
+    .then(function(aPokemon) {
+  
+      createPokeCard(aPokemon);
     });
 }
 
