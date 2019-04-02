@@ -6,6 +6,17 @@ class Pokemon {
   }
 }
 
+const deleteForM = (name) =>{
+  let end = name.lastIndexOf('-')
+  console.log(end)
+  let start = end -2
+  if(name.charAt(start)==='-'){
+    start ++
+  }
+  return(name.slice(start,end))
+}
+
+
 const mainContainer = document.querySelector(".container");
 
 function cardFront(pokeData){
@@ -75,6 +86,7 @@ function matchIdToImage(aPokemon){
   if (aPokemon.id > 99) {
     aPokemon.imageID = aPokemon.id;
   }
+  
   aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1);
   return aPokemon
 }
