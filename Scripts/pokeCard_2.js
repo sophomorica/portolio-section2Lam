@@ -10,12 +10,12 @@ const mainContainer = document.querySelector(".container");
 
 function cardFront(pokeData){
   let cardFront = document.createElement("div")
-  cardBack.className = 'card__face--front card__face'
+  cardBack.className = 'card__face'
   let figure = document.createElement("figure")
   let caption = document.createElement("figcaption")
   let image = document.createElement("img")
+  
   caption.textContent = pokeData.name;
-
   if (pokeData.id !== 0) {
     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`;
   } else {
@@ -30,38 +30,29 @@ function cardFront(pokeData){
 
 function cardBack(pokeData){
   let cardBack = document.createElement('div')
-  cardBack.className = 'card__face--back card__face'
- 
-
   let backImage = document.createElement('img')
   backImage.src = `../images/pokeball.png`
+  cardBack.className = 'card__face card__face--back'
   cardBack.appendChild(backImage)
-  
   return cardBack
 }
 
 
 function createPokeCard(pokeData) {
   let scene = document.createElement('div')
-  let card = document.createElement("div")
   scene.className = 'scene'
+  let card = document.createElement("div")
   card.className = 'card'
 
+  card.appendChild(cardFront(pokeData))
+  card.appendChild(cardBack(pokeData))
 
   card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
 });
-
-  card.appendChild(cardFront(pokeData))
-  card.appendChild(cardBack(pokeData))
   scene.appendChild(card)
   mainContainer.appendChild(scene)
 }
-
-
-
-
-
 
 pokemon.forEach(singleMon => {
   fetch(singleMon.url)
@@ -93,9 +84,9 @@ function fetchSinglePokemon(id) {
     .then(function(response) {
       return response.json();
     })
-    .then(function(aPokemon) {
+    .then(function(retrievedPokemon) {
   
-      createPokeCard(aPokemon);
+      createPokeCard(matchIdToImage(retrievedPokemon));
     });
 }
 
