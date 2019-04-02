@@ -41,9 +41,7 @@
   backface-visibility: hidden;
 }
 
-.card__face--front {
 
-}
 
 .card__face--back {
   background: blue;
