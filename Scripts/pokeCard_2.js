@@ -8,12 +8,12 @@ class Pokemon {
 
 const deleteForM = (name) =>{
   let end = name.lastIndexOf('-')
-  console.log(end)
+ 
   let start = end -2
   if(name.charAt(start)==='-'){
     start ++
   }
-  return(name.slice(start,end))
+ console.log(start + " " + end)
 }
 
 
@@ -72,7 +72,7 @@ pokemon.forEach(singleMon => {
   })
   .then(function(myJson){
     createPokeCard(matchIdToImage(myJson))
-  })
+  }) 
 })
 
 function matchIdToImage(aPokemon){
@@ -89,6 +89,7 @@ function matchIdToImage(aPokemon){
   
   aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1);
   return aPokemon
+
 }
 
 function fetchSinglePokemon(id) {
@@ -108,3 +109,6 @@ newPokemonButton.addEventListener("click", function() {
   let pokemonID = prompt("Enter an ID of an existing pokemon:");
   fetchSinglePokemon(pokemonID);
 });
+
+
+console.log(myJson)
