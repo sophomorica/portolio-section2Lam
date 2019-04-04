@@ -143,10 +143,11 @@ newPokemonButton.addEventListener("click", function() {
   // fetchSinglePokemon(pokemonID);
 });
 
-// const newPokemonButtonFetch = document.querySelector(".button-2")
-// newPokemonButtonFetch.className = "button-2"
+// const newPokemonButtonFetch = document.querySelector("button_2")
 
-// newPokemonButtonFetch.addEventListener("click", function(){
-//   createPokeCard()
-// })
 
+
+//   newPokemonButtonFetch.addEventListener('click', function() {
+//     let pokemonID = prompt('Enter an ID of an existing pokemon:')
+//     fetchSinglePokemon(pokemonID)
+//   });
