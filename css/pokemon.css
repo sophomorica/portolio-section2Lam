@@ -44,6 +44,7 @@ button {
   width: 300px;
 }
 figure{
+ 
 margin: 0px;
   width: 220px;
   height: 220px;
@@ -54,7 +55,11 @@ img{
   height: 200px;
   padding: 4px;
 }
- 
+ .backImage{
+   position: absolute;
+   opacity: 0.25;
+   
+ }
 
 
 

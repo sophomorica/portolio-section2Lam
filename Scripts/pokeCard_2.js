@@ -44,6 +44,7 @@ function cardInfo(pokeData){
   let move3 = document.createElement('p')
   let move4 = document.createElement('p')
 
+
   move1.textContent = pokeData.moves[0].move.name
   move2.textContent = pokeData.moves[1].move.name
   move3.textContent = pokeData.moves[2].move.name
@@ -60,7 +61,7 @@ function cardBack(pokeData){
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
   backImage.src = `../images/pokeball.png`
-  cardBack.className = 'card__face card__face--back'
+  cardBack.className = 'card__face card__face--back backImage'
   cardBack.appendChild(backImage)
   cardBack.appendChild(cardInfo(pokeData))
   return cardBack
