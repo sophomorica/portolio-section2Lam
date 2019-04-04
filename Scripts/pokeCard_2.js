@@ -1,21 +1,20 @@
 import { pokemon } from "../data/pokemon.js";
 
-class Pokemon {
-  constructor(id) {
-    this.id = id;
-  }
-}
 
-const deleteForM = (name) =>{
-  let end = name.lastIndexOf('-')
+//-----trying to delete the dash m---------//
+
+// const deleteForM = (name) =>{
+//   let end = name.lastIndexOf('-')
  
-  let start = end -2
-  if(name.charAt(start)==='-'){
-    start ++
-  }
- console.log(start + " " + end)
-}
+//   let start = end -2
+//   if(name.charAt(start)==='-'){
+//     start ++
+//   }
+//  console.log(start + " " + end)
+// }
+//--------^^^^^trying to delete the dash^^^^^------------//
 
+// foo = "nidorant-m" index = foo.indexOf('-') name = foo.slice(0, index)
 
 const mainContainer = document.querySelector(".container");
 
@@ -38,13 +37,32 @@ function cardFront(pokeData){
     cardFront.appendChild(figure)
     return cardFront
 }
+function cardInfo(pokeData){
+  let infoDiv= document.createElement('div')
+  let move1 = document.createElement('p')
+  let move2 = document.createElement('p')
+  let move3 = document.createElement('p')
+  let move4 = document.createElement('p')
 
+  move1.textContent = pokeData.moves[0].move.name
+  move2.textContent = pokeData.moves[1].move.name
+  move3.textContent = pokeData.moves[2].move.name
+  move4.textContent = pokeData.moves[3].move.name
+  infoDiv.appendChild(move1)
+  infoDiv.appendChild(move2)
+  infoDiv.appendChild(move3)
+  infoDiv.appendChild(move4)
+
+  return infoDiv
+
+}
 function cardBack(pokeData){
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
   backImage.src = `../images/pokeball.png`
   cardBack.className = 'card__face card__face--back'
   cardBack.appendChild(backImage)
+  cardBack.appendChild(cardInfo(pokeData))
   return cardBack
 }
 
@@ -86,7 +104,13 @@ function matchIdToImage(aPokemon){
   if (aPokemon.id > 99) {
     aPokemon.imageID = aPokemon.id;
   }
-  
+  //----this is trying to erase from the dash onwards
+  let dashIndex = aPokemon.name.indexOf("-")
+  if (dashIndex !== -1){
+    console.log(`found a pokemon named ${aPokemon.name} who has a dash in the name`)
+    //^^ this is trying to erase the dash------//
+    aPokemon.name = aPokemon.name.slice(0, dashIndex)
+  }
   aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1);
   return aPokemon
 
@@ -103,12 +127,26 @@ function fetchSinglePokemon(id) {
     });
 }
 
+class Pokemon {
+  constructor(name) {
+    this.id = 0;
+    this.name = name
+  }
+}
+
 const newPokemonButton = document.querySelector("button");
 
 newPokemonButton.addEventListener("click", function() {
-  let pokemonID = prompt("Enter an ID of an existing pokemon:");
-  fetchSinglePokemon(pokemonID);
+
+  let pokeName = prompt("Enter a name for a new pokemon:");
+  createPokeCard(new Pokemon(pokeName))
+  // fetchSinglePokemon(pokemonID);
 });
 
+// const newPokemonButtonFetch = document.querySelector(".button-2")
+// newPokemonButtonFetch.className = "button-2"
 
-console.log(myJson)
+// newPokemonButtonFetch.addEventListener("click", function(){
+//   createPokeCard()
+// })
+
