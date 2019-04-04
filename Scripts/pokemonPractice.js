@@ -24,6 +24,7 @@ import { pokemon } from '../data/pokemon.js'
     let card = document.createElement('div')
     let title = document.createElement('h2')
     let image = document.createElement('img')
+    card.className = 'box'
     
     title.textContent = pokeData.name + " " + pokeData.id
     image.src = pokeData.sprites.front_shiny
