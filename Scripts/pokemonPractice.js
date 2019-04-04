@@ -25,7 +25,11 @@ import { pokemon } from '../data/pokemon.js'
     let title = document.createElement('h2')
     let image = document.createElement('img')
     card.className = 'box'
+    
+    //--The upper case function--//
     let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
+    //--^^^The upper case function^^^--//
+
     title.textContent = upperName
     image.src = pokeData.sprites.front_shiny
     card.appendChild(image)
