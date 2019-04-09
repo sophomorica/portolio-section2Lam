@@ -98,3 +98,12 @@ newPokemonButton.addEventListener('click', function() {
     let pokemonID = prompt('Enter an ID of an existing pokemon:')
     fetchSinglePokemon(pokemonID)
   });
+
+  const createNewPokemon = document.querySelector('.button_2')
+
+  createNewPokemon.addEventListener('click', function(){
+    let pokeName = prompt('Make up any name for a New Pokemon:')
+    createPokeCard(new Pokemon(pokeName))
+    fetchSinglePokemon(pokemonID)
+
+  })

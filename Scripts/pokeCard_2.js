@@ -167,13 +167,14 @@ newPokemonButton.addEventListener("click", function() {
   fetchSinglePokemon(pokemonID);
 });
 
-patrickmonButton.addEventListener("click", function(){
-createPokeCard(matchIdToImage(new Pokemon))
+
+
+const newPokemonButtonFetch = document.querySelector("button_2")
+
+newPokemonButtonFetch.addEventListener('click',function(){
+  let pokemonID = prompt('Enter the ID of an existing Pokemon:')
+  fetchSinglePokemon(pokemonID)
 })
-
-// const newPokemonButtonFetch = document.querySelector("button_2")
-
-
 // const newPokemonButtonFetch = document.querySelector('button_2')
 //   newPokemonButtonFetch.addEventListener('click', function() {
 //     let pokemonID = prompt('Enter an ID of an existing pokemon:')
