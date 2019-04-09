@@ -134,6 +134,26 @@ class Pokemon {
   constructor(name) {
     this.id = 0;
     this.name = name
+    this.moves = [
+      {
+        move: {
+          name: "genius",
+        },
+      },{
+        move: {
+          name: "The Best"
+        },
+      },
+      {
+        move: {
+          name: "Booyah"
+        },
+      },{
+        move: {
+          name: "slam-dunk"
+        },
+      },
+    ]
   }
 }
 
@@ -143,8 +163,12 @@ newPokemonButton.addEventListener("click", function() {
 
   let pokeName = prompt("Enter a name for a new pokemon:");
   createPokeCard(new Pokemon(pokeName))
-  // fetchSinglePokemon(pokemonID);
+  fetchSinglePokemon(pokemonID);
 });
+
+patrickmonButton.addEventListener("click", function(){
+createPokeCard(matchIdToImage(new Pokemon))
+})
 
 // const newPokemonButtonFetch = document.querySelector("button_2")
 

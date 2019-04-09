@@ -74,6 +74,9 @@ function matchIdToImage(aPokemon) {
     if(aPokemon.id > 99) {
         aPokemon.imageID = aPokemon.id
     }
+    if(aPokemon.name === "mr-mime"){
+        aPokemon.name = "mr Mime"
+    }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
     return aPokemon
 }
