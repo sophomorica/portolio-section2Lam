@@ -40,7 +40,7 @@ function cardFront(pokeData){
 function cardInfo(pokeData){
 
   let infoDiv= document.createElement('div')
-  infoDiv.className = ('infoDiv')
+  infoDiv.className = 'infoDiv'
   let move1 = document.createElement('p')
   let move2 = document.createElement('p')
   let move3 = document.createElement('p')
@@ -62,8 +62,9 @@ function cardInfo(pokeData){
 function cardBack(pokeData){
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
+  backImage.ClassName = 'backImage'
   backImage.src = `../images/pokeball.png`
-  cardBack.className = 'card__face card__face--back backImage'
+  cardBack.className = 'card__face card__face--back'
   cardBack.appendChild(backImage)
   cardBack.appendChild(cardInfo(pokeData))
   return cardBack
