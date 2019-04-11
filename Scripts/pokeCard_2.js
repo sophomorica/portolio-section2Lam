@@ -114,8 +114,11 @@ function matchIdToImage(aPokemon) {
   }
 
   if(aPokemon.name === "mr-mime") {
-      aPokemon.name = "mr. Mime"
+      aPokemon.name = "mr_Mime"
   }
+  if(aPokemon.name === "mime-jr") {
+    aPokemon.name = "mime_jr"
+}
 
   let dashIndex = aPokemon.name.indexOf('-')
   if (dashIndex !== -1) {
