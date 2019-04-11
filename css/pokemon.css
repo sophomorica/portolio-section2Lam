@@ -62,21 +62,21 @@ button {
   text-transform: none;
   background-image: linear-gradient(
     to right,
-    rgb(28, 110, 164) 0%,
-    rgb(35, 136, 203) 50%,
-    rgb(20, 78, 117) 100%
+    rgb(252, 207, 8) 0%,
+    rgb(255, 123, 0) 50%,
+    rgb(251, 172, 0) 100%
   );
   box-shadow: rgba(0, 0, 0, 0.69) 5px 5px 15px 5px;
-  border: 2px solid rgb(28, 110, 164);
+  border: 2px solid rgb(164, 116, 28);
   display: inline-block;
 }
 
 .button:hover {
-  background: #1c6ea4;
+  background: rgb(252, 207, 8);
 }
 
 .button:active {
-  background: #144e75;
+  background: #e65502;
 }
 .button-container{
   display:flex;
