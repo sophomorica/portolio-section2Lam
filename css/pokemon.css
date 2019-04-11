@@ -9,6 +9,25 @@ main {
   justify-content: space-between;
 }
 
+#navbar{
+  padding: 0px;
+  margin: 0px;
+}
+nav{
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0px;
+}
+nav ul li a{
+  text-decoration: none;
+  padding: 0px;
+}
+
 .scene {
   width: 260px;
   height: 260px;
@@ -66,7 +85,7 @@ button {
     rgb(255, 123, 0) 50%,
     rgb(251, 172, 0) 100%
   );
-  box-shadow: rgba(0, 0, 0, 0.69) 5px 5px 15px 5px;
+  box-shadow: rgba(0, 0, 0, 0.603) 5px 5px 15px 5px;
   border: 2px solid rgb(164, 116, 28);
   display: inline-block;
 }
