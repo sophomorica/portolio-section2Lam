@@ -46,6 +46,7 @@ main {
   height: 100px; */
   transform: rotateY(180deg);
 
+
 }
 button {
   width: 300px;
@@ -61,6 +62,7 @@ img {
   width: 200px;
   height: 200px;
   padding: 4px;
+  
 
   
 }
@@ -74,4 +76,5 @@ img {
   opacity: .25;
   left: 26px;
   top: 20px;
+ 
 }

@@ -169,7 +169,7 @@ class Pokemon {
   }
 }
 
-const newPokemonButton = document.querySelector("button");
+const newPokemonButton = document.querySelector(".button_1");
 
 newPokemonButton.addEventListener("click", function() { let pokeName = prompt("Enter a name for a new pokemon:");
   createPokeCard(new Pokemon(pokeName))
