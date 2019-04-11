@@ -159,5 +159,5 @@ selectPokemonButton.addEventListener('click', function() {
 
 
 
-poketypeButton.addEventListener('click', function() {
-    const poisonTypes = allFetchedPokemon.filter(pokemon => pokemon.types[0].type.name === "poison")
+// poketypeButton.addEventListener('click', function() {
+//     const poisonTypes = allFetchedPokemon.filter(pokemon => pokemon.types[0].type.name === "poison")
