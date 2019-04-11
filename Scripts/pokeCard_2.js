@@ -62,7 +62,7 @@ function cardBackInfo(pokeData){
 function cardBack(pokeData){
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
-  backImage.ClassName = 'backImage'
+  backImage.className = 'backImage'
   backImage.src = `../images/pokeball.png`
   cardBack.className = 'card__face card__face--back'
   cardBack.appendChild(backImage)
@@ -74,7 +74,7 @@ function cardBack(pokeData){
 function createPokeCard(pokeData) {
   let scene = document.createElement('div')
   scene.className = 'scene'
-  let card = document.createElement("div")
+  let card = document.createElement('div')
   card.className = 'card'
 
   card.appendChild(cardFront(pokeData))
@@ -99,35 +99,30 @@ pokemon.forEach(singleMon => {
   }) 
 })
 
-function matchIdToImage(aPokemon){
-  if (aPokemon.id === 0){
-    aPokemon.id = 0
+function matchIdToImage(aPokemon) {
+  if (aPokemon.id === 0) {
+    aPokemon.imageID = 0
   }
-  
   if (aPokemon.id < 10) {
-    aPokemon.imageID = "00" + aPokemon.id;
+    aPokemon.imageID = '00' + aPokemon.id
   }
-
   if (aPokemon.id > 9 && aPokemon.id < 100) {
-    aPokemon.imageID = "0" + aPokemon.id;
+    aPokemon.imageID = '0' + aPokemon.id
   }
   if (aPokemon.id > 99) {
-    aPokemon.imageID = aPokemon.id;
+    aPokemon.imageID = aPokemon.id
   }
-  if (aPokemon.name ==="mr-mime"){
-    aPokemon.name = "mr. Mime"
+  if(aPokemon.name === "mr-mime") {
+      aPokemon.name = "mr. Mime"
   }
-  //----this is trying to erase from the dash onwards
-  let dashIndex = aPokemon.name.indexOf("-")
-  if (dashIndex !== -1){
-  
-    //^^ this is trying to erase the dash------//
-    aPokemon.name = aPokemon.name.slice(0, dashIndex)
+  let dash = aPokemon.name.indexOf('-')
+  if(dash !== -1) {
+      aPokemon.name = aPokemon.name.slice(0,dash)
   }
-  aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1);
+  aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
   return aPokemon
-
 }
+
 
 function fetchSinglePokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
