@@ -20,7 +20,7 @@ const mainContainer = document.querySelector(".container");
 
 function cardFront(pokeData){
   let cardFront = document.createElement("div")
-  cardFront.className = 'card__face card__face--front'
+  cardFront.className = 'card__face'
   let figure = document.createElement("figure")
   let caption = document.createElement("figcaption")
   let image = document.createElement("img")
@@ -37,7 +37,7 @@ function cardFront(pokeData){
     cardFront.appendChild(figure)
     return cardFront
 }
-function cardInfo(pokeData){
+function cardBackInfo(pokeData){
 
   let infoDiv= document.createElement('div')
   infoDiv.className = 'infoDiv'
@@ -66,7 +66,7 @@ function cardBack(pokeData){
   backImage.src = `../images/pokeball.png`
   cardBack.className = 'card__face card__face--back'
   cardBack.appendChild(backImage)
-  cardBack.appendChild(cardInfo(pokeData))
+  cardBack.appendChild(cardBackInfo(pokeData))
   return cardBack
 }
 
@@ -86,6 +86,7 @@ function createPokeCard(pokeData) {
   scene.appendChild(card)
   mainContainer.appendChild(scene)
 }
+const allFetchedPokemon = []
 
 pokemon.forEach(singleMon => {
   fetch(singleMon.url)
@@ -93,11 +94,16 @@ pokemon.forEach(singleMon => {
     return response.json()
   })
   .then(function(myJson){
+    allFetchedPokemon.push(myJson)
     createPokeCard(matchIdToImage(myJson))
   }) 
 })
 
 function matchIdToImage(aPokemon){
+  if (aPokemon.id === 0){
+    aPokemon.id = 0
+  }
+  
   if (aPokemon.id < 10) {
     aPokemon.imageID = "00" + aPokemon.id;
   }
@@ -111,7 +117,7 @@ function matchIdToImage(aPokemon){
   //----this is trying to erase from the dash onwards
   let dashIndex = aPokemon.name.indexOf("-")
   if (dashIndex !== -1){
-    console.log(`found a pokemon named ${aPokemon.name} who has a dash in the name`)
+  
     //^^ this is trying to erase the dash------//
     aPokemon.name = aPokemon.name.slice(0, dashIndex)
   }
