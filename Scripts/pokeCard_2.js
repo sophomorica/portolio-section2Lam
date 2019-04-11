@@ -168,7 +168,7 @@ newPokemonButton.addEventListener("click", function() {
 
   let pokeName = prompt("Enter a name for a new pokemon:");
   createPokeCard(new Pokemon(pokeName))
-  fetchSinglePokemon(pokemonID);
+  // fetchSinglePokemon(pokemonID);
 });
 
 
