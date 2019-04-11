@@ -150,20 +150,20 @@ class Pokemon {
     this.moves = [
       {
         move: {
-          name: "genius",
+          name: prompt("Pick your first move"),
         },
       },{
         move: {
-          name: "The Best"
+          name: prompt("Pick your second move")
         },
       },
       {
         move: {
-          name: "Booyah"
+          name: prompt("Pick your third move")
         },
       },{
         move: {
-          name: "slam-dunk"
+          name: prompt("Pick your last Move BITCH!")
         },
       },
     ]

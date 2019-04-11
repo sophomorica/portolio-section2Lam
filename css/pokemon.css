@@ -116,6 +116,7 @@ img {
 .infoDiv {
   top: 30px;
   margin-top: 60px;
+  text-transform: capitalize;
 }
 
 .backImage {
