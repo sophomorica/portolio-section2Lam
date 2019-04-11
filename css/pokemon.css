@@ -30,6 +30,7 @@ main {
   transform: rotateY(180deg);
   /* width: 100%;
   height: 100%; */
+/* backface-visibility: inherit; */
 }
 .card__face {
   position: absolute;
@@ -43,6 +44,7 @@ main {
   /* width: 100px;
   height: 100px; */
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 button {
   width: 300px;
