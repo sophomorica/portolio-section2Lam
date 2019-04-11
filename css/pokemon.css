@@ -59,10 +59,13 @@ img {
   width: 200px;
   height: 200px;
   padding: 4px;
+
   
 }
 .infoDiv {
   position: relative;
+
+  margin: -130px;
 }
 .backImage {
   position: absolute;
