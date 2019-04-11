@@ -24,6 +24,7 @@ function cardFront(pokeData){
   let figure = document.createElement('figure')
   let caption = document.createElement('figcaption')
   let image = document.createElement('img')
+  image.className = 'pokeImage'
   
   caption.textContent = pokeData.name;
   if (pokeData.id !== 0) {

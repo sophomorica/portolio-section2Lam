@@ -6,7 +6,7 @@ main {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .scene {
@@ -15,7 +15,6 @@ main {
   /* border: 1px solid #ccc; */
   margin: 4px;
   perspective: 600px;
-  
 }
 .card {
   text-align: center;
@@ -25,8 +24,7 @@ main {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  box-shadow: 5px 5px 15px 5px black;
-
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 .card.is-flipped {
   transform: rotateY(180deg);
@@ -45,14 +43,44 @@ main {
   /* width: 100px;
   height: 100px; */
   transform: rotateY(180deg);
-
-
 }
 button {
   width: 300px;
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+  line-height: 23px;
+  padding: 20px;
+  border-radius: 9px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(28, 110, 164) 0%,
+    rgb(35, 136, 203) 50%,
+    rgb(20, 78, 117) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.69) 5px 5px 15px 5px;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;
+}
+
+.button:hover {
+  background: #1c6ea4;
+}
+
+.button:active {
+  background: #144e75;
+}
+.button-container{
+  display:flex;
+  justify-content: space-between;
 }
 figure {
-  margin: 0px;
+  margin: 4px;
   padding: 4px;
   /* width: 220px;
   height: 220px; */
@@ -62,19 +90,15 @@ img {
   width: 200px;
   height: 200px;
   padding: 4px;
-  
-
-  
 }
 .infoDiv {
- top: 30px;
- margin-top: 60px;
+  top: 30px;
+  margin-top: 60px;
 }
 
 .backImage {
   position: absolute;
-  opacity: .25;
+  opacity: 0.25;
   left: 26px;
   top: 20px;
- 
 }
