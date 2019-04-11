@@ -114,6 +114,9 @@ function matchIdToImage(aPokemon){
   if (aPokemon.id > 99) {
     aPokemon.imageID = aPokemon.id;
   }
+  if (aPokemon.name ==="mr-mime"){
+    aPokemon.name = "mr. Mime"
+  }
   //----this is trying to erase from the dash onwards
   let dashIndex = aPokemon.name.indexOf("-")
   if (dashIndex !== -1){
@@ -131,9 +134,9 @@ function fetchSinglePokemon(id) {
     .then(function(response) {
       return response.json();
     })
-    .then(function(aPokemon) {
+    .then(function(retrievedPokemon) {
   
-      createPokeCard(matchIdToImage(aPokemon));
+      createPokeCard(matchIdToImage(retrievedPokemon));
     });
 }
 
@@ -175,7 +178,7 @@ newPokemonButton.addEventListener("click", function() {
 
 
 
-const newPokemonButtonFetch = document.querySelector("button_2")
+const newPokemonButtonFetch = document.querySelector(".button_2")
 
 newPokemonButtonFetch.addEventListener('click',function(){
   let pokemonID = prompt('Enter the ID of an existing Pokemon:')
