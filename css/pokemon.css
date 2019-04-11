@@ -8,11 +8,12 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .scene {
   width: 260px;
   height: 260px;
   /* border: 1px solid #ccc; */
-  margin: 40px 0;
+  margin: 4px;
   perspective: 600px;
   
 }
@@ -51,6 +52,7 @@ button {
 }
 figure {
   margin: 0px;
+  padding: 4px;
   /* width: 220px;
   height: 220px; */
 }
@@ -63,12 +65,12 @@ img {
   
 }
 .infoDiv {
-  position: relative;
-
-  /* margin: -130px; */
+ top: 30px;
 }
+
 .backImage {
   position: absolute;
-  
-  left: 6px;
+  opacity: .25;
+  left: 26px;
+  top: 20px;
 }
