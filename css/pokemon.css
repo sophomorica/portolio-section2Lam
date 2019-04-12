@@ -77,7 +77,12 @@ nav ul li a{
   /* border: 2px solid #ccc; */
   backface-visibility: hidden;
  border-radius: 15%;
- background-color: rgba(0, 140, 255, 0.623);
+ background: linear-gradient(
+    180deg,
+    rgb(0,140,255) 0%,
+    rgb(0,140,255, .623) 100%);
+
+
 }
 
 .card__face--back {
@@ -86,6 +91,8 @@ nav ul li a{
   height: 100px; */
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  font-weight: bolder;
+  color: black;
 }
 button {
   width: 300px;
