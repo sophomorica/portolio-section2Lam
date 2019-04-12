@@ -6,6 +6,9 @@ body{
     rgb(160,37,21) 100%);
 
 }
+h2{
+  text-align: center;
+}
 p{
   font-weight: bolder;
   letter-spacing: 4px;
