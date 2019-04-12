@@ -1,21 +1,6 @@
 import { pokemon } from "../data/pokemon.js";
 
-
-//-----trying to delete the dash m---------//
-
-// const deleteForM = (name) =>{
-//   let end = name.lastIndexOf('-')
- 
-//   let start = end -2
-//   if(name.charAt(start)==='-'){
-//     start ++
-//   }
-//  console.log(start + " " + end)
-// }
-//--------^^^^^trying to delete the dash^^^^^------------//
-
-// foo = "nidorant-m" index = foo.indexOf('-') name = foo.slice(0, index)
-
+/** */
 const mainContainer = document.querySelector(".container");
 
 function cardFront(pokeData){
