@@ -1,3 +1,11 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+p{
+  font-weight: bolder;
+  letter-spacing: 4px;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -10,6 +18,8 @@ main {
 }
 h1{
   font-size: 50px;
+  margin-top: 20px;
+  
 }
 #navbar{
   padding: 0px;
@@ -122,6 +132,7 @@ img {
   top: 30px;
   margin-top: 40px;
   text-transform: capitalize;
+  
 }
 
 .backImage {
@@ -132,4 +143,6 @@ img {
 }
 .attack-moves{
   font-size: 25px;
+  margin-top:20px;
+  margin-bottom: 0px;
 }
