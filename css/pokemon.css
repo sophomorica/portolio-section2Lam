@@ -2,8 +2,8 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(
     180deg,
-    rgb(237,107,96) 0%,
-    rgb(241, 73, 57) 100%);
+    rgb(210,51,75) 0%,
+    rgb(160,37,21) 100%);
 
 }
 p{
@@ -151,7 +151,7 @@ img {
 
 .backImage {
   position: absolute;
-  opacity: 0.25;
+  opacity: .15;
   left: 26px;
   top: 20px;
 }

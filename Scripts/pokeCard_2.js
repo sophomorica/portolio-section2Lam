@@ -30,7 +30,7 @@ function cardFront(pokeData){
   if (pokeData.id !== 0) {
     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`;
   } else {
-    image.src = `../images/pokeball.png`;
+    image.src = `../images/pokeball_1.png`;
   }
 
     figure.appendChild(image)
@@ -71,7 +71,7 @@ function cardBack(pokeData){
   let intro = document.createElement('h1')
   intro.className = 'attack-moves'
   backImage.className = 'backImage'
-  backImage.src = `../images/pokeball.png`
+  backImage.src = `../images/pokeball_1.png`
   intro.textContent = 'Pokemon Moves'
   cardBack.className = 'card__face card__face--back'
 
