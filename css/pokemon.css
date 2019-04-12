@@ -8,7 +8,9 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+h1{
+  font-size: 50px;
+}
 #navbar{
   padding: 0px;
   margin: 0px;
@@ -115,7 +117,7 @@ img {
 }
 .infoDiv {
   top: 30px;
-  margin-top: 60px;
+  margin-top: 40px;
   text-transform: capitalize;
 }
 
@@ -124,4 +126,7 @@ img {
   opacity: 0.25;
   left: 26px;
   top: 20px;
+}
+.attack-moves{
+  font-size: 25px;
 }
