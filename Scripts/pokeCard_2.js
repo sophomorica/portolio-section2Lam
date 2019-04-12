@@ -173,7 +173,7 @@ class Pokemon {
         },
       },{
         move: {
-          name: prompt("Pick your last Move BITCH!")
+          name: prompt("Pick your last Move!")
         },
       },
     ]
