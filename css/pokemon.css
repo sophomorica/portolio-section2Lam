@@ -1,6 +1,10 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
- 
+  background: linear-gradient(
+    180deg,
+    rgb(237,107,96) 0%,
+    rgb(241, 73, 57) 100%);
+
 }
 p{
   font-weight: bolder;
@@ -19,7 +23,7 @@ main {
 h1{
   font-size: 50px;
   margin-top: 20px;
-  
+  text-shadow: 2px 2px 4px rgb(110, 109, 109);
 }
 #navbar{
   padding: 0px;
@@ -56,6 +60,7 @@ nav ul li a{
   cursor: pointer;
   position: relative;
   border-radius: 15%;
+ 
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 .card.is-flipped {
@@ -71,7 +76,8 @@ nav ul li a{
   text-align: center;
   /* border: 2px solid #ccc; */
   backface-visibility: hidden;
- border-radius: 25%;
+ border-radius: 15%;
+ background-color: rgba(0, 140, 255, 0.623);
 }
 
 .card__face--back {
@@ -115,6 +121,7 @@ button {
 .button-container{
   display:flex;
   justify-content: space-between;
+  /* width: 200em; */
 }
 figure {
   margin: 4px;
