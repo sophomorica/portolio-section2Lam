@@ -31,38 +31,24 @@ main {
 
 }
 
-#navbar{
-  padding: 0px;
-  margin: 0px;
-}
+
 nav{
   padding: 0px;
   margin: 0px;
-}
-nav ul {
-  /* text-align: right; */
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgb(72, 173, 241) 0%,
-    rgb(42, 95, 128) 100%
-  );
-  margin: 0px;
+  text-align: center;
 }
 
 nav ul li {
   display: inline-block;
-  margin: 55px;
+  /* margin: 55px;
   margin-bottom: 15px;
-  margin-top: 25px;
+  margin-top: 25px; */
+  margin-right: 40px;
 }
 nav ul li a{
   text-decoration: none;
-  /* padding: 0px; */
-  color: black;
+  padding: 0px;
+  font-size: 30px;
 }
 
 .scene {
