@@ -41,12 +41,27 @@
         <button class="button button_2">Find a Pokemon by ID number</button>
       </div>
     </div>
+    <!---trying to add a form that appears when you want to add a pokemon-->
     <div class="modal">
       <div class="modal-background"></div>
-      <div class="modal-content">
-        <!-- Any other Bulma elements you want -->
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Pokemon Info!</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <!--Right here we are trying to add a form that shows up in the modal-->
+        <div class="field">
+          <label class="label">Pokemon Stats</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="New Pokemon Name">
+          </div>
+          <p class="help">Any name you want</p>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Create</button>
+          <button class="button">Cancel</button>
+        </footer>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
     </div>
     </main>
 
