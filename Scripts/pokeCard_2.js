@@ -160,10 +160,13 @@ class Pokemon {
 
 const newPokemonButton = document.querySelector(".button_1");
 const pokeModal = document.querySelector('.modal')
-const closeModal = document.querySelector('.modal')
+const closeModal = document.querySelector('.delete')
+const newPokemon = document.querySelector('.is-success')
+
+//that things value make a constructor for the move create an ID and then queryselector get the value and add it into the constructor
 
 closeModal.addEventListener('click',function(){
-  closeModal.classList.toggle('is-active')
+  pokeModal.classList.toggle('is-active')
 })
 
 newPokemonButton.addEventListener("click", function() {
