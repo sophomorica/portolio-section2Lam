@@ -60,11 +60,12 @@ nav ul li a {
   margin: 20px;
   perspective: 600px;
 }
+
 .card {
   text-align: center;
   width: 100%;
   height: 100%;
-  transition: transform 0.25s;
+  transition: all 0.25s ease;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
@@ -72,6 +73,7 @@ nav ul li a {
 
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
+
 .card.is-flipped {
   transform: rotateY(180deg);
   /* width: 100%;
@@ -103,9 +105,11 @@ nav ul li a {
   backface-visibility: hidden;
   font-weight: bolder;
   color: black;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 button {
   width: 300px;
+  height: 250px;
   color: rgb(255, 255, 255);
   font-size: 23px;
   line-height: 23px;

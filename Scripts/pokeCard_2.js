@@ -48,12 +48,16 @@ function cardBack(pokeData) {
   let cardBack = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
+  let classes = cardBack.classList;
   intro.className = "attack-moves";
   backImage.className = "backImage";
   backImage.src = `../images/pokeball_1.png`;
   intro.textContent = "Pokemon Moves";
   cardBack.className = "card__face card__face--back";
 
+
+
+  
   cardBack.appendChild(intro);
   cardBack.appendChild(backImage);
   cardBack.appendChild(cardBackInfo(pokeData));
@@ -72,8 +76,10 @@ function createPokeCard(pokeData) {
   card.appendChild(cardFront(pokeData));
   card.appendChild(cardBack(pokeData));
 
+
   scene.appendChild(card);
   mainContainer.appendChild(scene);
+ 
 }
 const allFetchedPokemon = [];
 
@@ -181,17 +187,7 @@ fetchPokemonbyID.addEventListener("click", function() {
   let pokemonID = prompt("Enter the ID of an existing Pokemon:");
   fetchSinglePokemon(pokemonID);
 });
-// const fetchPokemonbyID = document.querySelector('button_2')
-//   fetchPokemonbyID.addEventListener('click', function() {
-//     let pokemonID = prompt('Enter an ID of an existing pokemon:')
-//     fetchSinglePokemon(pokemonID)
-//   });
 
-// const removeSongCards = () => {
-//   while (musicWrapper.firstChild{
-//     musicWrapper.removeChild(musicWrapper.firstChild);
-//   }
-// }
 
 // git remote -v
 // git remote add "URL" adds an upstream
