@@ -11,14 +11,17 @@ h1 {
   font-size: 50px;
   margin-top: 20px;
   text-shadow: 2px 2px 4px rgb(110, 109, 109);
+  color: black;
 }
 
 h2 {
   text-align: center;
+  color: black;
 }
 p {
   font-weight: bolder;
   letter-spacing: 4px;
+  color: black;
 }
 main {
   display: flex;
@@ -142,6 +145,7 @@ figure {
   padding: 4px;
   /* width: 220px;
   height: 220px; */
+  color: black;
 }
 
 img {
