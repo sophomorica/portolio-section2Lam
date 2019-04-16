@@ -59,6 +59,7 @@ nav ul li a {
   /* border: 1px solid #ccc; */
   margin: 20px;
   perspective: 600px;
+  background-color: none;
 }
 
 .card {
@@ -70,14 +71,15 @@ nav ul li a {
   cursor: pointer;
   position: relative;
   border-radius: 15%;
-  
+  background-color: none;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 
-.card.is-flipped {
+.is-flipped {
   transform: rotateY(180deg);
   /* width: 100%;
   height: 100%; */
+  /* backface-visibility: hidden; */
   backface-visibility: hidden;
 
 }
@@ -87,7 +89,7 @@ nav ul li a {
   height: 100%;
   text-align: center;
   /* border: 2px solid #ccc; */
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   border-radius: 15%;
   background: linear-gradient(
     180deg,
