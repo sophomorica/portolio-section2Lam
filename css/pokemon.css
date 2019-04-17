@@ -185,3 +185,8 @@ img {
   margin-top: 20px;
   margin-bottom: 0px;
 }
+div.field{
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+}
