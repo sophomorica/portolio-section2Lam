@@ -182,9 +182,11 @@ closeModal.addEventListener('click',function(){
 newPokemonButton.addEventListener("click", function() {
   //let pokeName = prompt("Enter a name for a new pokemon:");
 pokeModal.classList.toggle('is-active')
-  createPokeCard(new Pokemon(newPokemon));
 });
-
+newPokemon.addEventListener('click',function(){
+createPokeCard(new Pokemon(newPokemon));
+pokeModal.classList.toggle('is-active')
+})
 const fetchPokemonbyID = document.querySelector(".button_2");
 
 fetchPokemonbyID.addEventListener("click", function() {
