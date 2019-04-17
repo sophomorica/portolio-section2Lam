@@ -12,7 +12,6 @@ const closeModal = document.querySelector('.delete')
 const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
-
 const move_1 = document.getElementsByClassName('.move_1').value
 const move_2 = document.getElementsByClassName('.move_2').value
 const move_3 = document.getElementsByClassName('.move_3').value
@@ -94,7 +93,6 @@ function cardBack(pokeData) {
   let cardBack = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
-  let classes = cardBack.classList;
   intro.className = "attack-moves";
   backImage.className = "backImage";
   backImage.src = `../images/pokeball_1.png`;
@@ -127,18 +125,6 @@ function createPokeCard(pokeData) {
   mainContainer.appendChild(scene);
  
 }
-const allFetchedPokemon = [];
-
-pokemon.forEach(singleMon => {
-  fetch(singleMon.url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(myJson) {
-      allFetchedPokemon.push(myJson);
-      createPokeCard(matchIdToImage(myJson));
-    });
-});
 
 function matchIdToImage(aPokemon) {
   if (aPokemon.id === 0) {
@@ -180,6 +166,24 @@ function fetchSinglePokemon(id) {
       createPokeCard(matchIdToImage(retrievedPokemon));
     });
 }
+function eraseVal(){
+  move_1.value = ''
+  move_2.value = ''
+  move_3.value = ''
+  move_4.value = ''
+  newPokemon.value = ''
+}
+//creating an array---------
+pokemon.forEach(singleMon => {
+  fetch(singleMon.url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      allFetchedPokemon.push(myJson);
+      createPokeCard(matchIdToImage(myJson));
+    });
+});
 
 
 //event listeners for the buttons------
@@ -190,14 +194,23 @@ cancel.addEventListener('click',function(){
 closeModal.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
-
 newPokemonButton.addEventListener("click", function() {
-  //let pokeName = prompt("Enter a name for a new pokemon:");
 pokeModal.classList.toggle('is-active')
 });
-const fetchPokemonbyID = document.querySelector(".button_2");
+newPokemonCreate.addEventListener('click',function(){
+  let move_1 = document.getElementById('move_1').value
+  let move_2 = document.getElementById('move_2').value
+  let move_3 = document.getElementById('move_3').value
+  let move_4 = document.getElementById('move_4').value
+  let pokeName = document.getElementById('newPokemon').value
 
-fetchPokemonbyID.addEventListener("click", function() {
-  let pokemonID = prompt("Enter the ID of an existing Pokemon:");
-  fetchSinglePokemon(pokemonID);
-});
+  eraseVal()
+  
+  createPokeCard(new Pokemon(pokeName,move_1,move_2,move_3,move_4));
+  pokeModal.classList.toggle('is-active')
+})
+
+// fetchPokemonbyID.addEventListener("click", function() {
+//   let pokemonID = prompt("Enter the ID of an existing Pokemon:");
+//   fetchSinglePokemon(pokemonID);
+// });

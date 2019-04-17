@@ -6,6 +6,10 @@ body {
     rgb(160, 37, 21) 100%
   );
 }
+footer{
+  text-align: center;
+  padding: 60px;
+}
 h1 {
   text-align: center;
   font-size: 50px;

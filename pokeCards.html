@@ -41,10 +41,11 @@
 
         <div class="container"></div>
         <div class="button-container">
-          <button class="button button_1">Create New Pokemon</button>
-          <button class="button button_2">Find a Pokemon by ID number</button>
+          <button class=" button_1">Create New Pokemon</button>
+          <button class=" button_2">Find a Pokemon by ID number</button>
         </div>
       </div>
+     
       <!---trying to add a form that appears when you want to add a pokemon-->
       <div class="modal">
         <div class="modal-background"></div>
@@ -104,22 +105,16 @@
         </div>
       </div>
 
-      <!-- this seems to work when I use it...now i have to impleemnt it elsewhere -->
-      <input type="text" id="txt" name="txt" />
-      <button onclick="getValue()">Get Value</button>
-      <script>
-        function eraseVal() {
-          txt.value = "";
-        }
-        function getValue() {
-          var txt = document.getElementById("txt").value;
-          eraseVal();
-          alert(txt);
-        }
-      </script>
-      <!--This ^^^^^^^^^^^^is working ....now for its use elsewher-->
+     
+          </div>
+        </div>
 
-      <footer></footer>
+      <footer>
+          <p>&copy; 2019 January</p>
+          <p>
+            Created by<a href="https://www.sophomorica.com"><em>Sophomorica</em></a>
+          </p>
+        </footer>
     </main>
 
     <script src="/scripts/pokeCard_2.js" type="module"></script>
