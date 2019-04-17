@@ -1,6 +1,6 @@
 import { pokemon } from "../data/pokemon.js";
 
-/** */
+// declared variables--------
 const mainContainer = document.querySelector(".container");
 const allFetchedPokemon = [];
 const newPokemonButton = document.querySelector(".button_1");
@@ -10,6 +10,7 @@ const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
 const fetchModal = document.querySelector('.modal_2')
+//----------------
 
 //creating an array-------
 pokemon.forEach(singleMon => {
