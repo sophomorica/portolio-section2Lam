@@ -142,22 +142,22 @@ class Pokemon {
     this.moves = [
       {
         move: {
-          name: prompt("Pick your first move")
+          name: move_1
         }
       },
       {
         move: {
-          name: prompt("Pick your second move")
+          name: move_2
         }
       },
       {
         move: {
-          name: prompt("Pick your third move")
+          name: move_3
         }
       },
       {
         move: {
-          name: prompt("Pick your last Move!")
+          name: move_4
         }
       }
     ];
@@ -167,7 +167,11 @@ class Pokemon {
 const newPokemonButton = document.querySelector(".button_1");
 const pokeModal = document.querySelector('.modal')
 const closeModal = document.querySelector('.delete')
-const newPokemon = document.querySelector('.is-success')
+const newPokemon = document.querySelector('#createButton')
+const move_1 = document.getElementsByClassName('move_1').value = ''
+const move_2 = document.getElementsByClassName('move_2').value = ''
+const move_3 = document.getElementsByClassName('move_3').value = ''
+const move_4 = document.getElementsByClassName('move_4').value = ''
 
 //that things value make a constructor for the move create an ID and then queryselector get the value and add it into the constructor
 
@@ -178,7 +182,7 @@ closeModal.addEventListener('click',function(){
 newPokemonButton.addEventListener("click", function() {
   //let pokeName = prompt("Enter a name for a new pokemon:");
 pokeModal.classList.toggle('is-active')
-  createPokeCard(new Pokemon(pokeName));
+  createPokeCard(new Pokemon(newPokemon));
 });
 
 const fetchPokemonbyID = document.querySelector(".button_2");
