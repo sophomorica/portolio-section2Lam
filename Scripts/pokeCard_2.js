@@ -208,8 +208,8 @@ newPokemonCreate.addEventListener('click',function(){
 })
 
 fetchPokemonbyID.addEventListener("click", function() {
-  fetchModal.classList.toggle('is-active')
-  // let pokemonID = prompt("Enter the ID of an existing Pokemon:");
+  // fetchModal.classList.toggle('is-active')
+  let pokemonID = prompt("Enter the ID of an existing Pokemon:");
   fetchSinglePokemon(pokemonID);
 });
 
