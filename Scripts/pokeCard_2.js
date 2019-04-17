@@ -55,9 +55,6 @@ function cardBack(pokeData) {
   intro.textContent = "Pokemon Moves";
   cardBack.className = "card__face card__face--back";
 
-
-
-  
   cardBack.appendChild(intro);
   cardBack.appendChild(backImage);
   cardBack.appendChild(cardBackInfo(pokeData));
@@ -136,7 +133,7 @@ function fetchSinglePokemon(id) {
 }
 
 class Pokemon {
-  constructor(name) {
+  constructor(name,move_1,move_2,move_3,move_4) {
     this.id = 0;
     this.name = name;
     this.moves = [
@@ -170,15 +167,8 @@ const pokeModal = document.querySelector('.modal')
 const closeModal = document.querySelector('.delete')
 const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
-const move_1 = document.getElementsByClassName('.move_1').value
-const move_2 = document.getElementsByClassName('.move_2').value
-const move_3 = document.getElementsByClassName('.move_3').value
-const move_4 = document.getElementsByClassName('.move_4').value
 
-function getVal(){
-  var txt = document.getElementsByClassName('.move_1').value
-  alert(txt)
-}
+
 
 //that things value make a constructor for the move create an ID and then queryselector get the value and add it into the constructor
 cancel.addEventListener('click',function(){
@@ -193,13 +183,30 @@ newPokemonButton.addEventListener("click", function() {
   //let pokeName = prompt("Enter a name for a new pokemon:");
 pokeModal.classList.toggle('is-active')
 });
+function eraseVal(){
+  move_1.value = ''
+  move_2.value = ''
+  move_3.value = ''
+  move_4.value = ''
+  newPokemon.value = ''
+}
+
+
+
 newPokemonCreate.addEventListener('click',function(){
-
-  let pokeName = document.getElementsByClassName('.newPokemon').value
-// createPokeCard(new Pokemon(pokeName));
-
+  let move_1 = document.getElementById('move_1').value
+  let move_2 = document.getElementById('move_2').value
+  let move_3 = document.getElementById('move_3').value
+  let move_4 = document.getElementById('move_4').value
+  let pokeName = document.getElementById('newPokemon').value
+  // console.log(move_2, move_1,move_3, move_4, pokeName)
+  eraseVal()
+  
+createPokeCard(new Pokemon(pokeName,move_1,move_2,move_3,move_4));
 pokeModal.classList.toggle('is-active')
 })
+
+
 const fetchPokemonbyID = document.querySelector(".button_2");
 
 fetchPokemonbyID.addEventListener("click", function() {
@@ -207,6 +214,14 @@ fetchPokemonbyID.addEventListener("click", function() {
   fetchSinglePokemon(pokemonID);
 });
 
+//  function eraseVal() {
+//   txt.value = "";
+// }
+// function getVal() {
+//   var txt = document.getElementById("move_1").value;
+//   eraseVal()
+//   alert(txt);
+// }
 
 // git remote -v
 // git remote add "URL" adds an upstream

@@ -58,28 +58,32 @@
             <label class="label">Pokemon Stats</label>
             <div class="control">
               <input
-                class="input is-rounded newPokemon"
+              id="newPokemon"
+                class="input is-rounded"
                 type="text"
                 placeholder="New Pokemon Name"
               />
               <input
                 id="move_1"
-                class="input is-rounded move_1"
+                class="input is-rounded"
                 type="text"
                 placeholder="Move 1"
               />
               <input
-                class="input is-rounded move_2"
+              id="move_2"
+                class="input is-rounded"
                 type="text"
                 placeholder="Move 2"
               />
               <input
-                class="input is-rounded move_3"
+              id="move_3"
+                class="input is-rounded"
                 type="text"
                 placeholder="Move 3"
               />
               <input
-                class="input is-rounded move_4"
+              id="move_4"
+                class="input is-rounded"
                 type="text"
                 placeholder="Move 4"
               />
@@ -89,20 +93,12 @@
           <footer class="modal-card-foot">
             <button
               id="createButton"
-              onclick="getVal()"
+              
               class="button is-success"
             >
               Create
             </button>
-            <script> function eraseVal() {
-                txt.value = "";
-              }
-              function getVal() {
-                var txt = document.getElementById("move_1").value;
-                eraseVal()
-                alert(txt);
-              }
-            </script>
+           
             <button id="cancel" class="button">Cancel</button>
           </footer>
         </div>
