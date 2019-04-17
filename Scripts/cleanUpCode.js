@@ -1,30 +1,53 @@
 import { pokemon } from "../data/pokemon.js";
 
-/** */
+
+//declaring constant variables.
 const mainContainer = document.querySelector(".container");
+
 const allFetchedPokemon = [];
+
 const newPokemonButton = document.querySelector(".button_1");
 const pokeModal = document.querySelector('.modal')
 const closeModal = document.querySelector('.delete')
 const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
-const fetchModal = document.querySelector('.modal_2')
+const move_1 = document.getElementsByClassName('.move_1').value
+const move_2 = document.getElementsByClassName('.move_2').value
+const move_3 = document.getElementsByClassName('.move_3').value
+const move_4 = document.getElementsByClassName('.move_4').value
 
-//creating an array-------
-pokemon.forEach(singleMon => {
-  fetch(singleMon.url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(myJson) {
-      allFetchedPokemon.push(myJson);
-      createPokeCard(matchIdToImage(myJson));
-    });
-});
+// constructor for the card
+class Pokemon {
+  constructor(name) {
+    this.id = 0;
+    this.name = name;
+    this.moves = [
+      {
+        move: {
+          name: move_1
+        }
+      },
+      {
+        move: {
+          name: move_2
+        }
+      },
+      {
+        move: {
+          name: move_3
+        }
+      },
+      {
+        move: {
+          name: move_4
+        }
+      }
+    ];
+  }
+}
 
-//functions---------------
-
+// functions--------------
 function cardFront(pokeData) {
   let cardFront = document.createElement("div");
   cardFront.className = "card__face card__face--front";
@@ -70,13 +93,15 @@ function cardBack(pokeData) {
   let cardBack = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
-  let classes = cardBack.classList;
   intro.className = "attack-moves";
   backImage.className = "backImage";
   backImage.src = `../images/pokeball_1.png`;
   intro.textContent = "Pokemon Moves";
   cardBack.className = "card__face card__face--back";
 
+
+
+  
   cardBack.appendChild(intro);
   cardBack.appendChild(backImage);
   cardBack.appendChild(cardBackInfo(pokeData));
@@ -100,6 +125,7 @@ function createPokeCard(pokeData) {
   mainContainer.appendChild(scene);
  
 }
+
 function matchIdToImage(aPokemon) {
   if (aPokemon.id === 0) {
     aPokemon.imageID = 0;
@@ -147,40 +173,20 @@ function eraseVal(){
   move_4.value = ''
   newPokemon.value = ''
 }
-
-class Pokemon {
-  constructor(name,move_1,move_2,move_3,move_4) {
-    this.id = 0;
-    this.name = name;
-    this.moves = [
-      {
-        move: {
-          name: move_1
-        }
-      },
-      {
-        move: {
-          name: move_2
-        }
-      },
-      {
-        move: {
-          name: move_3
-        }
-      },
-      {
-        move: {
-          name: move_4
-        }
-      }
-    ];
-  }
-}
+//creating an array---------
+pokemon.forEach(singleMon => {
+  fetch(singleMon.url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      allFetchedPokemon.push(myJson);
+      createPokeCard(matchIdToImage(myJson));
+    });
+});
 
 
-
-
-// All button event Listeners------------
+//event listeners for the buttons------
 cancel.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
@@ -188,12 +194,9 @@ cancel.addEventListener('click',function(){
 closeModal.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
-
 newPokemonButton.addEventListener("click", function() {
- 
 pokeModal.classList.toggle('is-active')
 });
-
 newPokemonCreate.addEventListener('click',function(){
   let move_1 = document.getElementById('move_1').value
   let move_2 = document.getElementById('move_2').value
@@ -207,12 +210,7 @@ newPokemonCreate.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
 
-fetchPokemonbyID.addEventListener("click", function() {
-  // fetchModal.classList.toggle('is-active')
-  let pokemonID = prompt("Enter the ID of an existing Pokemon:");
-  fetchSinglePokemon(pokemonID);
-});
-
-
-// git remote -v
-// git remote add "URL" adds an upstream
+// fetchPokemonbyID.addEventListener("click", function() {
+//   let pokemonID = prompt("Enter the ID of an existing Pokemon:");
+//   fetchSinglePokemon(pokemonID);
+// });

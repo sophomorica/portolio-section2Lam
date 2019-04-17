@@ -1,23 +1,31 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(
     180deg,
-    rgb(210,51,75) 0%,
-    rgb(160,37,21) 100%);
+    rgb(210, 51, 75) 0%,
+    rgb(160, 37, 21) 100%
+  );
 }
-h1{
-  text-align:center;
+footer{
+  text-align: center;
+  padding: 60px;
+}
+h1 {
+  text-align: center;
   font-size: 50px;
   margin-top: 20px;
   text-shadow: 2px 2px 4px rgb(110, 109, 109);
+  color: black;
 }
 
-h2{
+h2 {
   text-align: center;
+  color: black;
 }
-p{
+p {
   font-weight: bolder;
   letter-spacing: 4px;
+  color: black;
 }
 main {
   display: flex;
@@ -28,11 +36,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
-
-nav{
+nav {
   padding: 0px;
   margin: 0px;
   text-align: center;
@@ -45,7 +51,7 @@ nav ul li {
   margin-top: 25px; */
   margin-right: 40px;
 }
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   padding: 0px;
   font-size: 30px;
@@ -57,24 +63,32 @@ nav ul li a{
   /* border: 1px solid #ccc; */
   margin: 20px;
   perspective: 600px;
+  background-color: none;
 }
+
 .card {
   text-align: center;
   width: 100%;
   height: 100%;
-  transition: transform .25s;
+  transition: all 0.25s ease;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
   border-radius: 15%;
- 
+  background-color: none;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
+
 .card.is-flipped {
   transform: rotateY(180deg);
   /* width: 100%;
   height: 100%; */
+ 
+  /* backface-visibility: hidden; */
 
+}
+div.card{
+  background-color: transparent;
 }
 .card__face {
   position: absolute;
@@ -83,13 +97,13 @@ nav ul li a{
   text-align: center;
   /* border: 2px solid #ccc; */
   backface-visibility: hidden;
- border-radius: 15%;
- background: linear-gradient(
+  border-radius: 15%;
+  background: linear-gradient(
     180deg,
-    rgb(0,140,255) 0%,
-    rgb(0,140,255, .623) 100%);
-
-
+    rgb(0, 140, 255) 0%,
+    rgb(0, 140, 255, 0.623) 100%
+  );
+  
 }
 
 .card__face--back {
@@ -100,9 +114,11 @@ nav ul li a{
   backface-visibility: hidden;
   font-weight: bolder;
   color: black;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 button {
   width: 300px;
+  
   color: rgb(255, 255, 255);
   font-size: 23px;
   line-height: 23px;
@@ -124,7 +140,9 @@ button {
   border: 2px solid rgb(164, 116, 28);
   display: inline-block;
 }
-
+.button{
+  height: 100px;
+}
 .button:hover {
   background: rgb(252, 207, 8);
 }
@@ -132,8 +150,8 @@ button {
 .button:active {
   background: #e65502;
 }
-.button-container{
-  display:flex;
+.button-container {
+  display: flex;
   justify-content: space-around;
   /* width: 200em; */
 }
@@ -142,6 +160,7 @@ figure {
   padding: 4px;
   /* width: 220px;
   height: 220px; */
+  color: black;
 }
 
 img {
@@ -153,17 +172,16 @@ img {
   top: 30px;
   margin-top: 40px;
   text-transform: capitalize;
-  
 }
 
 .backImage {
   position: absolute;
-  opacity: .15;
+  opacity: 0.15;
   left: 26px;
   top: 20px;
 }
-.attack-moves{
+.attack-moves {
   font-size: 25px;
-  margin-top:20px;
+  margin-top: 20px;
   margin-bottom: 0px;
 }
