@@ -1,8 +1,7 @@
 import { pokemon } from "../data/pokemon.js";
 
-// declared variables--------
+//--------------------------declared variables-----------------------------
 const mainContainer = document.querySelector(".container");
-const allFetchedPokemon = [];
 const newPokemonButton = document.querySelector(".button_1");
 const pokeModal = document.querySelector('.modal')
 const closeModal = document.querySelector('.delete')
@@ -10,9 +9,11 @@ const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
 const fetchModal = document.querySelector('.modal_2')
-//----------------
+//-------------------------------------------------------------------------
 
-//creating an array-------
+//-----------------------------creating an array---------------------------
+
+const allFetchedPokemon = [];
 pokemon.forEach(singleMon => {
   fetch(singleMon.url)
     .then(function(response) {
@@ -24,7 +25,7 @@ pokemon.forEach(singleMon => {
     });
 });
 
-//functions---------------
+//--------------------------------functions---------------------------------
 
 function cardFront(pokeData) {
   let cardFront = document.createElement("div");
@@ -148,7 +149,7 @@ function eraseVal(){
   move_4.value = ''
   newPokemon.value = ''
 }
-
+//----------------------------------Constructor---------------------------------
 class Pokemon {
   constructor(name,move_1,move_2,move_3,move_4) {
     this.id = 0;
@@ -181,7 +182,7 @@ class Pokemon {
 
 
 
-// All button event Listeners------------
+//---------------------------All button event Listeners--------------------------
 cancel.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
@@ -209,14 +210,16 @@ newPokemonCreate.addEventListener('click',function(){
 })
 
 fetchPokemonbyID.addEventListener("click", function() {
-  // fetchModal.classList.toggle('is-active')
+  
   let pokemonID = prompt("Enter the ID of an existing Pokemon:");
   fetchSinglePokemon(pokemonID);
 });
 
-// $("#showModal").click(function() {
-//   $(".modal").addClass("is-active");  
-// });
+
+//------------------does this work to access the DOM??---------------
+$("#showModal").click(function() {
+  $(".modal").addClass("is-active");  
+});
 
 // $(".delete").click(function() {
 //   $(".modal").removeClass("is-active");
