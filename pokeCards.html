@@ -8,68 +8,122 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
-    
     />
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    
+
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="/css/pokemon.css"
     />
-
   </head>
   <body>
-      <nav>
-          <ul id="navbar">
-            <li><a href="/index.html">Home Page</a></li>
-          </ul>
-        </nav>
+    <nav>
+      <ul id="navbar">
+        <li><a href="/index.html">Home Page</a></li>
+      </ul>
+    </nav>
     <main>
-        
       <div class="main-container">
-      <h1 style="letter-spacing:10px;">Pokemon Cards</h1>
-      <h2 style="letter-spacing:10px;">Flip the cards to reveal their moves</h2>
-      <h2 style="letter-spacing:10px;">OR</h2>
-      <h2 style="letter-spacing:10px;">
-        Use the button to find your favorite Pokemon
-      </h2>
-      <h2 style="letter-spacing:10px;">OR</h2>
-      <h2 style="letter-spacing:10px;">Create your own, choosing your own moves!</h2>
+        <h1 style="letter-spacing:10px;">Pokemon Cards</h1>
+        <h2 style="letter-spacing:10px;">
+          Flip the cards to reveal their moves
+        </h2>
+        <h2 style="letter-spacing:10px;">OR</h2>
+        <h2 style="letter-spacing:10px;">
+          Use the button to find your favorite Pokemon
+        </h2>
+        <h2 style="letter-spacing:10px;">OR</h2>
+        <h2 style="letter-spacing:10px;">
+          Create your own, choosing your own moves!
+        </h2>
 
-      <div class="container"></div>
-      <div class="button-container">
-        <button class="button button_1">Create New Pokemon</button>
-        <button class="button button_2">Find a Pokemon by ID number</button>
-      </div>
-    </div>
-    <!---trying to add a form that appears when you want to add a pokemon-->
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Pokemon Info!</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <!--Right here we are trying to add a form that shows up in the modal-->
-        <div class="field">
-          <label class="label">Pokemon Stats</label>
-          <div class="control">
-            <input class="input is-rounded newPokemon" type="text" placeholder="New Pokemon Name">
-            <input class="input is-rounded move_1" type="text" placeholder="Move 1">
-            <input class="input is-rounded move_2" type="text" placeholder="Move 2">
-            <input class="input is-rounded move_3" type="text" placeholder="Move 3">
-            <input class="input is-rounded move_4" type="text" placeholder="Move 4">
-          </div>
-          <p class="help">Any name you want</p>
+        <div class="container"></div>
+        <div class="button-container">
+          <button class="button button_1">Create New Pokemon</button>
+          <button class="button button_2">Find a Pokemon by ID number</button>
         </div>
-        <footer class="modal-card-foot">
-          <button id= "createButton" class="button is-success">Create</button>
-          <button class="button">Cancel</button>
-        </footer>
       </div>
-    </div>
+      <!---trying to add a form that appears when you want to add a pokemon-->
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Pokemon Info!</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <!--Right here we are trying to add a form that shows up in the modal-->
+          <div class="field">
+            <label class="label">Pokemon Stats</label>
+            <div class="control">
+              <input
+                class="input is-rounded newPokemon"
+                type="text"
+                placeholder="New Pokemon Name"
+              />
+              <input
+                id="move_1"
+                class="input is-rounded move_1"
+                type="text"
+                placeholder="Move 1"
+              />
+              <input
+                class="input is-rounded move_2"
+                type="text"
+                placeholder="Move 2"
+              />
+              <input
+                class="input is-rounded move_3"
+                type="text"
+                placeholder="Move 3"
+              />
+              <input
+                class="input is-rounded move_4"
+                type="text"
+                placeholder="Move 4"
+              />
+            </div>
+            <p class="help">Any name you want</p>
+          </div>
+          <footer class="modal-card-foot">
+            <button
+              id="createButton"
+              onclick="getVal()"
+              class="button is-success"
+            >
+              Create
+            </button>
+            <script> function eraseVal() {
+                txt.value = "";
+              }
+              function getVal() {
+                var txt = document.getElementById("move_1").value;
+                eraseVal()
+                alert(txt);
+              }
+            </script>
+            <button id="cancel" class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
+      <!-- this seems to work when I use it...now i have to impleemnt it elsewhere -->
+      <input type="text" id="txt" name="txt" />
+      <button onclick="getValue()">Get Value</button>
+      <script>
+        function eraseVal() {
+          txt.value = "";
+        }
+        function getValue() {
+          var txt = document.getElementById("txt").value;
+          eraseVal();
+          alert(txt);
+        }
+      </script>
+      <!--This ^^^^^^^^^^^^is working ....now for its use elsewher-->
+
+      <footer></footer>
     </main>
 
     <script src="/scripts/pokeCard_2.js" type="module"></script>

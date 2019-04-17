@@ -163,17 +163,27 @@ class Pokemon {
     ];
   }
 }
+//trying to erase all the values in the form
 
 const newPokemonButton = document.querySelector(".button_1");
 const pokeModal = document.querySelector('.modal')
 const closeModal = document.querySelector('.delete')
+const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const move_1 = document.getElementsByClassName('.move_1').value
 const move_2 = document.getElementsByClassName('.move_2').value
 const move_3 = document.getElementsByClassName('.move_3').value
 const move_4 = document.getElementsByClassName('.move_4').value
 
+function getVal(){
+  var txt = document.getElementsByClassName('.move_1').value
+  alert(txt)
+}
+
 //that things value make a constructor for the move create an ID and then queryselector get the value and add it into the constructor
+cancel.addEventListener('click',function(){
+  pokeModal.classList.toggle('is-active')
+})
 
 closeModal.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
@@ -185,8 +195,9 @@ pokeModal.classList.toggle('is-active')
 });
 newPokemonCreate.addEventListener('click',function(){
 
-  let pokeName = document.getElementsByClassName('newPokemon').value
-createPokeCard(new Pokemon(pokeName));
+  let pokeName = document.getElementsByClassName('.newPokemon').value
+// createPokeCard(new Pokemon(pokeName));
+
 pokeModal.classList.toggle('is-active')
 })
 const fetchPokemonbyID = document.querySelector(".button_2");
