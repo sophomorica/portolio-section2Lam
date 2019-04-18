@@ -190,3 +190,8 @@ div.field{
   text-align: center;
   padding: 15px;
 }
+.control{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
