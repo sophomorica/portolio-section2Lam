@@ -9,6 +9,7 @@ const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
 const fetchModal = document.querySelector('.modal_2')
+
 //-------------------------------------------------------------------------
 
 //-----------------------------creating an array---------------------------
@@ -38,9 +39,12 @@ function cardFront(pokeData) {
   caption.textContent = pokeData.name;
   if (pokeData.id !== 0) {
     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`;
-  } else {
-    image.src = `../images/pokeball_1.png`;
-  }
+ }// else if (userImage.vlalue = true){
+  //    image.src= document.getElementById('userImage').value;}
+     else{
+       image.src = `../images/pokeball_1.png`
+     }
+ 
 
   figure.appendChild(image);
   figure.appendChild(caption);
@@ -72,7 +76,6 @@ function cardBack(pokeData) {
   let cardBack = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
-  let classes = cardBack.classList;
   intro.className = "attack-moves";
   backImage.className = "backImage";
   backImage.src = `../images/pokeball_1.png`;
@@ -148,6 +151,7 @@ function eraseVal(){
   move_3.value = ''
   move_4.value = ''
   newPokemon.value = ''
+
 }
 //----------------------------------Constructor---------------------------------
 class Pokemon {
@@ -191,8 +195,7 @@ closeModal.addEventListener('click',function(){
   pokeModal.classList.toggle('is-active')
 })
 
-newPokemonButton.addEventListener("click", function() {
- 
+newPokemonButton.addEventListener("click", function() { 
 pokeModal.classList.toggle('is-active')
 });
 
@@ -201,12 +204,14 @@ newPokemonCreate.addEventListener('click',function(){
   let move_2 = document.getElementById('move_2').value
   let move_3 = document.getElementById('move_3').value
   let move_4 = document.getElementById('move_4').value
+ 
   let pokeName = document.getElementById('newPokemon').value
 
   eraseVal()
   
   createPokeCard(new Pokemon(pokeName,move_1,move_2,move_3,move_4));
   pokeModal.classList.toggle('is-active')
+  userImage.value = ''
 })
 
 fetchPokemonbyID.addEventListener("click", function() {
@@ -217,9 +222,9 @@ fetchPokemonbyID.addEventListener("click", function() {
 
 
 //------------------does this work to access the DOM??---------------
-$("#showModal").click(function() {
-  $(".modal").addClass("is-active");  
-});
+// $("#showModal").click(function() {
+//   $(".modal").addClass("is-active");  
+// });
 
 // $(".delete").click(function() {
 //   $(".modal").removeClass("is-active");
