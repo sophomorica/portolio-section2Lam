@@ -214,13 +214,6 @@ fetchPokemonbyID.addEventListener("click", function() {
   fetchSinglePokemon(pokemonID);
 });
 
-//------------------does this work to access the DOM??---------------
-// $("#showModal").click(function() {
-//   $(".modal").addClass("is-active");
-// });
 
-// $(".delete").click(function() {
-//   $(".modal").removeClass("is-active");
-// });
 // git remote -v
 // git remote add "URL" adds an upstream
