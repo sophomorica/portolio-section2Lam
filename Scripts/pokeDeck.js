@@ -8,7 +8,8 @@ const closeModal = document.querySelector('.delete')
 const cancel = document.querySelector('#cancel')
 const newPokemonCreate = document.querySelector('#createButton')
 const fetchPokemonbyID = document.querySelector(".button_2");
-const fetchModal = document.querySelector('.modal_2')
+// const fetchModal = document.querySelector('#modal_1')
+const userImage = document.getElementById('userImage')
 
 //-------------------------------------------------------------------------
 
@@ -39,9 +40,11 @@ function cardFront(pokeData) {
   caption.textContent = pokeData.name;
   if (pokeData.id !== 0) {
     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`;
- }// else if (userImage.vlalue = true){
-  //    image.src= document.getElementById('userImage').value;}
-     else{
+ }
+ else if (userImage.value) {
+     image.src = userImage.value
+    } else
+     {
        image.src = `../images/pokeball_1.png`
      }
  
@@ -215,7 +218,7 @@ newPokemonCreate.addEventListener('click',function(){
 })
 
 fetchPokemonbyID.addEventListener("click", function() {
-  
+  // fetchModal.classList.toggle('is-active')
   let pokemonID = prompt("Enter the ID of an existing Pokemon:");
   fetchSinglePokemon(pokemonID);
 });
