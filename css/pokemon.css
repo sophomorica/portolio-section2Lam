@@ -13,8 +13,8 @@ footer {
 h1 {
   text-align: center;
   font-size: 50px;
-  margin-top: 20px;
-  text-shadow: 3px 3px 3px rgb(0, 142, 236);
+  /* margin-top: 20px; */
+  text-shadow: 3px 3px 3px rgb(160, 37, 21);
   color: black;
 }
 
@@ -186,5 +186,9 @@ img {
 div.field {
   background-color: white;
   text-align: center;
+  padding: 15px;
+}
+.pokeHeader{
+  background-color: white;
   padding: 15px;
 }
