@@ -4,7 +4,7 @@ body {
   text-align: center;
   /* max-width: 960px; */
 }
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -16,8 +16,9 @@ nav ul {
   width: 100%;
   background: linear-gradient(
     135deg,
-    rgb(72, 173, 241) 0%,
-    rgb(42, 95, 128) 100%
+    rgb(83, 183, 245, 0.5) 0%,
+    #ffff 50%,
+    rgb(42, 95, 128, 0.5) 100%
   );
 
   margin: 0px;
@@ -32,7 +33,7 @@ nav ul li a {
   color: #ffd000;
   text-decoration: none;
 }
-h1{
+h1 {
   text-shadow: 2px 2px 2px black;
 }
 h2 {
@@ -50,22 +51,22 @@ h2 {
   padding-top: 45vh;
   background: linear-gradient(
     135deg,
-    rgb(72, 173, 241) 0%,
-    rgb(35, 77, 104) 100%
+    rgba(83, 183, 245, 0.692) 0%,
+    rgba(255, 255, 255, 0.171) 75%,
+    rgba(144, 12, 12, 0.445) 100%
   );
   color: #ffd000;
   text-shadow: 2px 2px 2px black;
 }
-.intro div{
-
+.intro div {
   /* border: 1px solid red; */
   width: 400px;
   /* height: 320px; */
-  text-align:center;
+  text-align: center;
   margin-bottom: 40px;
 }
-.intro p{
-  text-transform: uppercase
+.intro p {
+  text-transform: uppercase;
 }
 .work-main {
   /* min-height: 55vh;
@@ -78,31 +79,30 @@ h2 {
   justify-content: space-evenly; */
   min-height: 55vh;
   background: linear-gradient(
-    45deg,
-    rgb(35, 77, 104) 0%,
-    rgb(72,173,241) 100%
+    135deg,
+    rgba(83, 183, 245, 0.794) 0%,
+    rgba(255, 255, 255, 0.171) 75%,
+    rgba(144, 12, 12, 0.445) 100%
   );
   display: flex;
   flex-direction: column;
   text-align: center;
-  
 }
-.work-main a:link{
+.work-main a:link {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
-  color:blue;
+  color: blue;
 }
-.work-main a:hover{
-  
+.work-main a:hover {
   text-shadow: 2px 2px 2px #1c6ea4;
 }
-.portfolio-page{
+.portfolio-page {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
-.work{
+.work {
   display: flex;
   justify-content: space-evenly;
   margin: 20px;
@@ -118,8 +118,6 @@ h2 {
 figure {
   max-width: 355px;
   margin: 0px;
-
- 
 }
 
 @media only screen and (max-width: 500px) {
@@ -136,7 +134,7 @@ figure {
 .header {
   padding: 160px 0 110px;
 }
-.smaller-image{
+.smaller-image {
   height: 200px;
 }
 #contact {
@@ -151,7 +149,8 @@ figure {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-bottom: 160px;}
+  padding-bottom: 160px;
+}
 .contact-buttons {
   display: flex;
   justify-content: space-evenly;
@@ -175,16 +174,16 @@ figure {
   background: #e4f1fe;
   color: green;
 }
-footer{
+footer {
   padding: 20px;
   text-decoration: none;
 }
- footer a:link{
+footer a:link {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
-  color:blue;
+  color: blue;
 }
-footer a:hover{
+footer a:hover {
   text-shadow: 2px 2px 2px #1c6ea4;
 }
