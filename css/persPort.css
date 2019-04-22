@@ -37,7 +37,7 @@ h1 {
   text-shadow: 2px 2px 2px black;
 }
 h2 {
-  color: #ffd000;
+  color: #ffffff;
   padding: 20px;
   margin: 0px;
   text-shadow: 2px 2px 2px black;
@@ -57,6 +57,12 @@ h2 {
   );
   color: #ffd000;
   text-shadow: 2px 2px 2px black;
+}
+.intro h1:hover{
+  color: white;
+}
+.intro p:hover{
+  color: white;
 }
 .intro div {
   /* border: 1px solid red; */
