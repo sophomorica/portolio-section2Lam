@@ -92,6 +92,7 @@ var light_side = document.getElementById('light-side')
 var dark_side = document.getElementById('dark-side')
 const createCards = ((personArray) => {
   removeCards()
+  
   personArray.forEach((person) => {
   
   let personElement = document.createElement('div')
