@@ -14,12 +14,7 @@ nav ul {
   justify-content: flex-end;
   position: fixed;
   width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgb(83, 183, 245, 0.5) 0%,
-    #ffff 50%,
-    rgb(42, 95, 128, 0.5) 100%
-  );
+  background: rgba(161, 161, 253, 0.63);
 
   margin: 0px;
 }
@@ -30,40 +25,48 @@ nav ul li {
   margin-top: 25px;
 }
 nav ul li a {
-  color: #ffd000;
+  color:black;
   text-decoration: none;
 }
 h1 {
   text-shadow: 2px 2px 2px black;
+ 
+}
+.intro h1{
+  font-size: 180px;
+text-align: left;
+padding-top: 60vh;
+}
+.intro p{
+  font-size: 40px;
+  position: sticky;
+  text-align: left;
 }
 h2 {
   color: #ffffff;
   padding: 20px;
   margin: 0px;
   text-shadow: 2px 2px 2px black;
+ 
 }
 .intro {
   /* display:flex;
   flex-wrap: wrap;
   justify-content: space-around;
   top: 0px; */
-  min-height: 55vh;
-  padding-top: 45vh;
-  background: linear-gradient(
+  /* min-height: 55vh; */
+  /* padding-top: 45vh; */
+  /* background: linear-gradient(
     135deg,
     rgba(83, 183, 245, 0.692) 0%,
     rgba(255, 255, 255, 0.171) 75%,
     rgba(144, 12, 12, 0.445) 100%
-  );
+  ); */
+  border: solid green;
   color: #ffd000;
   text-shadow: 2px 2px 2px black;
 }
-.intro h1:hover{
-  color: white;
-}
-.intro p:hover{
-  color: white;
-}
+
 .intro div {
   /* border: 1px solid red; */
   width: 400px;
