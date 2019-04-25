@@ -92,6 +92,8 @@ var females = document.getElementById('females')
 var males = document.getElementById('males')
 var light_side = document.getElementById('light-side')
 var dark_side = document.getElementById('dark-side')
+
+
 const createCards = ((personArray) => {
   removeCards()
   
