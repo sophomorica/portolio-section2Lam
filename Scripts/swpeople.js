@@ -65,6 +65,8 @@ const lightSide = allHomeWorlds.filter(person=> person.force ==='light')
 const darkSide = allHomeWorlds.filter(person=> person.force === 'dark')
 
 
+
+
 console.log(darkSide)
 
 

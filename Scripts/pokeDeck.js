@@ -26,6 +26,7 @@ pokemon.forEach(singleMon => {
       createPokeCard(matchIdToImage(myJson));
     });
 });
+console.log(allFetchedPokemon)
 
 //--------------------------------functions---------------------------------
 
