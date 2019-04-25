@@ -10,13 +10,14 @@ body {
 }
 nav ul {
   /* text-align: right; */
-  display: flex;
+  /* display: flex;
   justify-content: flex-end;
-  position: fixed;
+
   width: 100%;
   background: rgba(83, 183, 245, 0.794);
 
-  margin: 0px;
+  margin: 0px; */
+  position: fixed;
 }
 nav ul li {
   display: inline-block;
