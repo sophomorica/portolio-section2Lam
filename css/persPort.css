@@ -21,9 +21,9 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
-  margin: 55px;
-  margin-bottom: 15px;
-  margin-top: 25px;
+ margin: 15px;
+    /*margin-bottom: 15px;
+  margin-top: 25px; */
 }
 nav ul li a {
   color:black;
@@ -67,6 +67,9 @@ h2 {
   border: solid green;
   color: rgba(83, 183, 245, 0.794);
   text-shadow: 2px 2px 2px black;
+}
+.title{
+  color: rgba(83, 183, 245, 0.794);
 }
 
 .intro div {
