@@ -86,7 +86,7 @@ const removeCards = () => {
   }
 }
 
-//------pulling the HTML id to assign variables to use in the event listener------
+//------pulling the HTML id to assign variables to use in the event listener on the buttons------
 
 var females = document.getElementById('females')
 var males = document.getElementById('males')
