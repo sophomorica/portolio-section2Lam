@@ -88,12 +88,12 @@ h2 {
   flex-direction: column;
   justify-content: space-evenly; */
   min-height: 55vh;
-  /* background: linear-gradient(
+   background: linear-gradient(
     135deg,
     rgba(83, 183, 245, 0.794) 0%,
-    rgba(255, 255, 255, 0.171) 75%,
-    rgba(144, 12, 12, 0.445) 100% */
-    background: grey;
+    rgba(255, 255, 255, 0.171) 45%,
+    rgba(55, 54, 54) 100%);
+  
 
   display: flex;
   flex-direction: column;
