@@ -64,7 +64,7 @@ h2 {
     rgba(144, 12, 12, 0.445) 100%
   ); */
   border: solid green;
-  color: #ffd000;
+  color: rgba(83, 183, 245, 0.794);
   text-shadow: 2px 2px 2px black;
 }
 
@@ -88,12 +88,13 @@ h2 {
   flex-direction: column;
   justify-content: space-evenly; */
   min-height: 55vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(83, 183, 245, 0.794) 0%,
     rgba(255, 255, 255, 0.171) 75%,
-    rgba(144, 12, 12, 0.445) 100%
-  );
+    rgba(144, 12, 12, 0.445) 100% */
+    background: grey;
+
   display: flex;
   flex-direction: column;
   text-align: center;
