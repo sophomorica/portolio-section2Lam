@@ -28,6 +28,8 @@ pokemon.forEach(singleMon => {
 });
 console.log(allFetchedPokemon)
 
+
+
 //--------------------------------functions---------------------------------
 
 function cardFront(pokeData) {
