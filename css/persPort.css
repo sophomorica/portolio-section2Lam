@@ -9,21 +9,21 @@ body {
   padding: 0px;
 }
 nav ul {
-  /* text-align: right; */
-  /* display: flex;
+  text-align: right;
+  display: flex;
   justify-content: flex-end;
 
   width: 100%;
   background: rgba(83, 183, 245, 0.794);
 
-  margin: 0px; */
+  margin: 0px; 
   position: fixed;
 }
 nav ul li {
   display: inline-block;
  margin: 15px;
-    /*margin-bottom: 15px;
-  margin-top: 25px; */
+    margin-bottom: 15px;
+  margin-top: 25px;
 }
 nav ul li a {
   color:black;
@@ -83,14 +83,8 @@ h2 {
   text-transform: uppercase;
 }
 .work-main {
-  /* min-height: 55vh;
-  padding-top: 60px; */
-  /* min-height: 55vh; */
   padding-bottom: 20vh;
   padding-top: 20vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; */
   min-height: 55vh;
    background: linear-gradient(
     135deg,

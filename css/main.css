@@ -5,10 +5,14 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: #f4f4f4;
+
  
 }
 
 /* global */
+*{
+  text-decoration: none;
+}
 .container {
   width: 80%;
   margin: auto;
@@ -30,11 +34,17 @@ color: white;
 
 /* -------------------------header--------------------------*/
 header{
-  background: #35424a;
+  /* background: #35424a;  this is gray*/
+  background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%);
   color: #ffffff;
   padding-top: 30px;
+
   min-height: 70px;
   border-bottom: #e8901d 4px solid;
+  position: relative;
+  width: 100%;
+  /* margin-bottom: 15px; */
+
 }
 header a{
   color: #ffffff;
@@ -57,7 +67,8 @@ header #branding h1 {
   margin: 0;
 }
 header nav{
-  float: right;
+ display: flex;
+ justify-content:flex-end;
   margin-top: 10px;
 }
 header .highlight, header .current a{
@@ -68,18 +79,28 @@ header a:hover{
   color:#cccccc;
   font-weight: bold;
 }
+header nav ul{
+  /* position: fixed; */
+/* display: flex; */
+
+}
 
 /* -------------------------showcase --------------------------*/
 
 #showcase{
-  min-height: 400px;
+  min-height: 75vh;
+  padding-top: 20vh;
   background-color: #5a5a5a;
+  background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
  
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 2px #000000;
+  text-shadow: 2px 2px 2px #13243e;
   border-bottom: #e8901d 4px solid;
   
+}
+section .emphasize{
+  color: #e8901d;
 }
 #showcase h1{
   margin-top: 100px;
@@ -96,32 +117,30 @@ header a:hover{
   padding: 15px;
   
   color: white;
-  background: #35424a;
+  /* background: #35424a; */
+  background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176) 100%);
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 2px 2px 2px #000000;
+  text-shadow: 2px 2px 2px #13243e;
+  border-bottom: #e8901d 5px solid;
 }
 /* ---------------------------work------------------ */
 
 #work{
-  padding-top: 20px;
+  padding-bottom: 20vh;
+  padding-top: 20vh;
+  min-height: 55vh;
 display: flex;
-background:white;
+background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
 color: #e8901d;
 font-size: 20px;
-/* text-shadow: 2px 2px 2px #000000; */
+text-shadow: 2px 2px 2px #13243e;
 }
 section#work .container{
   display: flex;
   justify-content: space-around;
   text-align: center;
 }
-/* #work .box{
-  float: left;
-  width: 30%;
-  padding: 10px;
-  text-align: center;
-} */
 #work .box img{
   height: 300px;
 }
@@ -138,7 +157,10 @@ section#work .container{
 }
 /* ---------------------------contact------------------ */
 #contact{
-  background: #35424a;
+  min-height: 55vh;
+  padding-top: 25vh;
+  /* background: #35424a; */
+  background: linear-gradient(180deg, #13243e 0%, rgb(27, 116, 176) 100%);
   color: white;
   text-align: center;
   text-shadow:2px 2px 2px #000000;
