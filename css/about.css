@@ -8,6 +8,9 @@ body {
   flex-direction: column;
   justify-content: space-between; */
 }
+.about-body{
+/* padding-top: 40px; */
+}
 h5{
   text-transform: uppercase;
 }
@@ -20,6 +23,7 @@ header {
   text-align: center;
 }
 .about {
+  padding-top: 10vh;
   background-color: rgb(19, 50, 97);
   /* max-width: 960px;
 

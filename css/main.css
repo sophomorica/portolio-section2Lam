@@ -41,7 +41,7 @@ header{
 
   min-height: 70px;
   border-bottom: #e8901d 4px solid;
-  position: relative;
+  position: fixed;
   width: 100%;
   /* margin-bottom: 15px; */
 
