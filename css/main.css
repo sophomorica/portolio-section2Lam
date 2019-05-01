@@ -40,13 +40,14 @@ header a{
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+
 }
 header li{
 
   display: inline;
   padding: 0 20px 0 20px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
 }
 header #branding{
   float: left; 
@@ -103,9 +104,10 @@ header a:hover{
 #work{
   padding-top: 20px;
 display: flex;
-background: #5a5a5a;
-color: white;
-text-shadow: 2px 2px 2px #000000;
+background:white;
+color: #e8901d;
+font-size: 20px;
+/* text-shadow: 2px 2px 2px #000000; */
 }
 section#work .container{
   display: flex;
@@ -121,7 +123,17 @@ section#work .container{
 #work .box img{
   height: 300px;
 }
-
+.project-tile:hover {
+  outline: none;
+  text-decoration: none;
+ 
+  color: rgb(255, 0, 0);
+}
+.project-tile {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 /* ---------------------------contact------------------ */
 #contact{
   background: #35424a;
@@ -148,11 +160,15 @@ section#work .container{
   background: #5a5a5a;
   color:white;
 }
+.contact-details:hover {
+  background: #e4f1fe;
+  color:#e8901d;
+}
 
 
 footer{
   padding: 20px;
-  
+  padding-top: 40px;
   color: white;
 background-color: #e8901d ;
 text-align: center;
