@@ -1,124 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Patrick's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Patrick Portfolio</title>
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="/css/persPort.css"
+      href="/css/main.css"
     />
   </head>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Web</span>Dev Portfolio</h1>
+      </div>
+      <nav>
+        <ul>
+            <li class="current"><a href="portfolio.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          <li> <a href="projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
   <body>
-    <nav class="navbar is-spaced is-light">
-      <ul id="navbar">
-        <li><a href="#welcome-section">About</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a
-          href="./practiceProfile/indexPatrickLamoureux.html"
-          target="_blank"
-          class="project project-tile"
-        >Page</li>
-      </ul>
-    </nav>
-
-    <div class="intro" id="welcome-section">
-      <h1 class="title">Patrick</h1>
-      <p class="crawl">A Developing Developer</p>
-      <br />
-      <!-- <button>Create Poem</button> -->
-    </div>
-
-    <div id="projects" class="work-main">
-      <div>
-        <h1 style="color: #ffd000" class="work-header">Some of My Projects</h1>
-      </div>
-
-      <div class="portfolio-page">
-        <figure>
-          <a
-            href="./practiceProfile/indexPatrickLamoureux.html"
-            target="_blank"
-            class="project project-tile"
-          >
-            <img
-              class="project-pic"
-              src="https://sophomorica.com/wp-content/uploads/2018/12/IMG_0568.jpg"
-              alt="project"
-              target="_blank"
-            />
-            <figcaption class="project-title">Personal Website</figcaption></a
-          >
-        </figure>
-      </div>
-      <div class="work">
-        <figure>
-          <a
-            href="/starWarsPeople.html"
-            target="_blank"
-            class="project project-tile"
-          >
-            <img
-              class="project-pic"
-              src="/downloaded-pics/maleBGedit.jpg"
-              alt="project"
-              target="_blank"
-            />
-            <figcaption class="project-title">
-              Working With JSON and StarWars
-            </figcaption></a
-          >
-        </figure>
-        <figure>
-            <a
-              href="/pokeCards.html"
-              target="_blank"
-              class="project project-tile"
-            >
-              <img
-                class="project-pic"
-                src="https://cdna.artstation.com/p/assets/images/images/005/960/040/large/cuong-le-manh-14682129-1166390370093722-2432448776547346696-o.jpg?1495010397"
-                alt="project"
-                target="_blank"
-              />
-              <figcaption class="project-title">
-                Making Pokeman Card Deck
-              </figcaption></a
-            >
-          </figure>
-         
-      </div>
-    </div>
-    <div id="contact">
-      <div class="header">
-        <h1>Let's Talk More</h1>
-      </div>
-      <div class="contact-buttons">
+      <section id="showcase">
+          <div class="container">
+            <h1><span class="emphasize">Patrick Lamoureux</span></h1>
+            <p>Developing Developer</p>
+            <p>Constantly Learning and Constantly Growing</p>
+          </div>
+        </section>
+        <!-- <section id="banner">
+          <div class="container">
+            <h1>My Projects</h1>
+          </div>
+        </section>
+        <section id="work">
+          <div class="container">
+            <div class="box">
+              <h3>Java Force</h3>
+              <figure>
+                <a
+                  href="/starWarsPeople.html"
+                  target="_blank"
+                  class="project project-tile"
+                >
+                  <img
+                    class="project-pic"
+                    src="/downloaded-pics/maleBGedit.jpg"
+                    alt="project"
+                    target="_blank"
+                  />
+                  <figcaption class="project-title">
+                    Star Wars Cards
+                  </figcaption></a
+                >
+              </figure>
+            </div>
+            <div class="box">
+              <h3>Catching Pokemon API's</h3>
+              <figure>
+                <a
+                    href="/pokeCards.html"
+                    target="_blank"
+                    class="project project-tile"
+                  >
+                    <img
+                      class="project-pic"
+                      src="https://cdna.artstation.com/p/assets/images/images/005/960/040/large/cuong-le-manh-14682129-1166390370093722-2432448776547346696-o.jpg?1495010397"
+                      alt="project"
+                      target="_blank"
+                    />
+                    <figcaption class="project-title">
+                     Pokemon Deck
+                    </figcaption></a
+                  >
+              </figure>
+            </div>
+            <div class="box">
+              <h3>Senate & House</h3>
+              <figure>
+                <a
+                  href="/starWarsPeople.html"
+                  target="_blank"
+                  class="project project-tile"
+                >
+                  <img
+                    class="project-pic"
+                    src="/downloaded-pics/maleBGedit.jpg"
+                    alt="project"
+                    target="_blank"
+                  />
+                  <figcaption class="project-title">
+                    Pulling Profiles
+                  </figcaption></a
+                >
+              </figure>
+            </div>
+          </div>
+        </section> -->
+        <section id="contact">
+          <div class="container">
+              <div class="contact-head">
+                  <h1>Let's Talk More</h1>
+                </div>
+              <div class="contact-buttons">
         
-        <a href="mailto:patrick@blackcedar.com" class="contact-details"
-          >Mail Me</a
-        >
-        <a href="tel:385-337-8601" class="contact-details">Call Me</a>
-        <a
-          href="https://github.com/sophomorica"
-          id="profile-link"
-          target="_blank"
-          class="contact-details"
-          >Git Me</a
-        >
-      </div>
-    </div>
-    <footer>
-      <p>&copy; 2019 January</p>
-      <p>
-        Created by<a href="https://www.sophomorica.com"><em>Sophomorica</em></a>
-      </p>
-    </footer>
-    <script type="module" src="/scripts/persPort.js"></script>
+                  <a href="mailto:patrick@blackcedar.com" class="contact-details"
+                    >Mail Me</a
+                  >
+                  <a href="tel:385-337-8601" class="contact-details">Call Me</a>
+                  <a
+                    href="https://github.com/sophomorica"
+                    id="profile-link"
+                    target="_blank"
+                    class="contact-details"
+                    >Git Me</a
+                  >
+                </div>
+          </div>
+        </section>
   </body>
+  <footer>
+      <p><a href="https://www.sophomorica.com"><em>Sophomorica</em></a> Webs, Copyright &copy; 2019</p>
+  </footer>
 </html>
