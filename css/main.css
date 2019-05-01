@@ -28,7 +28,7 @@ padding-right: 20px;
 color: white;
 }
 
-/*header*/
+/* -------------------------header--------------------------*/
 header{
   background: #35424a;
   color: #ffffff;
@@ -74,9 +74,11 @@ header a:hover{
 #showcase{
   min-height: 400px;
   background-color: #5a5a5a;
+ 
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px #000000;
+  border-bottom: #e8901d 4px solid;
   
 }
 #showcase h1{
