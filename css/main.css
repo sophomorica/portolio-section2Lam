@@ -91,6 +91,7 @@ header a:hover{
 
 #banner{
   padding: 15px;
+  
   color: white;
   background: #35424a;
   text-align: center;
@@ -100,8 +101,11 @@ header a:hover{
 /* ---------------------------work------------------ */
 
 #work{
-  margin-top: 20px;
+  padding-top: 20px;
 display: flex;
+background: #5a5a5a;
+color: white;
+text-shadow: 2px 2px 2px #000000;
 }
 section#work .container{
   display: flex;
@@ -119,15 +123,21 @@ section#work .container{
 }
 
 /* ---------------------------contact------------------ */
-
+#contact{
+  background: #35424a;
+  color: white;
+  text-align: center;
+  text-shadow:2px 2px 2px #000000;
+}
 .contact-buttons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 .contact-details {
   text-decoration: none;
-  border: 2px solid #ffd000;
+  border: 2px solid white;
   font-weight: bold;
   margin: 0 35px 45px 35px;
   list-style-type: none;
@@ -135,6 +145,15 @@ section#work .container{
   width: 100px;
   height: 100px;
   line-height: 100px;
-  background: rgb(52, 28, 10);
-  color: #ffd000;
+  background: #5a5a5a;
+  color:white;
+}
+
+
+footer{
+  padding: 20px;
+  
+  color: white;
+background-color: #e8901d ;
+text-align: center;
 }
