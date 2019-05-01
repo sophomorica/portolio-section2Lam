@@ -86,3 +86,34 @@ header a:hover{
 #showcase p{
   font-size: 20px;
 }
+
+/* ---------------------------banner------------------ */
+
+#banner{
+  padding: 15px;
+  color: white;
+  background: #35424a;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #000000;
+}
+/* ---------------------------work------------------ */
+
+#work{
+  margin-top: 20px;
+display: flex;
+}
+section .container{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+/* #work .box{
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+} */
+#work .box img{
+  height: 300px;
+}
