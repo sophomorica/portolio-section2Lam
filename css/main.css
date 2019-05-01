@@ -117,3 +117,24 @@ section#work .container{
 #work .box img{
   height: 300px;
 }
+
+/* ---------------------------contact------------------ */
+
+.contact-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact-details {
+  text-decoration: none;
+  border: 2px solid #ffd000;
+  font-weight: bold;
+  margin: 0 35px 45px 35px;
+  list-style-type: none;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: rgb(52, 28, 10);
+  color: #ffd000;
+}
