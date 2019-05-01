@@ -103,7 +103,7 @@ header a:hover{
   margin-top: 20px;
 display: flex;
 }
-section .container{
+section#work .container{
   display: flex;
   justify-content: space-around;
   text-align: center;
