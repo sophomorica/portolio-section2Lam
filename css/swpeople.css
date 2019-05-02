@@ -5,9 +5,28 @@ body{
   text-align: center;
   color: #ffd000;
 }
+/* ------------------------header-------------------- */
+
+
+
+
+
+
+
 h1{
   font-size: 30px;
-}nav ul li {
+}
+#branding{
+  display:flex;
+  justify-content: space-around;
+}
+nav li{
+  display: inline;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+nav ul li {
   display: inline-block;
   margin: 55px;
   margin-bottom: 15px;
@@ -93,9 +112,6 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   width: 200px;
   margin: 10px;
   text-align: center;
-
-
-  
 }
 
 /*----------^^^^^^^^^^^ to make the box-shadow appear -------------*/
