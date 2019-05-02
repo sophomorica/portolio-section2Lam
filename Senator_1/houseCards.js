@@ -16,21 +16,21 @@ const removeCards = () => {
 };
 //---------------reduce functions-------------------
 
-const allVotes = representatives.reduce((acc,rep) => {
-  return acc + rep.total_votes 
-},0) 
-const allSenatorVotes = senators.reduce((acc,sen)=>{
-  return acc + sen.total_votes
-},0)
-const allSentorMiss = senators.reduce((acc, sen)=>{
-  return acc + sen.missed_votes
-},0)
-console.log(allSentorMiss)
-console.log("missed Votes = " + allSenatorVotes)
-console.log("All Votes = " + allVotes)
-const allMissedvotes = representatives.reduce((acc, rep) =>{
-  return acc + rep.missed_votes
-},0)
+// const allVotes = representatives.reduce((acc,rep) => {
+//   return acc + rep.total_votes 
+// },0) 
+// const allSenatorVotes = senators.reduce((acc,sen)=>{
+//   return acc + sen.total_votes
+// },0)
+// const allSentorMiss = senators.reduce((acc, sen)=>{
+//   return acc + sen.missed_votes
+// },0)
+// console.log(allSentorMiss)
+// console.log("missed Votes = " + allSenatorVotes)
+// console.log("All Votes = " + allVotes)
+// const allMissedvotes = representatives.reduce((acc, rep) =>{
+//   return acc + rep.missed_votes
+// },0)
 
 //-------------------------making smaller arrays----------------------------------------
 
