@@ -139,6 +139,7 @@ section#work .container{
 }
 #work .box img{
   height: 300px;
+  /* width: 250px; */
 }
 .project-tile:hover {
   outline: none;
