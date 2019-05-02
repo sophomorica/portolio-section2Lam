@@ -18,8 +18,8 @@ h1{
   font-size: 30px;
 }
 #branding{
-  display:flex;
-  justify-content: space-evenly;
+  /* display:flex;
+  justify-content: space-evenly; */
   padding-top: 15px;
 }
 nav li{
@@ -33,6 +33,10 @@ nav ul li {
   margin: 55px;
   margin-bottom: 15px;
   margin-top: 15px;
+}
+nav ul li a:hover{
+
+color: white;
 }
 .button{
   width: 500px;
@@ -50,6 +54,12 @@ nav ul li {
   color: #FFF;
   text-shadow: 3px 3px 6px rgb(72, 157, 35)
 }
+button:hover{
+color:blue;
+}
+.maleBG:hover{
+  color:#ffd000;
+}
 .maleBG{
   background-image: url("/downloaded-pics/maxresdefault\ \(1\).jpg");
   background-size:100% 100% ;
@@ -66,6 +76,11 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   height: 200px;
   width: 150px;
 }
+.button-pic:hover{
+ box-shadow:2px 2px 2px white;
+  color:#ffd000;
+}
+
 .femaleBG{
   background-image: url("/downloaded-pics/femaleBGedit.jpg");
   background-size: 100% 100%;
