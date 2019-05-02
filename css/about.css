@@ -8,9 +8,7 @@ body {
   flex-direction: column;
   justify-content: space-between; */
 }
-.about-body{
-/* padding-top: 40px; */
-}
+
 h5{
   text-transform: uppercase;
 }
