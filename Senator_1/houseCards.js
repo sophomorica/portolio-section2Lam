@@ -68,7 +68,7 @@ function cardBackInfo(senData) {
   webpage.textContent = "Webpage"
   
 
-  facebook.textContent = "Facebook Page: " + senData.facebook
+  facebook.textContent = "Facebook: " + senData.facebook
   // webpage.textContent = senData.webpage
   
 
@@ -184,9 +184,9 @@ function cardBackR(repData){
   backImage.src = `./images/repsSeal.png`;
   cardBackR.className = "card__face card__face--back";
 
-  cardBackR.addEventListener('click',function(){
-    cardBack.classList.toggle('is-flip')
-  })
+  // cardBackR.addEventListener('click',function(){
+  //   cardBackR.classList.add('is-flip')
+  // })
 
   cardBackR.appendChild(intro);
   cardBackR.appendChild(backImage);
@@ -211,9 +211,14 @@ const createCardRep = ((representatives)=>{
   if(repData.party ==="ID"){
     card.className = "card personBox"
   }
-  card.addEventListener("click", function() {
+  // scene.addEventListener("dblclick",function() {
+  //   card.classList.remove("is-flipped");
+  // });
+  card.addEventListener("click",function() {
     card.classList.toggle("is-flipped");
   });
+  
+  
   
   card.appendChild(cardFrontR(repData));
   card.appendChild(cardBackR(repData));

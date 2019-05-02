@@ -50,7 +50,11 @@ h1{
 .card.is-flipped {
   transform: rotateY(180deg);
 }
+.card.is-flip{
+  transform: rotateY(180deg)
+}
 div.card {
+
   background-color: transparent;
 }
 .card__face {
@@ -77,6 +81,11 @@ div.card {
   color: black;
   
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
+}
+.infoDiv {
+  /* top: 30px; */
+  /* margin-bottom: 50px; */
+  text-transform: capitalize;
 }
 img {
   width: 200px;
