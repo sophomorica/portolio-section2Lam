@@ -1,0 +1,125 @@
+.container {
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+  text-align: center;
+  
+}
+.container.div{
+  padding: 10px;
+}
+
+img{
+  height: 290px;
+  width: 240x;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.democrat:hover{
+  box-shadow: 2px 2px 2px blue;
+}
+.republican:hover{
+  box-shadow: 2px 2px 2px red;
+}
+.box{
+  margin: 20px
+}
+.personBox p{
+  flex-wrap: wrap;
+  /* width:80%; */
+  padding: .75rem;
+  /* padding: 12px; */
+  text-align: center;
+}
+.personBox{
+  text-align: center;
+}
+div{
+  text-align: center;
+}
+*{
+  text-align: center;
+}
+
+/* .is-hidden{
+visibility: hidden;
+} */
+.is-hiddenR{
+  visibility: hidden;
+}
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+h1{
+  font-size: 80px;
+}
+
+
+.senatorBG{
+  padding-right: 100px;
+  padding-left: 100px;
+  margin: 15px;
+}
+.repBG{
+  padding-right: 80px;
+  padding-left: 80px;
+  margin: 15px;
+}
+.button-section{
+  border: solid blue;
+  display: flex;
+  justify-content: space-around;
+}
+/* .senatorSectionBtn{
+  border: solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+/* .repsSectionBtn{
+  border: solid green;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+} */
+/* .personBox:hover{
+  transform: rotateY(180deg)
+} */
+/* .bannerS{
+  border: solid blue;
+} */
+h1.senate{
+  background: #060EFF;
+background: -moz-linear-gradient(-45deg, #060EFF 0%, #FF0000 100%);
+background: -webkit-linear-gradient(-45deg, #060EFF 0%, #FF0000 100%);
+background: linear-gradient(135deg, #060EFF 0%, #FF0000 100%);
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 8px;
+  text-shadow: 2px 2px 2px #000000;
+
+}
+h1.house{
+  background: #ff0000;
+background: -moz-linear-gradient(-45deg, #ff0000 0%, #060EFF 100%);
+background: -webkit-linear-gradient(-45deg, #ff0000 0%, #060EFF 100%);
+background: linear-gradient(135deg, #ff0000 0%, #060EFF 100%);
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 8px;
+  text-shadow: 2px 2px 2px #000000;
+}
+.backgroundImg{
+  height: 100%;
+  width: 100%;
+  z-index: 0000;
+}
+.sBanner-hide{
+  visibility: hidden;
+}
+.rBanner-hide{
+  visibility: hidden;
+}

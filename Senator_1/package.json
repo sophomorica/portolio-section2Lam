@@ -1,0 +1,26 @@
+{
+  "name": "senators",
+  "version": "1.0.0",
+  "description": "I am trying to make a website application with senator and rep buttons",
+  "main": "senRepCards.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophomorica/repsAndSenators.git"
+  },
+  "keywords": [
+    "party",
+    "name",
+    "imagePath",
+    "facebook",
+    "homepage"
+  ],
+  "author": "Patrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophomorica/repsAndSenators/issues"
+  },
+  "homepage": "https://github.com/sophomorica/repsAndSenators#readme"
+}
