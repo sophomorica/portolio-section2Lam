@@ -109,8 +109,8 @@ function cardBack(senData) {
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
 
-  intro.className = "party";
-  intro.textContent = simpleSen.party;
+  // intro.className = "party";
+  // intro.textContent = simpleSen.party;
   backImage.className = "backImage";
   backImage.src = `./images/SenateStamp.png`;
   cardBack.className = "card__face card__face--back";
