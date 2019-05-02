@@ -23,6 +23,7 @@ const removeCards = () => {
 const democratFilter = senators.filter(senator => {
   return senator.party === 'D' 
 })
+console.log(democratFilter)
 const republicanFilter = senators.filter(senator => senator.party === 'R')
 
 const demFilterReps = representatives.filter(represent => {
@@ -76,7 +77,7 @@ return acc + num
 },0 )
 console.log(testResults)
 //-------Functions to create the cards------------------------------------
-const createCardSen = ((senatorArray)=>{
+const createCardSen = ((senators)=>{
   removeCards()
   senators.forEach((senator)=>{
     let personElement = document.createElement('div')
@@ -165,7 +166,7 @@ const repWithPics = representatives.map(rep=>{
 //variables to make the buttons later
 var allSenators = document.getElementById('senators')
 var allReps = document.getElementById('reps')
-var allDems = document.querySelector('#D')
+var allDems = document.getElementById('D')
 var allRepubs = document.getElementById('R')
 var allRepRBtn = document.getElementById('r')
 var allRepDBtn = document.getElementById('d')
