@@ -9,20 +9,6 @@ document.body.appendChild(mainContainer)
 // const mainContainer = document.querySelector(".container");
 
 
-//-----------------Filters-----------------------------------------------
-const democratFilter = senators.filter(senator => {
-  return senator.party === 'D' 
-})
-const republicanFilter = senators.filter(senator => senator.party === 'R')
-
-const demFilterReps = representatives.filter(represent => {
-  return represent.party ==='D'
-})
-const repFilterReps = representatives.filter(represent => {
-  return represent.party ==='R'
-})
-
-//-----------------------filters---------------------------------
 
 const removeCards = () => {
   let removeDiv = document.querySelector(".container");
@@ -45,7 +31,7 @@ const simpleReps = representatives.map(rep => {
   return {
     name: `${rep.first_name} ${rep.last_name}`,
     facebook: rep.facebook_account,
-    hompage: rep.url,
+    homepage: rep.url,
     party: rep.party,
     imagePath: `https://www.congress.gov/img/member/114_rp_${rep.state.toLowerCase()}_${rep.district}_${rep.last_name.toLocaleLowerCase()}_${rep.first_name.toLowerCase()}_200.jpg`, 
 
@@ -75,11 +61,15 @@ function cardBackInfo(senData) {
   infoDiv.className = "infoDiv";
 
   let facebook = document.createElement("p");
-  let webpage = document.createElement("p");
+  let webpage = document.createElement("a");
+
+  webpage.href = senData.homepage
+  webpage.target="_blank"
+  webpage.textContent = "Webpage"
   
 
-  facebook.textContent = senData.facebook
-  webpage.textContent = senData.webpage
+  facebook.textContent = "Facebook Page: " + senData.facebook
+  // webpage.textContent = senData.webpage
   
 
   infoDiv.appendChild(facebook);
@@ -167,12 +157,15 @@ function cardBackInfoR(repData) {
   infoDiv.className = "infoDiv";
 
   let facebook = document.createElement("p");
-  let webpage = document.createElement("p");
-  
+  let webpage = document.createElement("a");
+
+  webpage.href = repData.homepage
+  webpage.target="_blank"
+  webpage.textContent = "Website"
+
+
 
   facebook.textContent = repData.facebook
-  webpage.textContent = repData.webpage
-  
 
   infoDiv.appendChild(facebook);
   infoDiv.appendChild(webpage);
@@ -231,3 +224,42 @@ allReps.addEventListener('click', function(){
   createCardRep(simpleReps)
  
   })
+//----------------BUTTONS----------------
+var allDems = document.getElementById('D')
+var allRepubs = document.getElementById('R')
+var allRepRBtn = document.getElementById('r')
+var allRepDBtn = document.getElementById('d')
+
+const democratFilter = simpleSen.filter(senator => {
+  return senator.party === 'D' 
+})
+allDems.addEventListener('click', function(){
+  removeCards()
+  createCardSen(democratFilter)
+
+})
+
+const republicanFilter = simpleSen.filter(senator => senator.party === 'R')
+allRepubs.addEventListener('click', function(){
+  removeCards()
+  createCardSen(republicanFilter)
+  
+  
+})
+
+const demFilterReps = simpleReps.filter(represent => {
+  return represent.party ==='D'
+})
+const repFilterReps = simpleReps.filter(represent => {
+  return represent.party ==='R'
+})
+allRepRBtn.addEventListener('click', function(){
+  removeCards()
+  createCardRep(repFilterReps)
+})
+allRepDBtn.addEventListener('click', function(){
+  removeCards()
+  createCardRep(demFilterReps)
+})
+
+  

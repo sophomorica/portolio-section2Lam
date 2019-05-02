@@ -10,8 +10,8 @@
 }
 
 img{
-  height: 190px;
-  width: 140x;
+  height: 290px;
+  width: 240x;
 
   display: flex;
   justify-content: space-around;
@@ -71,55 +71,4 @@ h1{
   border: solid blue;
   display: flex;
   justify-content: space-around;
-}
-.senatorSectionBtn{
-  border: solid green;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.repsSectionBtn{
-  border: solid green;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  
-}
-/* .personBox:hover{
-  transform: rotateY(180deg)
-} */
-/* .bannerS{
-  border: solid blue;
-} */
-h1.senate{
-  background: #060EFF;
-background: -moz-linear-gradient(-45deg, #060EFF 0%, #FF0000 100%);
-background: -webkit-linear-gradient(-45deg, #060EFF 0%, #FF0000 100%);
-background: linear-gradient(135deg, #060EFF 0%, #FF0000 100%);
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 8px;
-  text-shadow: 2px 2px 2px #000000;
-
-}
-h1.house{
-  background: #ff0000;
-background: -moz-linear-gradient(-45deg, #ff0000 0%, #060EFF 100%);
-background: -webkit-linear-gradient(-45deg, #ff0000 0%, #060EFF 100%);
-background: linear-gradient(135deg, #ff0000 0%, #060EFF 100%);
-  color: white;
-  font-weight: bolder;
-  letter-spacing: 8px;
-  text-shadow: 2px 2px 2px #000000;
-}
-.backgroundImg{
-  height: 100%;
-  width: 100%;
-  z-index: 0000;
-}
-.sBanner-hide{
-  visibility: hidden;
-}
-.rBanner-hide{
-  visibility: hidden;
 }
