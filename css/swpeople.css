@@ -2,6 +2,8 @@
 
 body{
   background: rgb(0, 0, 0);
+  background: url(/downloaded-pics/stars.jpeg);
+  /* background-size: 100% 100%; */
   text-align: center;
   color: #ffd000;
 }
@@ -18,6 +20,7 @@ h1{
 #branding{
   display:flex;
   justify-content: space-evenly;
+  padding-top: 15px;
 }
 nav li{
   display: inline;
@@ -29,7 +32,7 @@ nav ul li {
   display: inline-block;
   margin: 55px;
   margin-bottom: 15px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .button{
   width: 500px;
@@ -108,6 +111,9 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   flex-wrap: wrap;
   background-color: black;
  padding-bottom: 200px;
+ background: url(/downloaded-pics/stars.jpeg);
+ /* background-size: 100% 100%; */
+
 }
 .container div{
   width: 200px;
