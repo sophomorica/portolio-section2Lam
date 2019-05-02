@@ -47,7 +47,15 @@ function cardFront(senData) {
   image.className = "senImage";
 
   caption.textContent = senData.name
-  
+  if(senData.party === "R"){
+    cardFront.className = "card__face card__face--front republican"
+  }
+  if(senData.party ==="D"){
+    cardFront.className = "card__face card__face--front democrat"
+  }
+  if(senData.party ==="ID"){
+    cardFront.className = "card__face card__face--front personBox"
+  }
  
   image.src= senData.imagePath
 
@@ -103,15 +111,7 @@ const createCardSen = ((senators)=>{
   let card = document.createElement("div");
   card.className = "card";
 
-  if(senData.party === "R"){
-    card.className = "card republican personBox"
-  }
-  if(senData.party ==="D"){
-    card.className = "card democrat personBox"
-  }
-  if(senData.party ==="ID"){
-    card.className = "card personBox"
-  }
+
   card.addEventListener("click", function() {
     card.classList.toggle("is-flipped");
   });
@@ -142,7 +142,15 @@ function cardFrontR(repData){
   image.className = "senImage";
 
   caption.textContent = repData.name
-  
+  if(repData.party === "R"){
+    cardFrontR.className = "card__face card__face--front republican"
+  }
+  if(repData.party ==="D"){
+    cardFrontR.className = "card__face card__face--front democrat"
+  }
+  if(repData.party ==="ID"){
+    cardFrontR.className = "card__face card__face--front personBox"
+  }
  
   image.src= repData.imagePath
 
@@ -202,15 +210,7 @@ const createCardRep = ((representatives)=>{
   let card = document.createElement("div");
   card.className = "card";
 
-  if(repData.party === "R"){
-    card.className = "card republican personBox"
-  }
-  if(repData.party ==="D"){
-    card.className = "card democrat personBox"
-  }
-  if(repData.party ==="ID"){
-    card.className = "card personBox"
-  }
+ 
   // scene.addEventListener("dblclick",function() {
   //   card.classList.remove("is-flipped");
   // });
