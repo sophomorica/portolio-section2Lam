@@ -1,31 +1,31 @@
-import{ senators } from './senators.js'
-import{ representatives } from './representatives.js'
+import { senators } from "./senators.js";
+import { representatives } from "./representatives.js";
+
+const mainContainer = document.createElement("div");
+mainContainer.className = "container";
+document.body.appendChild(mainContainer);
 
 
-const mainContainer = document.createElement('div')
-mainContainer.className = 'container'
-document.body.appendChild(mainContainer)
-
-// const mainContainer = document.querySelector(".container");
-
-
+////----------remove Card Function
 
 const removeCards = () => {
   let removeDiv = document.querySelector(".container");
   while (removeDiv.firstChild) {
-      removeDiv.removeChild(removeDiv.firstChild);
+    removeDiv.removeChild(removeDiv.firstChild);
   }
-}
+};
 
-const simpleSen = senators.map(senator =>{
-  return{
+//-------------------------making smaller arrays----------------------------------------
+
+const simpleSen = senators.map(senator => {
+  return {
     name: `${senator.first_name} ${senator.last_name}`,
     facebook: senator.facebook_account,
     homepage: senator.url,
     party: senator.party,
     imagePath: `https://www.congress.gov/img/member/${senator.id.toLowerCase()}.jpg`
-  }
-})
+  };
+});
 
 const simpleReps = representatives.map(rep => {
   return {
@@ -33,11 +33,14 @@ const simpleReps = representatives.map(rep => {
     facebook: rep.facebook_account,
     homepage: rep.url,
     party: rep.party,
-    imagePath: `https://www.congress.gov/img/member/114_rp_${rep.state.toLowerCase()}_${rep.district}_${rep.last_name.toLocaleLowerCase()}_${rep.first_name.toLowerCase()}_200.jpg`, 
+    imagePath: `https://www.congress.gov/img/member/114_rp_${rep.state.toLowerCase()}_${
+      rep.district
+    }_${rep.last_name.toLocaleLowerCase()}_${rep.first_name.toLowerCase()}_200.jpg`
+  };
+});
 
-  }
-})
-//-----------------------------SENATE CARDS----------------------------
+//-----------------------------SENATE CARDS and Button----------------------------
+
 function cardFront(senData) {
   let cardFront = document.createElement("div");
   cardFront.className = "card__face card__face--front";
@@ -46,18 +49,18 @@ function cardFront(senData) {
   let image = document.createElement("img");
   image.className = "senImage";
 
-  caption.textContent = senData.name
-  if(senData.party === "R"){
-    cardFront.className = "card__face card__face--front republican"
+  caption.textContent = senData.name;
+  if (senData.party === "R") {
+    cardFront.className = "card__face card__face--front republican";
   }
-  if(senData.party ==="D"){
-    cardFront.className = "card__face card__face--front democrat"
+  if (senData.party === "D") {
+    cardFront.className = "card__face card__face--front democrat";
   }
-  if(senData.party ==="ID"){
-    cardFront.className = "card__face card__face--front personBox"
+  if (senData.party === "ID") {
+    cardFront.className = "card__face card__face--front personBox";
   }
- 
-  image.src= senData.imagePath
+
+  image.src = senData.imagePath;
 
   figure.appendChild(image);
   figure.appendChild(caption);
@@ -71,29 +74,26 @@ function cardBackInfo(senData) {
   let facebook = document.createElement("p");
   let webpage = document.createElement("a");
 
-  webpage.href = senData.homepage
-  webpage.target="_blank"
-  webpage.textContent = "Website: "+senData.name
-  
+  webpage.href = senData.homepage;
+  webpage.target = "_blank";
+  webpage.textContent = "Website: " + senData.name;
 
-  facebook.textContent = "Facebook: " + senData.facebook
+  facebook.textContent = "Facebook: " + senData.facebook;
   // webpage.textContent = senData.webpage
-  
 
   infoDiv.appendChild(webpage);
   infoDiv.appendChild(facebook);
 
-
   return infoDiv;
 }
 
-function cardBack(senData){
+function cardBack(senData) {
   let cardBack = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
 
-  intro.className = 'party'
-  intro.textContent = simpleSen.party
+  intro.className = "party";
+  intro.textContent = simpleSen.party;
   backImage.className = "backImage";
   backImage.src = `./images/SenateStamp.png`;
   cardBack.className = "card__face card__face--back";
@@ -103,37 +103,37 @@ function cardBack(senData){
   cardBack.appendChild(cardBackInfo(senData));
   return cardBack;
 }
-const createCardSen = ((senators)=>{
-  removeCards()
-  senators.forEach((senData)=>{
-  let scene = document.createElement("div");
-  scene.className = "scene";
-  let card = document.createElement("div");
-  card.className = "card";
+const createCardSen = senators => {
+  removeCards();
+  senators.forEach(senData => {
+    let scene = document.createElement("div");
+    scene.className = "scene";
+    let card = document.createElement("div");
+    card.className = "card";
 
+    card.addEventListener("click", function() {
+      card.classList.toggle("is-flipped");
+    });
+    card.appendChild(cardFront(senData));
+    card.appendChild(cardBack(senData));
 
-  card.addEventListener("click", function() {
-    card.classList.toggle("is-flipped");
+    scene.appendChild(card);
+    mainContainer.appendChild(scene);
   });
-  card.appendChild(cardFront(senData));
-  card.appendChild(cardBack(senData));
+};
 
-  scene.appendChild(card);
-  mainContainer.appendChild(scene);
-})})
+//-----------Create Card Button
 
+var allSenators = document.getElementById("senators");
 
-var allSenators = document.getElementById('senators')
+allSenators.addEventListener("click", function() {
+  removeCards();
+  createCardSen(simpleSen);
+});
 
-allSenators.addEventListener('click', function(){
-  removeCards()
-  createCardSen(simpleSen)
- 
-})
+//---------------------------HOUSE CARDS and Button-------------------------------
 
-//--------------------------HOUSE CARDS-------------------
-
-function cardFrontR(repData){
+function cardFrontR(repData) {
   let cardFrontR = document.createElement("div");
   cardFrontR.className = "card__face card__face--front";
   let figure = document.createElement("figure");
@@ -141,24 +141,23 @@ function cardFrontR(repData){
   let image = document.createElement("img");
   image.className = "senImage";
 
-  caption.textContent = repData.name
-  if(repData.party === "R"){
-    cardFrontR.className = "card__face card__face--front republican"
+  caption.textContent = repData.name;
+  if (repData.party === "R") {
+    cardFrontR.className = "card__face card__face--front republican";
   }
-  if(repData.party ==="D"){
-    cardFrontR.className = "card__face card__face--front democrat"
+  if (repData.party === "D") {
+    cardFrontR.className = "card__face card__face--front democrat";
   }
-  if(repData.party ==="ID"){
-    cardFrontR.className = "card__face card__face--front personBox"
+  if (repData.party === "ID") {
+    cardFrontR.className = "card__face card__face--front personBox";
   }
- 
-  image.src= repData.imagePath
+
+  image.src = repData.imagePath;
 
   figure.appendChild(image);
   figure.appendChild(caption);
   cardFrontR.appendChild(figure);
   return cardFrontR;
-
 }
 function cardBackInfoR(repData) {
   let infoDiv = document.createElement("div");
@@ -167,27 +166,24 @@ function cardBackInfoR(repData) {
   let facebook = document.createElement("p");
   let webpage = document.createElement("a");
 
-  webpage.href = repData.homepage
-  webpage.target="_blank"
-  webpage.textContent = "Website: " +repData.name
+  webpage.href = repData.homepage;
+  webpage.target = "_blank";
+  webpage.textContent = "Website: " + repData.name;
 
-
-
-  facebook.textContent =  "Facebook: " +repData.facebook
+  facebook.textContent = "Facebook: " + repData.facebook;
 
   infoDiv.appendChild(webpage);
   infoDiv.appendChild(facebook);
 
-
   return infoDiv;
 }
-function cardBackR(repData){
+function cardBackR(repData) {
   let cardBackR = document.createElement("div");
   let backImage = document.createElement("img");
   let intro = document.createElement("h1");
 
-  intro.className = 'party'
-  intro.textContent = simpleSen.party
+  intro.className = "party";
+  intro.textContent = simpleSen.party;
   backImage.className = "backImage";
   backImage.src = `./images/repsSeal.png`;
   cardBackR.className = "card__face card__face--back";
@@ -202,74 +198,78 @@ function cardBackR(repData){
   return cardBackR;
 }
 
-const createCardRep = ((representatives)=>{
-  removeCards()
-  representatives.forEach((repData)=>{
-  let scene = document.createElement("div");
-  scene.className = "scene";
-  let card = document.createElement("div");
-  card.className = "card";
+const createCardRep = representatives => {
+  removeCards();
+  representatives.forEach(repData => {
+    let scene = document.createElement("div");
+    scene.className = "scene";
+    let card = document.createElement("div");
+    card.className = "card";
 
- 
-  // scene.addEventListener("dblclick",function() {
-  //   card.classList.remove("is-flipped");
-  // });
-  card.addEventListener("click",function() {
-    card.classList.toggle("is-flipped");
+    // scene.addEventListener("dblclick",function() {
+    //   card.classList.remove("is-flipped");
+    // });
+    card.addEventListener("click", function() {
+      card.classList.toggle("is-flipped");
+    });
+
+    card.appendChild(cardFrontR(repData));
+    card.appendChild(cardBackR(repData));
+
+    scene.appendChild(card);
+    mainContainer.appendChild(scene);
   });
-  
-  
-  
-  card.appendChild(cardFrontR(repData));
-  card.appendChild(cardBackR(repData));
+};
+//-----------Create Card Button
 
-  scene.appendChild(card);
-  mainContainer.appendChild(scene);
-})})
+var allReps = document.getElementById("reps");
 
-var allReps = document.getElementById('reps')
+allReps.addEventListener("click", function() {
+  removeCards();
+  createCardRep(simpleReps);
+});
 
-allReps.addEventListener('click', function(){
-  removeCards()
-  createCardRep(simpleReps)
- 
-  })
-//----------------BUTTONS----------------
-var allDems = document.getElementById('D')
-var allRepubs = document.getElementById('R')
-var allRepRBtn = document.getElementById('r')
-var allRepDBtn = document.getElementById('d')
+//----------------------------BUTTONS for Filters ----------------------------------------
+
+
+//-----variables 
+
+var allDems = document.getElementById("D");
+var allRepubs = document.getElementById("R");
+var allRepRBtn = document.getElementById("r");
+var allRepDBtn = document.getElementById("d");
+
+//-------filter functions
 
 const democratFilter = simpleSen.filter(senator => {
-  return senator.party === 'D' 
-})
-allDems.addEventListener('click', function(){
-  removeCards()
-  createCardSen(democratFilter)
-
-})
-
-const republicanFilter = simpleSen.filter(senator => senator.party === 'R')
-allRepubs.addEventListener('click', function(){
-  removeCards()
-  createCardSen(republicanFilter)
-  
-  
-})
-
+  return senator.party === "D";
+});
+const republicanFilter = simpleSen.filter(senator => senator.party === "R");
 const demFilterReps = simpleReps.filter(represent => {
-  return represent.party ==='D'
-})
+  return represent.party === "D";
+});
 const repFilterReps = simpleReps.filter(represent => {
-  return represent.party ==='R'
-})
-allRepRBtn.addEventListener('click', function(){
-  removeCards()
-  createCardRep(repFilterReps)
-})
-allRepDBtn.addEventListener('click', function(){
-  removeCards()
-  createCardRep(demFilterReps)
-})
+  return represent.party === "R";
+});
 
-  
+//-----------Event listeners for buttons
+
+
+allDems.addEventListener("click", function() {
+  removeCards();
+  createCardSen(democratFilter);
+});
+
+allRepubs.addEventListener("click", function() {
+  removeCards();
+  createCardSen(republicanFilter);
+});
+
+allRepRBtn.addEventListener("click", function() {
+  removeCards();
+  createCardRep(repFilterReps);
+});
+allRepDBtn.addEventListener("click", function() {
+  removeCards();
+  createCardRep(demFilterReps);
+});
