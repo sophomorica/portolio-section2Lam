@@ -73,15 +73,15 @@ function cardBackInfo(senData) {
 
   webpage.href = senData.homepage
   webpage.target="_blank"
-  webpage.textContent = senData.name
+  webpage.textContent = "Website: "+senData.name
   
 
-  facebook.textContent = "f'book: " + senData.facebook
+  facebook.textContent = "Facebook: " + senData.facebook
   // webpage.textContent = senData.webpage
   
 
-  infoDiv.appendChild(facebook);
   infoDiv.appendChild(webpage);
+  infoDiv.appendChild(facebook);
 
 
   return infoDiv;
@@ -169,7 +169,7 @@ function cardBackInfoR(repData) {
 
   webpage.href = repData.homepage
   webpage.target="_blank"
-  webpage.textContent = repData.name
+  webpage.textContent = "Website: " +repData.name
 
 
 
