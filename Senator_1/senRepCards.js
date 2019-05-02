@@ -74,7 +74,7 @@ const testArray = [5,10,15,20,25]
 const testResults = testArray.reduce((acc,num)=> {
 return acc + num
 },0 )
-console.log(testResults)
+
 //-------Functions to create the cards------------------------------------
 const createCardSen = ((senators)=>{
   removeCards()
