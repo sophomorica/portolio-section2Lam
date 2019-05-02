@@ -8,7 +8,7 @@
     /* background-size: 100% 100%; */
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 2px black;
+
   }
 
 /* header */
@@ -16,6 +16,7 @@
   background: url(images/America.jpeg) no-repeat;
   background-size: 100% 100%;
   padding-top: 15px;
+  text-shadow: 2px 2px 2px black;
 }
 nav li{
   display: inline;
@@ -112,16 +113,9 @@ div.card {
   /* border: 2px solid #ccc; */
   backface-visibility: hidden;
   border-radius: 5%;
-  /* background: linear-gradient(
-    180deg,
-    rgb(0, 140, 255) 0%,
-    rgb(0, 140, 255, 0.623) 100%
-  ); */
 }
 .card__face--back {
   text-align: center;
-  /* width: 100px;
-  height: 100px; */
   transform: rotateY(180deg);
   backface-visibility: hidden;
   font-weight: bolder;
@@ -130,9 +124,12 @@ div.card {
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.37);
 }
 .infoDiv {
-  top:30px;
  
   text-transform: capitalize;
+}
+.infoDiv p{
+  font-size: 10px;
+  color: rgb(19, 93, 255);
 }
 img {
   width: 200px;
