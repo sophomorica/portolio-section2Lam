@@ -23,7 +23,6 @@ const removeCards = () => {
 const democratFilter = senators.filter(senator => {
   return senator.party === 'D' 
 })
-console.log(democratFilter)
 const republicanFilter = senators.filter(senator => senator.party === 'R')
 
 const demFilterReps = representatives.filter(represent => {

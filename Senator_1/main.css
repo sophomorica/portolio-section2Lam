@@ -72,19 +72,19 @@ h1{
   display: flex;
   justify-content: space-around;
 }
-/* .senatorSectionBtn{
+.senatorSectionBtn{
   border: solid green;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-} */
-/* .repsSectionBtn{
+}
+.repsSectionBtn{
   border: solid green;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
   
-} */
+}
 /* .personBox:hover{
   transform: rotateY(180deg)
 } */
