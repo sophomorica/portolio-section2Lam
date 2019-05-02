@@ -12,13 +12,12 @@ body{
 
 
 
-
 h1{
   font-size: 30px;
 }
 #branding{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 nav li{
   display: inline;
@@ -54,19 +53,23 @@ nav ul li {
   height: 600px;
   width: 350px;
   font-family: "Courier New", Courier, monospace;
-font-size: 60px;
+font-size: 30px;
 letter-spacing: 3px;
 text-transform: uppercase;
 font-weight: bolder;
 text-shadow: 4px 3px 14px rgb(72, 157, 35)
 }
+.button-pic{
+  height: 200px;
+  width: 150px;
+}
 .femaleBG{
   background-image: url("/downloaded-pics/femaleBGedit.jpg");
   background-size: 100% 100%;
-  height: 600px;
-  width: 350px;
+  height: 200px;
+  width: 150px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 60px;
+  font-size: 30px;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: bolder;
@@ -75,10 +78,10 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
 .lightBG{
   background-image: url("/downloaded-pics/yoda\ \(1\).jpg");
   background-size: 100% 100%;
-  height: 600px;
-  width: 350px;
+  height: 200px;
+  width: 150px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 60px;
+  font-size: 30px;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: bolder;
@@ -87,10 +90,10 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
 .darkBG{
   background-image: url("/downloaded-pics/DarthMaul\ \(1\).jpg");
   background-size: 100% 100%;
-  height: 600px;
-  width: 350px;
+  height: 200px;
+  width: 150px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 60px;
+  font-size: 30px;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: bolder;
@@ -105,8 +108,6 @@ text-shadow: 4px 3px 14px rgb(72, 157, 35)
   flex-wrap: wrap;
   background-color: black;
  padding-bottom: 200px;
- 
-
 }
 .container div{
   width: 200px;
@@ -128,4 +129,8 @@ box-shadow: 5px 5px 7px 5px rgb(1, 120, 255);
 h1 {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+footer{
+  padding-top: 15px;
 }
