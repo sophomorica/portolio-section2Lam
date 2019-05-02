@@ -65,10 +65,10 @@ function cardBackInfo(senData) {
 
   webpage.href = senData.homepage
   webpage.target="_blank"
-  webpage.textContent = "Webpage"
+  webpage.textContent = senData.name
   
 
-  facebook.textContent = "Facebook: " + senData.facebook
+  facebook.textContent = "f'book: " + senData.facebook
   // webpage.textContent = senData.webpage
   
 
@@ -161,7 +161,7 @@ function cardBackInfoR(repData) {
 
   webpage.href = repData.homepage
   webpage.target="_blank"
-  webpage.textContent = "Website"
+  webpage.textContent = repData.name
 
 
 
