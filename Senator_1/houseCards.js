@@ -87,7 +87,7 @@ function cardBack(senData){
   intro.className = 'party'
   intro.textContent = simpleSen.party
   backImage.className = "backImage";
-  backImage.src = `/images/SenateStamp.png`;
+  backImage.src = `./images/SenateStamp.png`;
   cardBack.className = "card__face card__face--back";
 
   cardBack.appendChild(intro);
@@ -181,8 +181,12 @@ function cardBackR(repData){
   intro.className = 'party'
   intro.textContent = simpleSen.party
   backImage.className = "backImage";
-  backImage.src = `/images/repsSeal.png`;
+  backImage.src = `./images/repsSeal.png`;
   cardBackR.className = "card__face card__face--back";
+
+  cardBackR.addEventListener('click',function(){
+    cardBack.classList.toggle('is-flip')
+  })
 
   cardBackR.appendChild(intro);
   cardBackR.appendChild(backImage);
@@ -210,6 +214,7 @@ const createCardRep = ((representatives)=>{
   card.addEventListener("click", function() {
     card.classList.toggle("is-flipped");
   });
+  
   card.appendChild(cardFrontR(repData));
   card.appendChild(cardBackR(repData));
 
