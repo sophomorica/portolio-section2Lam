@@ -1,58 +1,38 @@
 *{
   text-align: center;
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-background: #e6e6e6;
-}
+
+  body{
+    
+    
+    /* background-size: 100% 100%; */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+
 /* header */
-header{
-  /* background: #35424a;  this is gray*/
-  background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%);
-  color: #ffffff;
-  padding-top: 30px;
-
-  min-height: 70px;
-  border-bottom: #e8901d 4px solid;
-  position: fixed;
-  width: 100%;
-  /* margin-bottom: 15px; */
-
+#branding{
+  background: url(images/America.jpeg) no-repeat;
+  background-size: 100% 100%;
+  padding-top: 15px;
 }
-header a{
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-
-}
-header li{
-
+nav li{
   display: inline;
   padding: 0 20px 0 20px;
   font-size: 16px;
   font-weight: bold;
 }
-header #branding{
-  float: left; 
+nav ul li {
+  display: inline-block;
+  margin: 55px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+nav ul li a:hover{
 
+color: white;
 }
-header #branding h1 {
-  margin: 0;
-}
-header nav{
- display: flex;
- justify-content:flex-end;
-  margin-top: 10px;
-}
-header .highlight, header .current a{
-  color: #e8901d ;
-  font-weight: bold;
-}
-header a:hover{
-  color:#cccccc;
-  font-weight: bold;
-}
-
 /* global */
 .title{
   padding-top: 30vh;
@@ -65,14 +45,15 @@ h1{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.button{
-  background-color: #7e7e7ec2;
-}
+
 
 
 
 /* buttons */
-
+.button{
+  background-color: #7e7e7ec2;
+  color: white;
+}
 
 .button-section{
   display:flex;
