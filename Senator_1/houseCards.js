@@ -175,8 +175,8 @@ function cardBackInfoR(repData) {
 
   facebook.textContent = repData.facebook
 
-  infoDiv.appendChild(facebook);
   infoDiv.appendChild(webpage);
+  infoDiv.appendChild(facebook);
 
 
   return infoDiv;
