@@ -130,7 +130,7 @@ section .emphasize{
   padding-bottom: 20vh;
   padding-top: 20vh;
   min-height: 55vh;
-display: flex;
+/* display: flex; */
 background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
 color: #e8901d;
 font-size: 20px;
@@ -199,19 +199,25 @@ text-align: center;
 }
 
 /* --------------------------media stuff-------------------- */
-@media(max-width: 768px){
+@media(max-width: 870px){
   header #branding,
   header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form, #boxes .box,
-  article#main-col,
-  aside#sidebar{
+  header nav li, #work .box{
     float: none;
     text-align: center;
+    
     width: 100%
   
   }
+  section#work .container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #work .box img{
+    height: 250px;
+  }
+
   header{
     padding-bottom: 20px;
   }
@@ -219,13 +225,9 @@ text-align: center;
   #showcase h1{
     margin-top: 40px;
   }
-  #newsletter button{
-    display: block;
-    width: 100%;
+.contact-buttons{
+    display:flex;
+    flex-direction: column;
   }
-  #newsletter form input[type='email']{
-    width: 100%;
-    margin-bottom: 5px;
-
-  }
+ 
 }
