@@ -6,7 +6,7 @@ mainContainer.className = "container";
 document.body.appendChild(mainContainer);
 
 
-////----------remove Card Function
+//----------remove Card Function
 
 const removeCards = () => {
   let removeDiv = document.querySelector(".container");
