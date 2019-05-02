@@ -4,7 +4,7 @@
 
   body{
     
-    
+    background-color: rgba(190, 190, 190, 0.637);
     /* background-size: 100% 100%; */
     text-align: center;
     color: white;
@@ -166,4 +166,8 @@ div.field {
   background-color: white;
   text-align: center;
   padding: 15px;
+}
+footer{
+ color: white;
+ text-shadow: 2px 2px 2px black;
 }
