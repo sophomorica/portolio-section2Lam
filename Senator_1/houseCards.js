@@ -181,7 +181,7 @@ function cardBackR(repData){
   intro.className = 'party'
   intro.textContent = simpleSen.party
   backImage.className = "backImage";
-  backImage.src = `/images/SenateStamp.png`;
+  backImage.src = `/images/repsSeal.png`;
   cardBackR.className = "card__face card__face--back";
 
   cardBackR.appendChild(intro);
