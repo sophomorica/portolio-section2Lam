@@ -13,9 +13,7 @@ const button_section = document.getElementsByClassName('button-section')
 
 //function---------------------
 const removeCards = () => {
-  
   let removeDiv = document.querySelector(".container");
-  
   while (removeDiv.firstChild) {
       removeDiv.removeChild(removeDiv.firstChild);
   }
@@ -55,14 +53,6 @@ const simpleSen = senators.map(senator =>{
   }
 })
 
-// function cardFront (senatorArray){
-//   let cardFront = document.createElement("div");
-//   cardFront.className = "card__face card__face--front";
-//   let figure = document.createElement("figure");
-//   let caption = document.createElement("figcaption");
-//   let image = document.createElement("img");
-//   image.className = "senateImage";
-// }
 const allVotes = representatives.reduce((acc,rep) => {
   return acc + rep.total_votes 
 },0) 
@@ -88,28 +78,7 @@ console.log(testResults)
 //-------Functions to create the cards------------------------------------
 const createCardSen = ((senatorArray)=>{
   removeCards()
-  // revealSBanner()
-
-  //----------I wanted to create buttons dynamically but found out that the since the java script can't find the buttons before they are created I couldn't add any event listeners to it....perhaps node does-------------
-
-//   let filterButtons = document.createElement('div')
-//   filterButtons.className = "button_section"
-// let filterButtonR = document.createElement('button')
-// filterButtonR.id = 'republic'
-// filterButtonR.textContent = 'Republicans'
-// let filterButtonD = document.createElement('button')
-// filterButtonD.textContent = 'Democrats'
-// filterButtonD.id = ('D')
-// filterButtonD.className = ('button is-info')
-// filterButtonR.className = ('button is-danger')
-
-// filterButtons.appendChild(filterButtonD)
-// filterButtons.appendChild(filterButtonR)
-// mainContainer.appendChild(filterButtons)
-
-//------------------------------end--------------------------
-
-  simpleSen.forEach((senator)=>{
+  senators.forEach((senator)=>{
     let personElement = document.createElement('div')
     let personName = document.createElement ('p')
     let imageElement = document.createElement ('img')
@@ -126,13 +95,15 @@ const createCardSen = ((senatorArray)=>{
     }
 
     if(senator.imgURL ===`https://www.congress.gov/img/member/j000300.jpg`){
-      imageElement.src = `https://starwars-visualguide.com/assets/img/characters/21.jpg`
+      // imageElement.src = `https://starwars-visualguide.com/assets/img/characters/21.jpg`
+      imageElement.src = `https://avatars2.githubusercontent.com/u/42650486?s=460&v=4`
     }
      else if (senator.imgURL === `https://www.congress.gov/img/member/s001203.jpg`)
      {
-      imageElement.src = `https://starwars-visualguide.com/assets/img/characters/21.jpg`
+     // imageElement.src = `https://starwars-visualguide.com/assets/img/characters/21.jpg`
+     imageElement.src = `https://avatars2.githubusercontent.com/u/42650486?s=460&v=4`
      } else 
-    imageElement.src = senator.imagePath
+     imageElement.src = `https://www.congress.gov/img/member/${senator.id.toLowerCase()}.jpg`
 
  personName.textContent = senator.first_name +" " + senator.last_name
 // personElement.textContent = senator.name
@@ -145,6 +116,8 @@ mainContainer.appendChild(personElement)
   })
  
 })
+
+
 const revealRBanner = () => {
   let rBanner = document.querySelector('.house')
   rBanner.classList.toggle('rBanner-hide')
@@ -153,10 +126,10 @@ const revealRBanner = () => {
   let rBanner = document.querySelector('.senate')
   rBanner.classList.toggle('sBanner-hide')
  }
-const createCardRep = ((repArray)=>{
+const createCardRep = ((representatives)=>{
   removeCards()
   // revealRBanner()
-  simpleReps.forEach((rep)=>{
+  representatives.forEach((rep)=>{
     let personElement = document.createElement('div')
     let personName = document.createElement ('p')
     let imageElement = document.createElement ('img')
@@ -169,7 +142,7 @@ const createCardRep = ((repArray)=>{
     }
 
    
-    imageElement.src = rep.imagePath
+    imageElement.src =  `https://www.congress.gov/img/member/114_rp_${rep.state.toLowerCase()}_${rep.district}_${rep.last_name.toLocaleLowerCase()}_${rep.first_name.toLowerCase()}_200.jpg`, 
     personName.textContent = rep.first_name + " " + rep.last_name
     personElement.appendChild(personName)
     personElement.appendChild(imageElement)
@@ -188,18 +161,7 @@ const repWithPics = representatives.map(rep=>{
   rep.imgURL = `https://www.congress.gov/img/member/114_rp_${rep.state.toLowerCase()}_${rep.district}_${rep.last_name.toLocaleLowerCase()}_${rep.first_name.toLowerCase()}_200.jpg`
 })
 
-// function renderPictures(peopleArray) {
-//   peopleArray.forEach(senator => {
-//   let senatorPic = document.createElement('img')
-//   let senatorFig = document.createElement('figure')
-//   let senatorCap = document.createElement('figcaption')
-//   senatorCap.textContent = `${senator.name}`
-//   senatorPic.src = senator.imgURL
-//   senatorFig.appendChild(senatorPic)
-//   senatorFig.appendChild(senatorCap)
-//   mainContainer.appendChild(senatorFig)
-// })
-// }
+
 //variables to make the buttons later
 var allSenators = document.getElementById('senators')
 var allReps = document.getElementById('reps')
@@ -219,12 +181,6 @@ allSenators.addEventListener('click', function(){
 allReps.addEventListener('click', function(){
 removeCards()
 createCardRep(representatives)
-// if (allDems.className !== 'is-hidden'){
-//   allDems.classList.toggle('is-hidden')
-// }
-// if( allRepubs.className !=='is-hidden'){
-//   allRepubs.classList.toggle('is-hidden')
-// }
 allRepRBtn.classList.toggle('is-hiddenR')
 allRepDBtn.classList.toggle('is-hiddenR')
 })
