@@ -11,7 +11,7 @@ const fetchPokemonbyID = document.querySelector(".button_2");
 // const fetchModal = document.querySelector('#modal_1')
 const userImage = document.getElementById("userImage");
 
-//-------------------------------------------------------------------------
+
 
 //-----------------------------creating an array---------------------------
 
