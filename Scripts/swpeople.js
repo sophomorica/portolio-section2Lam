@@ -33,6 +33,7 @@ const allHomeWorlds = people.map(person => {
 }
 })
 
+
 console.log(allHomeWorlds)
 
 
