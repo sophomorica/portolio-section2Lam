@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  text-align: center;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+header{
+  /* background: #35424a;  this is gray*/
+  /* background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%); */
+  background-image: url('/downloaded-pics/nav-background.png');
+  color: #011640;
+  padding-top: 30px;
+  opacity: .7;
+  min-height: 70px;
+  border-bottom: #D9601A 4px solid;
+  position: fixed;
+  width: 100%;
+  /* margin-bottom: 15px; */
+
+}
+header a{
+  color: #011640;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+header li{
+
+  display: inline;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+header #branding{
+  float: left; 
+
+}
+header #branding h1 {
+  margin: 0;
+}
+header nav{
+ display: flex;
+ justify-content:flex-end;
+  margin-top: 10px;
+}
+header .highlight, header .current a{
+  color: #F27B13 ;
+  font-weight: bold;
+}
+header a:hover{
+  color:#878787;
+  font-weight: bold;
+}
+
+.visual-rhetoric-section{
+  padding-top:110px;
+  background-image: url('/downloaded-pics/background-texture.png');
+}
+#TheInfographic{
+  max-height:3600px;
+  max-width: 1000px;
+}
+#work h1{
+  color:white;
+  font-size: 48px;
+  padding:3rem;
+}
+
+section#work .container{
+  /* display: flex; */
+  justify-content: space-around;
+  text-align: center;
+}
+
+#work .box img{
+  height: 300px;
+  box-shadow: none;
+  max-width:260px;
+}
+#work .box img:hover{
+  height: 300px;
+  box-shadow: 3px 3px 3px whitesmoke;
+}
+#ProjectCards{
+  display:flex;
+  justify-content: space-around;
+}
+#MediaCards{
+  display:flex;
+  justify-content: center;
+}
+.box h3{
+  padding:2rem
+}
+
+
+/* Artifact */
+
+
+#ArtifactDiv{
+    color:white;
+    font-size: 48px;
+    padding:3rem;
+  }
+#InfographicDiv{
+    color:white;
+    font-size: 48px;
+    padding:3rem;
+  }
+  
+  
+  /* Genre */
+  #GenreDiv{
+    color:white;
+    font-size: 48px;
+    padding:3rem;
+    min-height: 65vh;
+  
+}
+#GenreDiv img{
+  max-height:250px;
+  max-width:250px;
+}
+#GenreImages{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top:2rem;
+}
+#GenreSection li{
+  font-size: 32px;
+  color:#D9601A;
+}
+#GenreSection ul{
+  list-style-type: none;
+}
+.genre-images ul{
+  opacity:0
+}
+.genre-images:hover  ul{
+
+    animation: transitionIn 3s;
+
+}
+@keyframes transitionIn{
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg)
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg)
+  }
+}
