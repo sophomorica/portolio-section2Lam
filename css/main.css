@@ -132,19 +132,35 @@ header a:hover{
   padding-top: 20vh;
   min-height: 55vh;
 /* display: flex; */
-background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
-color: #D9601A;
+background-image: url('/downloaded-pics/background-texture.png');
+color: white;
 font-size: 20px;
 text-shadow: 2px 2px 2px #13243e;
 }
+h3{
+  color: #D9601A;
+}
 section#work .container{
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   text-align: center;
 }
+
 #work .box img{
   height: 300px;
-  /* width: 250px; */
+  box-shadow: none;
+}
+#work .box img:hover{
+  height: 300px;
+  box-shadow: 3px 3px 3px whitesmoke;
+}
+#ProjectCards{
+  display:flex;
+  justify-content: center;
+}
+#MediaCards{
+  display:flex;
+  justify-content: center;
 }
 .project-tile:hover {
   outline: none;
@@ -162,10 +178,10 @@ section#work .container{
   min-height: 55vh;
   padding-top: 25vh;
   /* background: #35424a; */
-  background: linear-gradient(180deg, #13243e 0%, rgb(27, 116, 176) 100%);
-  color: white;
+  background-color: rgb(232,237,242);
+  color: #011640;
   text-align: center;
-  text-shadow:2px 2px 2px #000000;
+  /* text-shadow:2px 2px 2px #000000; */
 }
 .contact-buttons {
   display: flex;
@@ -175,7 +191,7 @@ section#work .container{
 }
 .contact-details {
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid #D9601A;
   font-weight: bold;
   margin: 0 35px 45px 35px;
   list-style-type: none;
@@ -183,8 +199,9 @@ section#work .container{
   width: 100px;
   height: 100px;
   line-height: 100px;
-  background: #5a5a5a;
-  color:white;
+  /* background: #5a5a5a; */
+  background-image: url('/downloaded-pics/background-texture.png');
+  color:#D9601A;
 }
 .contact-details:hover {
   background: #e4f1fe;
