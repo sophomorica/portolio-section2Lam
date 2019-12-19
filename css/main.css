@@ -34,8 +34,6 @@ color: white;
 
 /* -------------------------header--------------------------*/
 header{
-  /* background: #35424a;  this is gray*/
-  /* background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%); */
   background-image: url('/downloaded-pics/nav-background.png');
   color: #011640;
   padding-top: 30px;
@@ -44,7 +42,6 @@ header{
   border-bottom: #D9601A 4px solid;
   position: fixed;
   width: 100%;
-  /* margin-bottom: 15px; */
 
 }
 header a{

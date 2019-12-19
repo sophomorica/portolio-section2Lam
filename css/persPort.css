@@ -1,19 +1,10 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  text-align: center;
-}
-* {
-  margin: 0px;
-  padding: 0px;
-}
 nav ul {
   text-align: right;
   display: flex;
   justify-content: flex-end;
 
   width: 100%;
-  background: rgba(83, 183, 245, 0.794);
+  /* background: rgba(83, 183, 245, 0.794); */
 
   margin: 0px; 
   position: fixed;
