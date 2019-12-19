@@ -7,6 +7,12 @@ body {
   margin: 0px;
   padding: 0px;
 }
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+}
 
 header{
   /* background: #35424a;  this is gray*/
@@ -14,7 +20,7 @@ header{
   background-image: url('/downloaded-pics/nav-background.png');
   color: #011640;
   padding-top: 30px;
-
+  opacity: .7;
   min-height: 70px;
   border-bottom: #D9601A 4px solid;
   position: fixed;
