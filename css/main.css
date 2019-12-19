@@ -25,7 +25,7 @@ ul{
 }
 .button_1{
   height: 38px;
-  background: #e8901d ;
+  background: #D9601A ;
 border: none;
 padding-left: 20px;
 padding-right: 20px;
@@ -35,19 +35,20 @@ color: white;
 /* -------------------------header--------------------------*/
 header{
   /* background: #35424a;  this is gray*/
-  background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%);
-  color: #ffffff;
+  /* background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176, .79) 100%); */
+  background-image: url('/downloaded-pics/nav-background.png');
+  color: #011640;
   padding-top: 30px;
 
   min-height: 70px;
-  border-bottom: #e8901d 4px solid;
+  border-bottom: #D9601A 4px solid;
   position: fixed;
   width: 100%;
   /* margin-bottom: 15px; */
 
 }
 header a{
-  color: #ffffff;
+  color: #011640;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -72,11 +73,11 @@ header nav{
   margin-top: 10px;
 }
 header .highlight, header .current a{
-  color: #e8901d ;
+  color: #F27B13 ;
   font-weight: bold;
 }
 header a:hover{
-  color:#cccccc;
+  color:#878787;
   font-weight: bold;
 }
 
@@ -86,17 +87,21 @@ header a:hover{
 #showcase{
   min-height: 75vh;
   padding-top: 20vh;
-  background-color: #5a5a5a;
-  background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
+  background-color: #011640;
+  /* background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%); */
+  background-image:url("/downloaded-pics/background-texture.png");
+  background-repeat: repeat;
+  /* background-blend-mode: multiply; */
+  /* background-color:rgb(19, 43, 64); */
  
   text-align: center;
-  color: white;
+  color: #D9601A;
   text-shadow: 2px 2px 2px #13243e;
-  border-bottom: #e8901d 4px solid;
+  border-bottom: #D9601A 4px solid;
   
 }
-section .emphasize{
-  color: #e8901d;
+#showcase .emphasize{
+  color: white;
 }
 #showcase h1{
   margin-top: 100px;
@@ -112,13 +117,13 @@ section .emphasize{
 #banner{
   padding: 15px;
   
-  color: white;
+  color: #D9601A;
   /* background: #35424a; */
   background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176) 100%);
   text-align: center;
   text-transform: uppercase;
   text-shadow: 2px 2px 2px #13243e;
-  border-bottom: #e8901d 5px solid;
+  border-bottom: #D9601A 5px solid;
 }
 /* ---------------------------work------------------ */
 
@@ -128,7 +133,7 @@ section .emphasize{
   min-height: 55vh;
 /* display: flex; */
 background: linear-gradient(to bottom, #9b9b9b 0%, #555555 100%);
-color: #e8901d;
+color: #D9601A;
 font-size: 20px;
 text-shadow: 2px 2px 2px #13243e;
 }
@@ -183,7 +188,7 @@ section#work .container{
 }
 .contact-details:hover {
   background: #e4f1fe;
-  color:#e8901d;
+  color:#D9601A;
 }
 
 
@@ -191,7 +196,7 @@ footer{
   padding: 20px;
   padding-top: 40px;
   color: white;
-background-color: #e8901d ;
+background-color: #D9601A ;
 text-align: center;
 }
 

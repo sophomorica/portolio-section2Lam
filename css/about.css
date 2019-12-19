@@ -3,7 +3,7 @@
 }
 body {
   margin: 0px;
-  background-color: #13243e;
+  background-color: #132B40;
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
@@ -27,7 +27,7 @@ header {
 
   margin: 0px auto; */
   background: #13243e;
-  background: linear-gradient(to bottom, #13243e 0%, rgb(27, 116, 176) 100%);
+  background: linear-gradient(to bottom, #132B40 0%, rgb(27, 116, 176) 100%);
 }
 main {
   margin: 15px;
