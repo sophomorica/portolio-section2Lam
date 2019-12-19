@@ -55,3 +55,17 @@ header a:hover{
   color:#878787;
   font-weight: bold;
 }
+
+#infographic{
+  padding-top:110px;
+  background-image: url('/downloaded-pics/background-texture.png');
+}
+#TheInfographic{
+  max-height:3600px;
+  max-width: 1000px;
+}
+#infographic h1{
+  color:white;
+  font-size: 48px;
+  padding:3rem;
+}
