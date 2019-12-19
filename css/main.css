@@ -8,10 +8,17 @@ body {
 
  
 }
-
+/* font-family: 'Girassol', cursive;
+font-family: 'Roboto Slab', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Mountains of Christmas', cursive;
+font-family: 'Fredericka the Great', cursive; */
 /* global */
 *{
   text-decoration: none;
+font-family: 'Cinzel', serif;
+
 }
 .container {
   width: 80%;
@@ -99,6 +106,12 @@ header a:hover{
 }
 #showcase .emphasize{
   color: white;
+  /* font-family: 'Mountains of Christmas', cursive; */
+  /* font-family: 'Girassol', cursive; */
+/* font-family: 'Roboto Slab', serif; */
+/* font-family: 'Press Start 2P', cursive; */
+font-family: 'Mountains of Christmas', cursive;
+/* font-family: 'Fredericka the Great', cursive; */
 }
 #showcase h1{
   margin-top: 100px;
@@ -121,6 +134,15 @@ header a:hover{
   text-transform: uppercase;
   text-shadow: 2px 2px 2px #13243e;
   border-bottom: #D9601A 5px solid;
+}
+#ShowCaseWork{
+  display:flex;
+  justify-content: center;
+  padding-bottom:4rem;
+}
+#ShowCaseWork img{
+  max-width:400px;
+  max-height:250px;
 }
 /* ---------------------------work------------------ */
 
