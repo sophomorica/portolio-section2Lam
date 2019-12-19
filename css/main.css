@@ -37,7 +37,7 @@ header{
   background-image: url('/downloaded-pics/nav-background.png');
   color: #011640;
   padding-top: 30px;
-
+  opacity: .7;
   min-height: 70px;
   border-bottom: #D9601A 4px solid;
   position: fixed;
@@ -175,10 +175,11 @@ section#work .container{
   min-height: 55vh;
   padding-top: 25vh;
   /* background: #35424a; */
-  background-color: rgb(232,237,242);
-  color: #011640;
+  background-color: #4192D9;
+  background:linear-gradient(to bottom, #4192D9 0%, #2A5E8C 100%);;
+  color: #D9601A;
   text-align: center;
-  /* text-shadow:2px 2px 2px #000000; */
+  text-shadow:2px 2px 2px #000000;
 }
 .contact-buttons {
   display: flex;
